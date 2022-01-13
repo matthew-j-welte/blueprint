@@ -4,6 +4,8 @@
 
 _Exercise App Usable_
 
+Scenarios:
+
 - I can add exercises with basic info
 - I can create workouts from exercises
   - with a 'type' of some kind (heavy, conditioning, consistency, distance)
@@ -14,6 +16,22 @@ _Exercise App Usable_
 - I have a formula for calculating smart score
 - I can modify my cutoff weights
   - when you do make sure you warn the user (with a box for 'dont show this again') that it won't change previous scores, so your smart score may experience a sudden spike.
+- I can add/remove/modify exercises in a set/workout without breaking my smart score
+
+Tasks:
+
+- create db models (w/ well thought out partitions)
+- bring over sentrain cosmos/localdb/repo code
+- create repositories
+- create static frontend page for inputting exercises, workouts, regimens
+- create skeleton services
+- implement service functions
+- connect client to backend for exercise+workout+regimen endpoint
+- create static frontend page for inputting weight/reps for workouts
+- create and implement endpoints + service functions for weight+rep input
+- connect client to backend for weight+rep endpoint
+- make an edit workout page
+- make the service functions for the edit workout page
 
 ## Phase 2
 
