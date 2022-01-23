@@ -44,6 +44,25 @@ Reqs
 
 ---
 
+RANDOM:
+
+Ab Roll
+Left Pushup
+Right Pushup
+Pushup
+Jump to deadlift position
+Deadlift
+Calf Raise
+Upward Row
+Reverse Bicep Curl
+Front Squat to Shoulder Press
+Left Tilt shoulder Press?
+Right Tilt shoulder Press?
+Tricep Curl
+Front Lunge
+
+---
+
 ## Flow
 
 #1
