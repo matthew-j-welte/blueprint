@@ -6,16 +6,33 @@
 
 _Justification: If all other services are down. We should still be able to view all exercises available on gym.blueprint_
 
-Reqs
+Models:
 
-- Posts new exercise
-- Stores globally published + approved exercises
-- Handles all needed exercise publishing + approvals / rejections
-- Stores all user created exercises (with a limit per user)
+- PublishedExercise (exerciseId)
+  - All exercises that are available publicly (have been approved and published)
+- PublishedExerciseRef (type + page?)
+  - A ref to an exercise - should contain enough data to make a card for the frontend in one query
+- UserExercise (exerciseId + userId)
+  - Either a unique exercise not published, or a published exercise - but in both cases it should have user cutoff weight/reps and other info (total reps, max weight etc.)
+- UserExerciseRef (type + page?)
+  - A ref to a user exercise
+- ExerciseEntry
+- ExerciseEntryRef
+
+Reqs
 
 ### Workout Service
 
 _Justification: If all other services are down. We should still be able to view all previously stored workouts and examine its sets/exercises. We just won't be able to drill down into exercise details that are hosted on the exercise svc_
+
+Models:
+
+- PublishedWorkout (workoutId)
+- PublishedWorkoutRef (type + page?)
+- UserWorkout (workoutId + userId)
+- UserWorkoutRef (type + page?)
+- WorkoutEntry
+- WorkoutEntryRef
 
 Reqs
 
@@ -28,6 +45,15 @@ Reqs
 
 _Justification: If all other services are down. We should still be able to view all previously stored regimens and examine its workouts' details. We just won't be able to drill down into workout details that are hosted on the workout svc_
 
+Models:
+
+- PublishedRegimen (regimenId)
+- PublishedRegimenRef (type + page?)
+- UserRegimen (regimenId + userId)
+- UserRegimenRef (type + page?)
+- RegimenEntry
+- RegimenEntryRef
+
 Reqs
 
 - Posts new regimen
@@ -37,6 +63,12 @@ Reqs
 - Allow users to archive old regimens?
 
 ### RepTrackingService???
+
+Models:
+
+Reqs:
+
+- Recieves and stores all the rep info for exercise level tracking
 
 ### RegimenTrackingService???
 
