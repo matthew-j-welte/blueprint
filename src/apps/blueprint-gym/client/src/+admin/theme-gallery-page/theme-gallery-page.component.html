@@ -1,0 +1,211 @@
+<app-color-picker (colorChange)="setGlobalColor($event)"></app-color-picker>
+
+<div class="container mt-5 py-5">
+  <form (ngSubmit)="submit()" *ngIf="themeKeys">
+    <div class="container">
+      <div class="form-group">
+        <label for="exercise-categories">Current Themes</label>
+        <ng-select
+          [clearable]="false"
+          [items]="themes"
+          bindLabel="themeName"
+          id="exercise-categories"
+          name="exercise-categories"
+          (change)="initializeThemeToEdit($event)"
+          [ngModel]="editting ? { themeName: editting } : null"
+        >
+        </ng-select>
+      </div>
+
+      <h2 class="my-0">
+        <button
+          *ngIf="themeName && editting === undefined"
+          (click)="clearTheme()"
+          type="button"
+          class="mb-2 btn btn-danger mr-4"
+        >
+          Clear</button
+        ><strong *ngIf="editting">Editting: </strong> {{ themeName }}
+      </h2>
+      <hr class="mt-1 mb-2" />
+      <button
+        (click)="setUserActiveTheme()"
+        type="button"
+        class="btn-primary px-3 p-1 mr-2"
+      >
+        Set as Active Theme
+      </button>
+      <button
+        *ngIf="editting"
+        type="button"
+        (click)="stopEditting()"
+        class="btn-danger px-3 p-1 mx-2"
+      >
+        Stop Editting <strong>{{ themeName }}</strong>
+      </button>
+      <button
+        *ngIf="editting"
+        type="button"
+        (click)="copyTheme()"
+        class="btn-info px-3 p-1 mx-2"
+      >
+        Copy Theme
+      </button>
+      <div class="pt-3 row text-center">
+        <div
+          *ngFor="let themeKey of themeKeys"
+          class="col-lg-4 col-md-6 col-12 mx-0 p-3"
+        >
+          <div class="card">
+            <div class="card-header p-0 px-2">
+              <div class="d-flex justify-content-between text-center">
+                <div class="p-0">
+                  <h6 class="card-title py-0 my-1 text-primary">
+                    <label for="{{ themeKey }}">{{ themeKey.label }}</label>
+                  </h6>
+                </div>
+                <div class="p-0">
+                  <span
+                    *ngIf="themeMap[themeKey.fieldName]"
+                    role="button"
+                    class="text-danger"
+                    (click)="setCardColor(themeKey.fieldName, '')"
+                    ><i class="fas fa-times"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body py-0 px-0">
+              <div
+                *ngIf="themeMap[themeKey.fieldName]"
+                [style.background]="
+                  themeMap[themeKey.fieldName] != undefined &&
+                  themeMap[themeKey.fieldName] !== ''
+                    ? themeMap[themeKey.fieldName]
+                    : 'transparent'
+                "
+                class="card-color-top"
+              ></div>
+              <div
+                *ngIf="!themeMap[themeKey.fieldName]"
+                class="card-color-top text-center"
+              >
+                <div class="row px-4 py-1">
+                  <div *ngFor="let recent of relatedColors" class="col-2 my-2">
+                    <div
+                      class="color-preview-circle"
+                      role="button"
+                      [style.background]="recent"
+                      (click)="setCardColor(themeKey.fieldName, recent)"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer px-2 py-0">
+              <div class="row">
+                <div class="col-4">
+                  <div class="py-1">
+                    <span
+                      role="button"
+                      class="text-primary"
+                      (click)="setCardColor(themeKey.fieldName, globalColor)"
+                      ><i class="fas fa-globe"></i
+                    ></span>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="py-1">
+                    <span
+                      *ngIf="copiedColor === undefined"
+                      role="button"
+                      class="text-info"
+                      (click)="copiedColor = themeMap[themeKey.fieldName]"
+                      ><i class="fas fa-eye-dropper"></i
+                    ></span>
+                    <span
+                      *ngIf="
+                        copiedColor &&
+                        copiedColor === themeMap[themeKey.fieldName]
+                      "
+                      role="button"
+                      class="text-danger"
+                      (click)="copiedColor = undefined"
+                      ><i class="fas fa-times"></i
+                    ></span>
+                    <span
+                      *ngIf="
+                        copiedColor &&
+                        copiedColor !== themeMap[themeKey.fieldName]
+                      "
+                      role="button"
+                      class="text-info"
+                      (click)="setCardColor(themeKey.fieldName, copiedColor)"
+                      ><i class="fas fa-tint"></i
+                    ></span>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="py-1">
+                    <span
+                      role="button"
+                      class="text-danger"
+                      (click)="
+                        setCardColor(themeKey.fieldName, getRandomColor())
+                      "
+                      ><i class="fas fa-random"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5 pt-4">
+      <label for="themeName" class="mx-2"
+        >Theme Name
+        <span class="text-primary">(Typescript Interface Format)</span></label
+      >
+      <div class="row px-3">
+        <input
+          required
+          id="themeName"
+          name="themeName"
+          class="form-control col-12 my-2 mx-2"
+          type="text"
+          [(ngModel)]="themeName"
+        />
+        <button type="submit" class="btn btn-primary col-12 my-2 mx-2">
+          Generate Typescript Interface
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-6 mt-3">
+          <strong>sentrain/src/app/themes.ts</strong>
+          <textarea
+            class="form-control"
+            name="interfacesSourceCode"
+            id="interfacesSourceCode"
+            rows="30"
+            [(ngModel)]="interfacesSourceCode"
+          ></textarea>
+        </div>
+        <div class="col-6 mt-3">
+          <strong>sentrain/src/app/shared/scss/themes.scss</strong>
+          <textarea
+            class="form-control"
+            name="sassSourceCode"
+            id="sassSourceCode"
+            rows="30"
+            [(ngModel)]="sassSourceCode"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

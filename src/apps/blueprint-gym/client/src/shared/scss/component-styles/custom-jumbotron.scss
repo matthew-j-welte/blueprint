@@ -1,0 +1,70 @@
+@import "../themes.scss";
+@import "../mixins.scss";
+@import "../fonts.scss";
+
+.title-header {
+  font-size: 92px;
+  font-weight: 100;
+  color: $jumbotronHeaderColor;
+  margin-bottom: 0px;
+  font-family: $thin-modern-title;
+}
+
+.subpage-title {
+  color: $jumbotronSubheaderColor;
+}
+
+.title-subheader {
+  position: relative;
+  top: -10px;
+  font-size: 20px;
+  font-weight: 300;
+  // font-style: italic;
+  margin-top: 0px;
+  color: $jumbotronSubheaderColor;
+  font-family: $thin-modern-title;
+}
+
+.page-header-container {
+  // background: linear-gradient(
+  //   0deg,
+  //   $jumbotronBackground 45%,
+  //   $navbarBackgroundFade 100%
+  // );
+  color: $bodyHeaderColor;
+  // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+  // rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.subpage-header-container {
+  // background: $jumbotronBackground;
+
+  color: $jumbotronSubheaderColor;
+}
+
+.header-sep {
+  border-radius: 30px;
+  @include st-middle-linear-gradient-hr(
+    transparent,
+    $jumbotronHeaderColor,
+    transparent
+  );
+}
+
+.subheader-sep {
+  border-radius: 30px;
+  @include st-middle-linear-gradient-hr(
+    $jumbotronHeaderColor,
+    $jumbotronBackground,
+    $jumbotronBackground
+  );
+}
+
+.title-info {
+  font-family: $thin-modern-title;
+  color: $bodyTextColor;
+}
+
+.section-header {
+  color: $bodyHeaderColor;
+}

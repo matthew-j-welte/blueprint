@@ -1,0 +1,51 @@
+@mixin st-middle-linear-gradient-hr($color1, $color2, $color3) {
+  height: 1px;
+  border: 0;
+  background: $color2;
+  background: -webkit-linear-gradient(
+    to right,
+    $color1,
+    $color2,
+    $color3
+  ); /*For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(
+    to right,
+    $color1,
+    $color2,
+    $color3
+  ); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(
+    to right,
+    $color1,
+    $color2,
+    $color3
+  ); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(
+    to right,
+    $color1,
+    $color2,
+    $color3
+  ); /* Standard syntax */
+}
+
+@mixin st-to-right-gradient-hr($color1, $color2) {
+  height: 1px;
+  border: 0;
+  background: $color2;
+  background: -webkit-linear-gradient(
+    to right,
+    $color1,
+    $color2
+  ); /*For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(
+    to right,
+    $color1,
+    $color2
+  ); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(
+    to right,
+    $color1,
+    $color2
+  ); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, $color1, $color2); /* Standard syntax */
+}
