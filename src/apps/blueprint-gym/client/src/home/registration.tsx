@@ -30,8 +30,8 @@ function Registration() {
     //     this.registered = true;
     //     this.ctxService.login(res);
     //     this.router.navigate([
-    //       SENTRAIN_ROUTE_MAP.home.base,
-    //       SENTRAIN_ROUTE_MAP.home.landingDashboard,
+    //       ROUTE_MAP.home.base,
+    //       ROUTE_MAP.home.landingDashboard,
     //     ]);
     //   })
     // );

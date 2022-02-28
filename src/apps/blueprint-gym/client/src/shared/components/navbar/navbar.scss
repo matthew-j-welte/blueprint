@@ -1,0 +1,142 @@
+@import "../../scss/colors.scss";
+@import "../../scss/fonts.scss";
+
+.NavbarBackground {
+  width: 100%;
+  background-color: $navbarBackground;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  margin: 0px;
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 3px 0px;
+}
+
+.Navbar {
+  max-width: 1920px;
+  height: 40px;
+  background-color: $navbarBackground;
+  color: $navbarFontColor;
+  // overflow: hidden;
+}
+
+.Logo {
+  letter-spacing: 8px;
+  font-size: 30px;
+  color: whitesmoke;
+  text-shadow: 1px 1px 4px $navbarIconColor, 1px 1px 3px $navbarIconColor;
+  transition: all 0.2s ease-in-out;
+}
+
+.Logo:hover {
+  letter-spacing: 10px;
+}
+
+.NavItem {
+  height: 40px;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 8px;
+  transition: all 0.1s ease-in-out;
+}
+
+.NavItem:hover {
+  border-bottom: 4px solid $navbarIconColor;
+  cursor: pointer;
+}
+
+.NavProfileImage {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  margin-top: 4px;
+  border: 1px solid black;
+}
+
+.LinkNavSection {
+  width: 42%;
+
+  a {
+    color: $navbarIconColor;
+  }
+
+  span {
+    color: $navbarFontColor;
+  }
+}
+
+.LogoNavSection {
+  width: 16%;
+  height: 48px;
+  border-radius: 10px;
+  background-color: $navbarBackground;
+  padding: 6px 0px 0px 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+.LogoNavSection:hover {
+  cursor: pointer;
+  border-bottom: 4px solid $navbarIconColor;
+}
+
+.ProfileNavSection {
+  width: 42%;
+
+  .ProfileNavItem {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 8px;
+  }
+}
+
+.NavItemIcon {
+  padding-top: 8px;
+}
+
+.PlayerNavDropdown {
+  float: right;
+  margin-right: 0px;
+  text-align: right;
+  height: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+
+  // background-color: $navbarBackground;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.DropdownNavItem {
+  padding: 6px 10px 6px 64px;
+  margin-top: 12px;
+  border-radius: 6px;
+  background-color: $navbarBackground;
+  box-shadow: rgb(38, 57, 77) 0px 10px 20px -10px;
+  transition: all 0.2s ease-in-out;
+
+  a {
+    color: $navbarIconColor;
+  }
+
+  span {
+    color: $navbarFontColor;
+  }
+}
+
+.PlayerNavDropdownActive {
+  opacity: 100%;
+  height: auto;
+}
+
+.DropdownNavItem:hover {
+  box-shadow: $navbarIconColor 0px 11px 21px -9px;
+  cursor: pointer;
+}
+
+.ActiveNavLink {
+  border-bottom: 4px solid $navbarIconColor;
+}
+
+.PlayerNavItem {
+  background-color: $navbarBackgroundLight1;
+}
