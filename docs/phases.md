@@ -1,8 +1,20 @@
 # Blueprint
 
+## HOW TO DO A PHASE
+
+1. Draw out new high level frontend features and update existing ones (as needed).
+2. While drawing take note of:
+
+- additional fields needed (or the full models if a new component)
+- all new http requests
+- which service + controller that http request should go to
+- the overall flow of the page
+
+3. Transfer Drawings to proper design page (create new page if needed) and create the full e2e flow as well as a high level description
+
 ## Phase 1
 
-_Exercise App Usable_
+_Blueprint Gym Usable_
 
 Scenarios:
 
@@ -15,7 +27,7 @@ Scenarios:
 - I can pre-populate weights for exercises in a workout
 - I have a formula for calculating smart score
 - I can modify my cutoff weights
-  - when you do make sure you warn the user (with a box for 'dont show this again') that it won't change previous scores, so your smart score may experience a sudden spike.
+  - but warn heavily against this as it will require a good bit of processing to pull all workout records and modify the smart score based on the new formula.
 - I can add/remove/modify exercises in a set/workout without breaking my smart score
 
 Tasks:
@@ -35,12 +47,12 @@ Tasks:
 
 ## Phase 2
 
-_Recipe Portion of Cooking App Usable_
+_Blueprint Gym Production Ready_
 
-TBD
+Scenarios:
 
-## Phase 3
+- TBD
 
-_Setup Blueprint and have the exercise and cooking app available on it. Figure out how you're going to do logins across all the apps and Blueprint itself. Implement it. Setup a 'How to use' section._
+Tasks
 
-## Phase 4
+- Pagination for all models that need it!!!

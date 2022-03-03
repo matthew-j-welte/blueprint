@@ -32,12 +32,22 @@
 - days remaining
 - days in
 - overall progress % [based on smart score?]
-- regimen aim (heavy, cardio etc..)
 - links to some other analytics most likely:
   - improvement by muscle grouping
   - improvement by exercise
 
-## Workout Entry Page
+## Regimen Statistics Page
+
+- can navigate to this from the regimen page, we will have a number of different statistics already calculated (or maybe calculated when the user navs to this page).
+- will also have a list of cards detailing other calculations you can sign up for, for this regimen. Give user's a limit as to how many they can sign up for.
+  - maybe these will persist over the course of the regimen
+
+## Workout Page
+
+- Pulls the workoutEntry and the workoutSetEntries list
+- Basically a readonly version of the New Workout page
+
+## New Workout Page
 
 - Need to allow two modes:
   - Active Entry Mode
@@ -46,6 +56,7 @@
 **Active Entry Mode**
 
 - The main objective of this is to cater to someone who is in the middle of a workout and does not have the patience or energy to deal with slow animations, loading, or lagging.. it needs to be a fluent, easy, consistent and intuitive process, leaving each different type of exercise/set accounted for.
+- Should also have larger than usual text/buttons since somebody may be more unaware/shakey when entering point right after a set.
 
 Some Examples:
 
@@ -78,3 +89,13 @@ Nav Opts:
 
 - place where we can go through and analyze all past data from previous workouts.
 - make use of charts and different graphics for this, as well as the smart score.
+
+Design Mockups
+[X] Homepage
+[X] New Exercise Page
+[X] New Workout Page
+[X] New Regimen Page
+[X] Workout - Active Entry Page
+[ ] Workout - Bulk Entry Page (and active entry review)
+[ ] Regimen Page
+[ ] Workout Entry Page

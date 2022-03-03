@@ -1,0 +1,26 @@
+using System.Linq;
+using AutoMapper;
+using BlueprintGym.Business.Shared.Models;
+using BlueprintGym.Business.WorkoutTracker.Models;
+using BlueprintGym.Business.WorkoutTracker.Models;
+using BlueprintGym.Domain.WorkoutTracker.Models;
+
+namespace BlueprintGym.Business.WorkoutTracker.Mappings
+{
+  public class WorkoutProfile : Profile
+  {
+    public WorkoutProfile()
+    {
+      CreateMap<WorkoutRef, ExerciseLookupDto>().ReverseMap();
+      CreateMap<WorkoutFormView, Workout>().ReverseMap();
+      CreateMap<WorkoutFormView, WorkoutRef>()
+        .ForMember(x => x.MusclesWorked, memberOptions => memberOptions.MapFrom(x => x.ExerciseAssignments.SelectMany(y => y.MusclesWorked)));
+
+      CreateMap<WorkoutEntryFormView, WorkoutEntry>().ReverseMap();
+
+      CreateMap<RegimenFormView, Regimen>().ReverseMap();
+
+      CreateMap<WorkoutSetFormView, WorkoutSet>().ReverseMap();
+    }
+  }
+}

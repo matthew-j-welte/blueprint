@@ -1,0 +1,22 @@
+﻿{
+  "profiles": {
+    "ExerciseServiceJob-Development": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE": "false"
+      }
+    },
+    "ExerciseServiceJob-Integration": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Integration",
+        "ASPNETCORE_ENVIRONMENT": "Integration",
+        "DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE": "false"
+      }
+    }
+  }
+}

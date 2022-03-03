@@ -1,4 +1,4 @@
-# Gym.Blueprint Architecture
+# Blueprint Gym Architecture
 
 ## Services
 
@@ -8,18 +8,39 @@ _Justification: If all other services are down. We should still be able to view 
 
 Models:
 
-- PublishedExercise (exerciseId)
-  - All exercises that are available publicly (have been approved and published)
-- PublishedExerciseRef (type + page?)
+- Exercise (exerciseId)
+  - exerciseId
+  - name
+  - labels: string[]
+  - muscleGroups
+- ExerciseRef (type + published + page?)
   - A ref to an exercise - should contain enough data to make a card for the frontend in one query
-- UserExercise (exerciseId + userId)
-  - Either a unique exercise not published, or a published exercise - but in both cases it should have user cutoff weight/reps and other info (total reps, max weight etc.)
-- UserExerciseRef (type + page?)
-  - A ref to a user exercise
-- ExerciseEntry
-- ExerciseEntryRef
+- ExercisePublishSubmissionRef (type + page?)
+- MemberExerciseStatistics
 
-Reqs
+Controllers:
+
+ExerciseController:
+Get(string id) (GET -> ExerciseDto)
+Save(ExerciseFormView exerciseForm) (PUT -> ExerciseDto)
+Delete(string id) (DELETE -> bool)
+GetAll() (GET -> List<ExerciseCardDto>)
+
+ExerciseAdminController:
+Unpublish(string exerciseId, bool andDelete = false) (DELETE -> bool)
+PublishExercise(PublishExerciseFormView exerciseForm) (PUT -> ExerciseDto)
+GetAllPublishSubmissionRefs() (GET -> List<ExerciseCardDto>)
+
+ExerciseStatisticsController:
+Save
+
+Services:
+
+### Gym Member Statistics Service
+
+### Exercise Tracking Service
+
+_Justification: If all other services are down. We should still be able to view all exercises available on gym.blueprint_
 
 ### Workout Service
 
@@ -27,8 +48,8 @@ _Justification: If all other services are down. We should still be able to view 
 
 Models:
 
-- PublishedWorkout (workoutId)
-- PublishedWorkoutRef (type + page?)
+- Workout (workoutId)
+- WorkoutRef (type + page?)
 - UserWorkout (workoutId + userId)
 - UserWorkoutRef (type + page?)
 - WorkoutEntry
@@ -40,6 +61,14 @@ Reqs
 - Stores all globally published + approved workouts
 - Handles all needed workout publishing + approvals / rejections
 - Stores all user created workout (with a limit per user)
+
+Controllers:
+
+- WorkoutController
+- WorkoutAdminController
+- WorkoutTemplateController (for publishing and getting/saving workout templates)
+
+### Workout Tracking Service
 
 ### Regimen Service
 
