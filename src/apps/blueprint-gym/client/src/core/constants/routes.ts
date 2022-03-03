@@ -1,5 +1,8 @@
 export const AppRoutes = {
   home: "home",
+  newExercise: "exercise/new",
+  newWorkout: "workout/new",
+  newRegimen: "regimen/new",
 
   editExercise: (exerciseId: string = ":exerciseId") =>
     `exercise/edit/${exerciseId}`,

@@ -17,6 +17,7 @@ function App() {
       <Routes>
         <Route path={AppRoutes.home} element={<Homepage />} />
         <Route path={AppRoutes.editExercise()} element={<ExerciseForm />} />
+        <Route path={AppRoutes.newExercise} element={<ExerciseForm />} />
         <Route path={AppRoutes.editWorkout()} element={<WorkoutForm />} />
         <Route path={AppRoutes.editRegimen()} element={<RegimenForm />} />
         <Route
