@@ -1,0 +1,27 @@
+containerPort: 5001
+
+localdbEnv: development
+
+image:
+  repository: sentraindev.azurecr.io/development/mwelte/exercise-tracker
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets:
+  - name: acr-dev-secret
+
+service:
+  port: 5001
+  targetPort: 5001
+  type: NodePort
+  nodePort: 30001
+
+environment:
+  - name: ASPNETCORE_URLS
+    value: http://+:5001
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  - name: DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE
+    value: "false"
+  - name: SENTRAIN_PATH
+    value: /data

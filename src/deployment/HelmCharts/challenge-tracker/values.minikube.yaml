@@ -1,0 +1,50 @@
+containerPort: 5000
+
+localdbEnv: development
+
+image:
+  repository: sentraindev.azurecr.io/development/mwelte/challenge-tracker
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets:
+  - name: acr-dev-secret
+
+service:
+  port: 5000
+  targetPort: 5000
+  type: NodePort
+  nodePort: 30000
+
+environment:
+  - name: ASPNETCORE_URLS
+    value: http://+:5000
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Development
+  - name: DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE
+    value: "false"
+  - name: SENTRAIN_PATH
+    value: /data
+
+cronjobs:
+  crons:
+    - name: challenge-completer-est
+      jobKey: 1
+      jobTZ: est
+      scheduler: 59 3 * * *
+      replicas: 1
+    - name: challenge-completer-ct
+      jobKey: 1
+      jobTZ: ct
+      scheduler: 59 4 * * *
+      replicas: 1
+    - name: challenge-completer-mt
+      jobKey: 1
+      jobTZ: mt
+      scheduler: 59 5 * * *
+      replicas: 1
+    - name: challenge-completer-pst
+      jobKey: 1
+      jobTZ: pst
+      scheduler: 59 6 * * *
+      replicas: 1

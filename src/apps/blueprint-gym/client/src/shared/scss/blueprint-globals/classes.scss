@@ -1,6 +1,12 @@
 @import "./colors.scss";
+@import "./fonts.scss";
 
 .page-title {
-  font-size: 52px;
+  font-size: 72px;
+  padding-left: 24px;
+  padding-top: 24px;
   color: $pageTitle;
+  font-family: $thin-modern-title;
+  font-weight: 200;
+  text-align: left;
 }
