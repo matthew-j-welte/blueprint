@@ -2,6 +2,8 @@
 @import "./shared/scss/colors.scss";
 @import "./shared/scss/fonts.scss";
 
+@import "./shared/scss/blueprint-globals/all.scss";
+
 body {
   background-color: $background;
   color: $bodyTextColor;

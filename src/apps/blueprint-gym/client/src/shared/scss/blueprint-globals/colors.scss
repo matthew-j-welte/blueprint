@@ -1,1 +1,43 @@
+$themeColorBlue: rgb(12, 98, 148);
+$navbarBackground: $themeColorBlue;
+
+$themeColorBlue_seeThrough: rgba(12, 98, 148, 0.35);
+$themeColorBlue1: rgb(24, 140, 207);
+
+$background: rgb(241, 242, 246);
+$sunkenPanelBackground: rgb(243, 244, 246);
+
+$selectedPillBackground: rgb(232, 240, 246);
+$selectedPillBackground1: rgb(246, 251, 255);
+$pillBackground: rgb(246, 249, 255);
+$pillBackground1: rgb(249, 251, 255);
+$selectedPillHover: rgb(246, 232, 232);
+
 $pageTitle: rgb(8, 55, 126);
+$formSectionTitle: black;
+
+$textPrimary: $themeColorBlue;
+$textPrimary1: rgb(20, 117, 173);
+$textPrimary2: rgb(30, 135, 195);
+
+$textPrimary_seeThrough: rgba(34, 137, 197, 0.1);
+$textPrimary_seeThrough1: rgba(57, 163, 224, 0.1);
+$textPrimary_seeThrough2: rgba(80, 191, 255, 0.1);
+
+$textPrimary_topFade: linear-gradient(
+  0deg,
+  $textPrimary_seeThrough2 0%,
+  transparent 100%
+);
+$textPrimary_topFade1: linear-gradient(
+  0deg,
+  $textPrimary_seeThrough2 0%,
+  transparent 70%
+);
+$textPrimary_topFade2: linear-gradient(
+  0deg,
+  $textPrimary_seeThrough2 0%,
+  transparent 50%
+);
+
+$textPrimaryFaded: rgba(12, 98, 148, 0.5);

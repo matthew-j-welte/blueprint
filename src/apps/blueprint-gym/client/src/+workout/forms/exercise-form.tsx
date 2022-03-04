@@ -6,25 +6,42 @@ import {
 } from "../../core/models/exercise.model";
 import { ExerciseService } from "../../core/services/exercise-service";
 import {
+  enumToDropdownOptionsList,
   ExerciseState,
   FitnessDifficulty,
   FitnessDifficultyLookup,
-  getMapKeys,
 } from "../../core/models/enums.model";
 import "../../shared/scss/blueprint-globals/all.scss";
-import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { AppRoutes } from "../../core/constants/routes";
+import {
+  BasicMuscleGroups,
+  ExerciseLabels,
+  FocusedMuscleGroups,
+} from "../../core/constants/workout";
+import {
+  faLayerGroup,
+  faMultiply,
+  faPerson,
+  faSitemap,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SelectablePill from "../../shared/components/selectable-pill/selectable-pill";
+
+declare type MuscleGroupings = "basic" | "focused" | "trainer";
 
 function ExerciseForm() {
   const { exerciseId } = useParams();
-  const [searchParams, set_searchParams] = useSearchParams();
-  const [exercise, set_exercise] = useState<ExerciseFormView>();
+  const [nameEditCofirmed, set_nameEditCofirmed] = useState(false);
+  const [activeMuscleGroupBtn, set_activeMuscleGroupBtn] =
+    useState<MuscleGroupings>("focused");
   const [exerciseLookups, set_exerciseLookups] = useState<ExerciseLookupDto[]>(
     []
   );
-  const [nameEditCofirmed, set_nameEditCofirmed] = useState(false);
 
   // exercise
+  const [id, set_id] = useState<string | null>();
+  const [modifiedOn, set_modifiedOn] = useState<Date | null>();
   const [exerciseName, set_exerciseName] = useState<string>();
   const [description, set_description] = useState<string>();
   const [musclesWorked, set_musclesWorked] = useState<string[]>();
@@ -34,19 +51,48 @@ function ExerciseForm() {
   const [parentVariationExercise, set_parentVariationExercise] =
     useState<ExerciseLink>();
 
+  const [loadedExercise, set_loadedExercise] = useState<ExerciseFormView>();
+
+  const updateForm = (exercise: ExerciseFormView) => {
+    set_id(exercise.id);
+    set_modifiedOn(exercise.modifiedOn);
+    set_exerciseName(exercise.exerciseName);
+    set_description(exercise.description);
+    set_musclesWorked(exercise.musclesWorked);
+    set_exerciseLabels(exercise.exerciseLabels);
+    set_state(exercise.state);
+    set_difficulty(exercise.difficulty);
+    set_parentVariationExercise(exercise.parentVariationExercise);
+  };
+
+  const getForm = () =>
+    ({
+      id: id,
+      modifiedOn: modifiedOn,
+      exerciseId: exerciseId,
+      exerciseName: exerciseName,
+      description: description,
+      musclesWorked: musclesWorked,
+      exerciseLabels: exerciseLabels,
+      state: state,
+      difficulty: difficulty,
+      parentVariationExercise: parentVariationExercise,
+    } as ExerciseFormView);
+
   useEffect(() => {
     if (exerciseId) {
       console.log(exerciseId);
-      // ExerciseService.getExerciseFormView(exerciseId).then(res => {
-      //   setForm(res);
-      // })
+      ExerciseService.getExerciseFormView(exerciseId).then((res) => {
+        set_loadedExercise(res);
+        updateForm(res);
+      });
     } else {
-      console.log("new exercise...");
-      set_exercise({} as ExerciseFormView);
+      set_state(ExerciseState.Personal);
     }
   }, []);
 
   const searchExercise = (text: string) => {
+    set_exerciseName(text);
     ExerciseService.searchExerciseLookups(text, ExerciseState.Personal)
       .then((data) => {
         set_exerciseLookups(data);
@@ -56,54 +102,210 @@ function ExerciseForm() {
       });
   };
 
+  const saveForm = () => {
+    ExerciseService.saveExercise(getForm())
+      .then((res) => {
+        console.log(res);
+        alert("SAVED!!!!!!");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("Failed!!!!!!!!!!!");
+      });
+  };
+
   const isNewForm = exerciseId == null;
   const editWorkoutLink = (
     <Link to={AppRoutes.editWorkout()}>creating workouts</Link>
   );
-  const difficultyOptions = getMapKeys(FitnessDifficultyLookup).map(
-    (k: FitnessDifficulty) => (
-      <option key={k} onSelect={() => set_difficulty(k)}>
-        {FitnessDifficultyLookup.get(k)}
-      </option>
+
+  const muscleGroupToLabelMap: { [key: string]: string } = {
+    basic: "Basic",
+    focused: "Focused",
+    trainer: "Trainer Level",
+  };
+
+  const muscleGroupButtons = Object.keys(muscleGroupToLabelMap).map(
+    (k: any) => (
+      <button
+        type="button"
+        key={k}
+        onClick={() => set_activeMuscleGroupBtn(k)}
+        className={`flex-fill btn-sm btn-primary-fade btn-nav mx-0 ${
+          activeMuscleGroupBtn === k ? "active" : ""
+        }`}
+      >
+        {muscleGroupToLabelMap[k]}
+      </button>
     )
   );
+
+  const musclesWorkedSet = new Set(musclesWorked);
+  const exerciseLabelsSet = new Set(exerciseLabels);
+
+  const muscleGroupingComponents = (
+    activeMuscleGroupBtn === "basic" ? BasicMuscleGroups : FocusedMuscleGroups
+  ).map((muscleGroup) => {
+    const selected = musclesWorkedSet?.has(muscleGroup);
+    return (
+      <div key={muscleGroup} className="mx-3 my-2">
+        <SelectablePill
+          content={muscleGroup}
+          selected={selected}
+          key={muscleGroup}
+          onSelect={() =>
+            set_musclesWorked(
+              musclesWorked && !selected
+                ? [...musclesWorked, muscleGroup]
+                : [muscleGroup]
+            )
+          }
+          onDelete={() =>
+            set_musclesWorked(musclesWorked?.filter((x) => x !== muscleGroup))
+          }
+        />
+      </div>
+    );
+  });
+
+  const exerciseLabelComponents = ExerciseLabels.map((label) => {
+    const selected = exerciseLabelsSet?.has(label);
+    return (
+      <div key={label} className="mx-3 my-2">
+        <SelectablePill
+          content={label}
+          selected={selected}
+          key={label}
+          onSelect={() =>
+            set_exerciseLabels(
+              exerciseLabels && !selected ? [...exerciseLabels, label] : [label]
+            )
+          }
+          onDelete={() =>
+            set_exerciseLabels(exerciseLabels?.filter((x) => x !== label))
+          }
+        />
+      </div>
+    );
+  });
 
   return (
     <div className="px-3">
       <h1 className="page-title">{isNewForm ? "New" : "Edit"} Exercise</h1>
       {isNewForm ? (
         <p className="p-3 page-title-subtext">
-          Add an exercise here and use it later when {editWorkoutLink}: where
+          Add an exercise here and use it later when {editWorkoutLink} - where
           you can assign goals, a workout aim and combine them with other
           exercises for a specialized set. If you're confident with this
           exercise and want to share it with the community, you can publish it.
         </p>
       ) : null}
       <hr />
-      <form className="container py-4">
-        <div className="row">
-          <div className="col-md-8 col-12 form-group">
-            <label>Exercise Name</label>
-            <input
-              className="form-control"
-              readOnly={!isNewForm && !nameEditCofirmed}
-              type="text"
-              id="exerciseName"
-              value={exerciseName}
-              onChange={(e) => set_exerciseName(e.target.value)}
+      <form className="py-4">
+        <div className="container pt-2">
+          <h3 className="form-section-title">
+            <span className="text-primary">
+              <FontAwesomeIcon icon={faSitemap} />
+            </span>
+            {" Exercise Summary"}
+          </h3>
+          <hr className="form-section-title-underline" />
+          <div className="row">
+            <div className="col-md-8 col-12 form-group">
+              <label>Exercise Name</label>
+              <input
+                className="form-control form-control-sm"
+                readOnly={!isNewForm && !nameEditCofirmed}
+                type="text"
+                id="exerciseName"
+                value={exerciseName}
+                onChange={(e) => searchExercise(e.target.value)}
+              />
+            </div>
+            <div className="col-md-4 col-12 form-group">
+              <label>Difficulty</label>
+              <select
+                className="form-control form-control-sm"
+                id="difficulty"
+                value={difficulty}
+              >
+                {enumToDropdownOptionsList(
+                  FitnessDifficultyLookup,
+                  set_difficulty
+                )}
+              </select>
+            </div>
+          </div>
+
+          <div className="mt-4 form-group">
+            <label>Exercise Description</label>
+            <textarea
+              className="form-control form-control-sm"
+              rows={4}
+              id="description"
+              value={description}
+              onChange={(e) => set_description(e.target.value)}
             />
           </div>
-          <div className="col-md-4 col-12 form-group">
-            <label>Difficulty</label>
-            <select
-              className="form-control"
-              id="difficulty"
-              value={difficulty}
-              onSelect={(e) => console.log(e)}
-            >
-              {difficultyOptions}
-            </select>
+
+          <div className="form-group pt-4">
+            <label>Exercise Labels</label>
+            <div className="px-5 mt-2 d-flex flex-wrap">
+              {exerciseLabelComponents}
+            </div>
+            <hr className="dim-hr" />
           </div>
+          <p className="mt-2 form-section-subtext">
+            <em>
+              Assigning labels to an exercise allows you (and others if you
+              decide to publish) to group exercises with similar characteristics
+              later, which can help with creating workouts!
+            </em>
+          </p>
+        </div>
+
+        <div className="container pt-2">
+          <h3 className="form-section-title mt-5 ">
+            <span className="text-primary">
+              <FontAwesomeIcon icon={faPerson} />
+            </span>
+            {" Muscle Selection"}
+          </h3>
+          <hr className="form-section-title-underline" />
+          <div className="form-section-subtext">
+            <p className="px-3 pt-3 mb-1">
+              When creating an exercise, you can choose between 3 different
+              muscle group specificity levels{" "}
+            </p>
+            <ul>
+              <li>
+                <strong>Basic</strong> (6 major muscle groups)
+              </li>
+              <li>
+                <strong>Focused</strong> (expanded muscle areas)
+              </li>
+              <li>
+                <strong>Trainer Level</strong> (specific muscles)
+              </li>
+            </ul>
+          </div>
+          <div className="px-5">
+            <div className="d-flex mt-4">{muscleGroupButtons}</div>
+            <div className="form-group mt-2">
+              <div className="selectable-pills-pane">
+                <div className="d-flex flex-wrap py-3">
+                  {muscleGroupingComponents}
+                </div>
+                <hr className="dim-hr" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container d-flex justify-content-end mt-5">
+          <button className="save-btn" type="button" onClick={() => saveForm()}>
+            Save
+          </button>
         </div>
       </form>
     </div>

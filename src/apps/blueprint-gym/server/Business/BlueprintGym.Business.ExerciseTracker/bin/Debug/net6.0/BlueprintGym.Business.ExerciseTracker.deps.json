@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "BlueprintGym.Business.ExerciseTracker/1.0.0": {
         "dependencies": {
+          "BlueprintGym.Business.Shared": "1.0.0",
           "BlueprintGym.Domain.Core": "1.0.0",
           "BlueprintGym.Domain.ExerciseTracker": "1.0.0",
           "BlueprintGym.Infrastructure.Web": "1.0.0",
@@ -1174,6 +1175,20 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "BlueprintGym.Business.Shared/1.0.0": {
+        "dependencies": {
+          "BlueprintGym.Domain.Core": "1.0.0",
+          "BlueprintGym.Infrastructure.Web": "1.0.0",
+          "BlueprintGym.Integration": "1.0.0",
+          "BlueprintGym.Integration.Contracts": "1.0.0",
+          "Microsoft.Azure.Cosmos": "3.19.0",
+          "Serilog.AspNetCore": "4.1.0",
+          "Swashbuckle.AspNetCore": "6.1.4"
+        },
+        "runtime": {
+          "BlueprintGym.Business.Shared.dll": {}
+        }
+      },
       "BlueprintGym.Domain.Constants/1.0.0": {
         "runtime": {
           "BlueprintGym.Domain.Constants.dll": {}
@@ -2128,6 +2143,11 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "BlueprintGym.Business.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "BlueprintGym.Domain.Constants/1.0.0": {
       "type": "project",

@@ -1956,6 +1956,25 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
+      "BlueprintGym.Business.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "BlueprintGym.Domain.Core": "1.0.0",
+          "BlueprintGym.Infrastructure.Web": "1.0.0",
+          "BlueprintGym.Integration": "1.0.0",
+          "BlueprintGym.Integration.Contracts": "1.0.0",
+          "Microsoft.Azure.Cosmos": "3.19.0",
+          "Serilog.AspNetCore": "4.1.0",
+          "Swashbuckle.AspNetCore": "6.1.4"
+        },
+        "compile": {
+          "bin/placeholder/BlueprintGym.Business.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlueprintGym.Business.Shared.dll": {}
+        }
+      },
       "BlueprintGym.Domain.Constants/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -6878,6 +6897,11 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
+    "BlueprintGym.Business.Shared/1.0.0": {
+      "type": "project",
+      "path": "../BlueprintGym.Business.Shared/BlueprintGym.Business.Shared.csproj",
+      "msbuildProject": "../BlueprintGym.Business.Shared/BlueprintGym.Business.Shared.csproj"
+    },
     "BlueprintGym.Domain.Constants/1.0.0": {
       "type": "project",
       "path": "../../Domain/BlueprintGym.Domain.Constants/BlueprintGym.Domain.Constants.csproj",
@@ -6911,6 +6935,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BlueprintGym.Business.Shared >= 1.0.0",
       "BlueprintGym.Domain.Core >= 1.0.0",
       "BlueprintGym.Domain.ExerciseTracker >= 1.0.0",
       "BlueprintGym.Infrastructure.Web >= 1.0.0",
@@ -6946,6 +6971,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/BlueprintGym.Business.Shared/BlueprintGym.Business.Shared.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/BlueprintGym.Business.Shared/BlueprintGym.Business.Shared.csproj"
+            },
             "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Core/BlueprintGym.Domain.Core.csproj": {
               "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Core/BlueprintGym.Domain.Core.csproj"
             },

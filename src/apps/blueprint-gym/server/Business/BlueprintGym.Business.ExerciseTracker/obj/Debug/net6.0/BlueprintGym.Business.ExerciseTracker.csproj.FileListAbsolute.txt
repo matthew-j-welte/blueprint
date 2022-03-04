@@ -25,3 +25,5 @@
 /home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/BlueprintGym.Business.ExerciseTracker/obj/Debug/net6.0/refint/BlueprintGym.Business.ExerciseTracker.dll
 /home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/BlueprintGym.Business.ExerciseTracker/obj/Debug/net6.0/BlueprintGym.Business.ExerciseTracker.pdb
 /home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/BlueprintGym.Business.ExerciseTracker/obj/Debug/net6.0/ref/BlueprintGym.Business.ExerciseTracker.dll
+/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/BlueprintGym.Business.ExerciseTracker/bin/Debug/net6.0/BlueprintGym.Business.Shared.dll
+/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/BlueprintGym.Business.ExerciseTracker/bin/Debug/net6.0/BlueprintGym.Business.Shared.pdb

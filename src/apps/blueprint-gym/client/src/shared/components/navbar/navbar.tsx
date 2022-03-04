@@ -8,6 +8,7 @@ import {
   faBell,
   faChartBar,
   faCogs,
+  faDumbbell,
   faEnvelope,
   faHome,
   faSignOutAlt,
@@ -43,7 +44,7 @@ function Navbar() {
                 className={({ isActive }) => isActiveNav(isActive)}
                 to={AppRoutes.regimenEntryPage()}
               >
-                <FontAwesomeIcon icon={faWeight} />{" "}
+                <FontAwesomeIcon icon={faDumbbell} />{" "}
                 <span className="pl-1">My Regimen</span>
               </NavLink>
               <NavLink

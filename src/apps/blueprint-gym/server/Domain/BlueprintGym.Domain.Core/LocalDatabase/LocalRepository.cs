@@ -19,7 +19,8 @@ namespace BlueprintGym.Domain.Core.LocalDatabase
       this.databaseName = databaseName;
 
       var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "development";
-      var localDbStoragePath = Path.Join(Environment.GetEnvironmentVariable("BLUEPRINT_GYM_PATH"), "local-db", env.ToLower());
+      var blueprintPath = Environment.GetEnvironmentVariable("BLUEPRINT_GYM_PATH");
+      var localDbStoragePath = Path.Join(blueprintPath, "local-db", env.ToLower());
 
       Directory.CreateDirectory(localDbStoragePath);
       localDbStoragePath = Path.Join(localDbStoragePath, "cosmos");

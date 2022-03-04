@@ -39,6 +39,13 @@ export enum MuscleSpecificity {
   Trainer,
 }
 
+export const enumToDropdownOptionsList = (map: Map<any, any>, setter: any) =>
+  getMapKeys(map).map((k) => (
+    <option key={k} onSelect={() => setter(k)}>
+      {FitnessDifficultyLookup.get(k)}
+    </option>
+  ));
+
 export const getMapKeys = (map: Map<any, any>) => {
   const list = [];
   for (const item of map.keys()) {

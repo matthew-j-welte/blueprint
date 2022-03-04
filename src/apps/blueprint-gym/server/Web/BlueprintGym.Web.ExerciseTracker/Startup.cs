@@ -1,4 +1,7 @@
 using AutoMapper;
+using BlueprintGym.Business.ExerciseTracker.Interfaces;
+using BlueprintGym.Business.ExerciseTracker.Mappings;
+using BlueprintGym.Business.ExerciseTracker.Services;
 using BlueprintGym.Domain.ExerciseTracker.Interfaces;
 using BlueprintGym.Domain.ExerciseTracker.Models;
 using BlueprintGym.Domain.ExerciseTracker.Options;
@@ -30,7 +33,7 @@ namespace BlueprintGym.Web.ExerciseTracker
 
       var mapper = new MapperConfiguration(mc =>
       {
-        // mc.AddProfile<ExerciseProfile>();
+        mc.AddProfile<ExerciseProfile>();
       }).CreateMapper();
       services.AddSingleton<IMapper>(mapper);
 
@@ -44,7 +47,7 @@ namespace BlueprintGym.Web.ExerciseTracker
       this.apiStartupSvc.SetDatabaseName(dbOptions.DatabaseName);
       this.apiStartupSvc.SetContainerName(dbOptions.DatabaseContainers.ExerciseContainer.Name);
 
-      this.apiStartupSvc.ConfigureRepository<IExerciseRepository, ExerciseRepository, Exercise>(services);
+      this.apiStartupSvc.ConfigureRepository<IExerciseRepository, ExerciseRepository, Exercise, ExerciseRef>(services);
 
       var isLocalDbMode = this.apiStartupSvc.IsLocalDbMode();
       if (isLocalDbMode)
@@ -57,7 +60,7 @@ namespace BlueprintGym.Web.ExerciseTracker
 
       }
 
-      // services.AddScoped<IExerciseService, ExerciseService>();
+      services.AddScoped<IExerciseService, ExerciseService>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

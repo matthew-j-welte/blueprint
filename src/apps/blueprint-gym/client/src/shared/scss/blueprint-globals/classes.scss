@@ -1,23 +1,183 @@
 @import "./colors.scss";
 @import "./fonts.scss";
+@import "./mixins.scss";
 
 .page-title {
-  font-size: 72px;
+  font-size: 92px;
   padding-left: 24px;
   padding-top: 24px;
   color: $pageTitle;
-  font-family: $thin-modern-title;
-  font-weight: 200;
-  text-align: left;
+  font-family: $thin-allcaps-subtitle;
+  font-weight: 100;
 }
 
 .page-title-subtext {
+  margin-top: -24px;
+  padding-top: 0px;
+  margin-left: 24px;
+  font-family: $thin-modern-title;
+  font-weight: 100;
+  font-size: 16px;
+  color: rgb(27, 27, 27);
+  width: 70%;
+}
+
+.form-section-title {
+  font-size: 36px;
+  color: $formSectionTitle;
   font-family: $thin-allcaps-subtitle;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+label {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 15px;
   color: rgb(27, 27, 27);
 }
 
-.form-group {
-  padding: 8px;
+.btn-primary {
+  background-color: $textPrimary;
+  border: unset;
+}
+
+.btn-nav {
+  border-radius: unset;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.btn-primary.active {
+  background-color: $textPrimary2;
+  box-shadow: unset !important;
+  outline: unset !important;
+}
+
+.btn-primary:hover {
+  background-color: $textPrimary1;
+}
+
+.btn-primary:focus {
+  background-color: $textPrimary2;
+  box-shadow: unset !important;
+  outline: none !important;
+}
+
+.btn-primary-fade {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgb(224, 224, 224);
+}
+
+.btn-primary-fade.active {
+  background: $textPrimary_topFade;
+  color: $textPrimary;
+  border-left: 1px solid $textPrimary;
+  border-right: 1px solid $textPrimary;
+  box-shadow: unset !important;
+  outline: unset !important;
+  font-weight: 400;
+}
+
+.btn-primary-fade:hover {
+  background: $textPrimary_topFade;
+}
+
+.btn-primary-fade:focus {
+  background: $textPrimary_topFade;
+  box-shadow: unset !important;
+  outline: none !important;
+}
+
+.form-section-title-underline {
+  @include left-middle-right-gradient-hr(
+    rgb(187, 187, 187),
+    rgb(187, 187, 187),
+    transparent
+  );
+  margin-top: -8px;
+}
+
+.dim-hr {
+  @include colored-hr(rgb(187, 187, 187));
+}
+
+.selectable-pill {
+  background-color: $pillBackground;
+  font-weight: 300;
+  font-size: 13px;
+  border-radius: 6px;
+  box-shadow: 0px 1px 3px 0px #00000080;
+  border: none !important;
+  outline: none !important;
+  transition: all 0.1s ease-in-out;
+
+  .pill-end-icon-holder {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+}
+
+.selectable-pill:disabled {
+  opacity: 50%;
+}
+
+.selectable-pill:hover {
+  background-color: $pillBackground1;
+  box-shadow: 0px 1px 5px 0px #00000080;
+  border: none !important;
+  outline: none !important;
+
+  .pill-end-icon-holder {
+    opacity: 1;
+  }
+}
+
+.pill-end-icon-holder {
+  width: 8px;
+}
+
+.selectable-pill-selected {
+  background-color: $selectedPillBackground;
+  box-shadow: 0px 1px 3px 0px #1f63bb;
+  font-weight: 400;
+}
+
+.selectable-pill-selected:hover {
+  background-color: $selectedPillHover;
+  box-shadow: 0px 1px 5px 0px #bb1f1f;
+}
+
+.form-section-subtext {
+  padding: 0;
+  margin: 0;
+  margin-top: -20px;
+  font-family: $thin-modern-title;
+  font-weight: 100;
+  font-size: 14px;
+  color: rgb(27, 27, 27);
+  width: 80%;
+}
+
+.save-btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 0px;
+  border: unset;
+  outline: unset;
+  color: white;
+  background-color: $themeColorBlue;
+  box-shadow: 0 4px 8px 2px $themeColorBlue_seeThrough;
+  font-family: $thin-modern-title;
+  font-weight: 400;
+  font-size: 16px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.save-btn:hover {
+  box-shadow: 0 4px 12px 4px $themeColorBlue_seeThrough;
+}
+
+.text-primary {
+  color: $textPrimary !important;
 }
