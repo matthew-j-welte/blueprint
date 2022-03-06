@@ -19,7 +19,6 @@
   font-weight: 100;
   font-size: 16px;
   color: rgb(27, 27, 27);
-  width: 70%;
 }
 
 .form-section-title {
@@ -41,12 +40,6 @@ label {
   border: unset;
 }
 
-.btn-nav {
-  border-radius: unset;
-  font-weight: 300;
-  font-size: 15px;
-}
-
 .btn-primary.active {
   background-color: $textPrimary2;
   box-shadow: unset !important;
@@ -61,6 +54,35 @@ label {
   background-color: $textPrimary2;
   box-shadow: unset !important;
   outline: none !important;
+}
+
+.btn-secondary {
+  background-color: $textSecondary;
+  border: unset;
+  transition: all 0.1s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: $textSecondary1;
+}
+
+.btn-secondary:focus {
+  background-color: $textSecondary1;
+  box-shadow: unset !important;
+  outline: none !important;
+}
+
+.btn-secondary.active {
+  background-color: $textSecondary2;
+  box-shadow: 0px -1px 3px 2px $textSecondary2_seeThrough !important;
+  outline: unset !important;
+  font-weight: bolder;
+}
+
+.btn-nav {
+  border-radius: unset;
+  font-weight: 300;
+  font-size: 15px;
 }
 
 .btn-primary-fade {
@@ -90,11 +112,7 @@ label {
 }
 
 .form-section-title-underline {
-  @include left-middle-right-gradient-hr(
-    rgb(187, 187, 187),
-    rgb(187, 187, 187),
-    transparent
-  );
+  @include left-middle-right-gradient-hr(rgb(187, 187, 187), rgb(187, 187, 187), transparent);
   margin-top: -8px;
 }
 
@@ -119,7 +137,21 @@ label {
 }
 
 .selectable-pill:disabled {
-  opacity: 50%;
+  cursor: default;
+  font-weight: 400;
+  opacity: 70%;
+  background-color: $themeColorBlue;
+  color: whitesmoke;
+  box-shadow: 0px 2px 3px 0px inset #00000080;
+}
+
+.selectable-pill:disabled:hover {
+  cursor: default;
+  opacity: 70%;
+  font-weight: 400;
+  background-color: $themeColorBlue;
+  color: whitesmoke;
+  box-shadow: 0px 2px 3px 0px inset #00000080;
 }
 
 .selectable-pill:hover {
@@ -144,8 +176,8 @@ label {
 }
 
 .selectable-pill-selected:hover {
-  background-color: $selectedPillHover;
-  box-shadow: 0px 1px 5px 0px #bb1f1f;
+  background-color: $selectedPillBackground1;
+  box-shadow: 0px 1px 3px 0px #1f63bbb7;
 }
 
 .form-section-subtext {
@@ -156,7 +188,6 @@ label {
   font-weight: 100;
   font-size: 14px;
   color: rgb(27, 27, 27);
-  width: 80%;
 }
 
 .save-btn {
@@ -180,4 +211,99 @@ label {
 
 .text-primary {
   color: $textPrimary !important;
+}
+
+.text-secondary {
+  color: $textSecondary !important;
+}
+
+.nounderline {
+  text-decoration: none !important;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.less-thin {
+  font-weight: 300;
+}
+
+.workout-exercise-selection-panel {
+  background-color: $sunkenPanelBackground;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.315);
+}
+
+.space-1 {
+  width: 1px;
+}
+
+.space-5 {
+  width: 5px;
+}
+
+.space-10 {
+  width: 10px;
+}
+
+.space-20 {
+  width: 20px;
+}
+
+.unit-label {
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.number-input-without-arrows input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.number-input-without-arrows input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.table-row-header {
+  font-family: $thin-allcaps-subtitle;
+
+  h5 {
+    font-weight: 400;
+  }
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.small {
+  font-size: 0.9em;
+}
+
+.datepicker {
+  height: 38px;
+}
+
+.datepicker:focus {
+  border: 1px solid lightgrey !important;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $textPrimary_glow;
+}
+
+.see-through-75 {
+  opacity: 75%;
+}
+
+.see-through-50 {
+  opacity: 50%;
+}
+
+.see-through-25 {
+  opacity: 25%;
+}
+
+.bigger {
+  font-size: 1.1em;
 }

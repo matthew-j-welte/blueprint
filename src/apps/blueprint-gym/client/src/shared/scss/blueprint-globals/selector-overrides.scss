@@ -1,0 +1,12 @@
+@import "./colors.scss";
+
+.form-control {
+  border: 1px solid lightgrey !important;
+  outline: 0 !important;
+}
+
+.form-control:focus {
+  border: 1px solid lightgrey;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px $textPrimary_glow !important;
+}

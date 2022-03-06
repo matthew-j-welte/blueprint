@@ -57,3 +57,8 @@ Tasks
 
 - Pagination for all models that need it!!!
 - Be able to move a published exercise to "Your Exercise Library"
+- Create a well organized blueprint UI toolkit to ensure the components themselves are very straightforward when it comes to classes/styling/theming.
+  - This includes tossing reusable functionality into components.. we shouldnt have to be re-using classes all over the place (other than the helper classes for things like space-5, no-underline)
+  - We should be relying on reusable components first, then start thinking about common classes/styling.
+  - Make sure to use mixins to reduce class code
+- Create a reusable table/grid component

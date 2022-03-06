@@ -15,7 +15,7 @@ namespace BlueprintGym.Domain.ExerciseTracker.Repositories
       this.baseRefRepository = baseRefRepository;
     }
 
-    public IBaseRepository<Exercise> Base => this.baseRepository;
-    public IBaseRepository<ExerciseRef> RefBase => this.baseRefRepository;
+    public IBaseRepository<Exercise> Exercise => this.baseRepository;
+    public IBaseRepository<ExerciseRef> ExerciseRef => this.baseRefRepository;
   }
 }

@@ -190,6 +190,37 @@ namespace BlueprintGym.Infrastructure.Web.Startup
       });
     }
 
+    public void ConfigureRepository<T1, T2, T3, T4, T5, T6>(IServiceCollection services)
+      where T1 : class
+      where T3 : ICosmosEntity
+      where T4 : ICosmosEntity
+      where T5 : ICosmosEntity
+      where T6 : ICosmosEntity
+    {
+      services.AddScoped<T1>(provider =>
+      {
+        return Activator.CreateInstance(typeof(T2), new object[]
+        {
+          new BaseRepository<T3>(
+            provider.GetService<IDatabaseRepositoryFactory>(),
+            this.dbName,
+            this.containerName),
+          new BaseRepository<T4>(
+            provider.GetService<IDatabaseRepositoryFactory>(),
+            this.dbName,
+            this.containerName),
+          new BaseRepository<T5>(
+            provider.GetService<IDatabaseRepositoryFactory>(),
+            this.dbName,
+            this.containerName),
+          new BaseRepository<T6>(
+            provider.GetService<IDatabaseRepositoryFactory>(),
+            this.dbName,
+            this.containerName)
+        }) as T1;
+      });
+    }
+
     public void ConfigureReferenceRepository<T>(IServiceCollection services)
       where T : ICosmosEntity
     {

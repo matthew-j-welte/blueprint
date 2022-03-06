@@ -10,10 +10,10 @@ namespace BlueprintGym.Business.WorkoutTracker.Models
   {
     public string WorkoutId { get; set; }
     public string WorkoutName { get; set; }
-    public string MemberId { get; set; }
+    public string WorkoutDescription { get; set; }
     public FitnessDifficulty Difficulty { get; set; }
     public IEnumerable<WorkoutExerciseAssignment> ExerciseAssignments { get; set; }
     public IEnumerable<ExerciseLink> BackupExercises { get; set; }
-    public WorkoutOrigin WorkoutOrigin { get; set; }
+    public IEnumerable<string> WorkoutLabels { get; set; }
   }
 }

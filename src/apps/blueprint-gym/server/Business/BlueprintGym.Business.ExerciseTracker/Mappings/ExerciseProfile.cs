@@ -10,10 +10,13 @@ namespace BlueprintGym.Business.ExerciseTracker.Mappings
     public ExerciseProfile()
     {
       CreateMap<ExerciseFormView, ExerciseRef>()
-        .ForMember(x => x.DescriptionSnippet, options => options.MapFrom(x => x.Description.Substring(0, 100)));
+        .ForMember(x => x.DescriptionSnippet, options => options.MapFrom(x => x.Description.Length > 100 ? x.Description.Substring(0, 100) : x.Description));
+      CreateMap<Exercise, ExerciseRef>()
+        .ForMember(x => x.DescriptionSnippet, options => options.MapFrom(x => x.Description.Length > 100 ? x.Description.Substring(0, 100) : x.Description));
 
       CreateMap<ExerciseRef, ExerciseLookupDto>().ReverseMap();
       CreateMap<ExerciseFormView, Exercise>().ReverseMap();
+
     }
   }
 

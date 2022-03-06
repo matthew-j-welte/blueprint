@@ -22,3 +22,11 @@ export interface WorkoutLink {
   workoutId: string;
   workoutName: string;
 }
+
+export interface WorkoutLookupDto {
+  workoutId: string;
+  workoutName: string;
+  exerciseCount: number;
+  musclesWorked: string[];
+  labels: string[];
+}

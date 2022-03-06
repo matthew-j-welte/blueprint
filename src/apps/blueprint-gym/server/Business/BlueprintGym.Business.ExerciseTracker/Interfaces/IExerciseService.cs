@@ -12,6 +12,8 @@ namespace BlueprintGym.Business.ExerciseTracker.Interfaces
     Task<ExerciseFormView> GetExercise(string exerciseId);
     Task<ExerciseFormView> SaveExercise(ExerciseFormView exercise);
     Task<bool> DeleteExercise(string exerciseId);
+    Task<IEnumerable<ExerciseLink>> GetAllExerciseLinks(ExerciseState searchType);
+    Task<IEnumerable<ExerciseLookupDto>> GetAllExerciseLookups(ExerciseState searchType);
     Task<IEnumerable<ExerciseLink>> SearchExerciseLinksByName(string name, ExerciseState searchType);
     Task<IEnumerable<ExerciseLookupDto>> SearchExerciseLookupsByName(string name, ExerciseState searchType);
   }

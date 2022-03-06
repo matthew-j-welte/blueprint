@@ -9,9 +9,16 @@ namespace BlueprintGym.Domain.WorkoutTracker.Models.Containers
     public string SpecialSetIdentifier { get; set; }
     public string ExerciseId { get; set; }
     public string ExerciseName { get; set; }
-    public int AimBonusCutoff { get; set; }
-    public ExerciseAim ExerciseAim { get; set; }
+    public ExerciseAimInfo HeavyAim { get; set; }
+    public ExerciseAimInfo ConditionedAim { get; set; }
+    public ExerciseAimInfo DurableAim { get; set; }
     public SpecializedSetType? SpecializedSetType { get; set; }
     public IEnumerable<string> MusclesWorked { get; set; }
+  }
+
+  public class ExerciseAimInfo
+  {
+    public int AimBonusCutoff { get; set; }
+    public ExerciseAim ExerciseAim { get; set; }
   }
 }

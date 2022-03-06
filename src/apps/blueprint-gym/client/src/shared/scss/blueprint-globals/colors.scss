@@ -8,7 +8,7 @@ $background: rgb(241, 242, 246);
 $sunkenPanelBackground: rgb(243, 244, 246);
 
 $selectedPillBackground: rgb(232, 240, 246);
-$selectedPillBackground1: rgb(246, 251, 255);
+$selectedPillBackground1: rgb(235, 243, 249);
 $pillBackground: rgb(246, 249, 255);
 $pillBackground1: rgb(249, 251, 255);
 $selectedPillHover: rgb(246, 232, 232);
@@ -20,24 +20,24 @@ $textPrimary: $themeColorBlue;
 $textPrimary1: rgb(20, 117, 173);
 $textPrimary2: rgb(30, 135, 195);
 
+$textSecondary: rgb(30, 133, 180);
+$textSecondary1: rgb(40, 145, 192);
+$textSecondary2: rgb(50, 157, 210);
+
+$textSecondary_seeThrough: rgba(30, 133, 180, 0.25);
+$textSecondary1_seeThrough: rgba(40, 145, 192, 0.25);
+$textSecondary2_seeThrough: rgba(50, 157, 210, 0.25);
+
 $textPrimary_seeThrough: rgba(34, 137, 197, 0.1);
 $textPrimary_seeThrough1: rgba(57, 163, 224, 0.1);
 $textPrimary_seeThrough2: rgba(80, 191, 255, 0.1);
 
-$textPrimary_topFade: linear-gradient(
-  0deg,
-  $textPrimary_seeThrough2 0%,
-  transparent 100%
-);
-$textPrimary_topFade1: linear-gradient(
-  0deg,
-  $textPrimary_seeThrough2 0%,
-  transparent 70%
-);
-$textPrimary_topFade2: linear-gradient(
-  0deg,
-  $textPrimary_seeThrough2 0%,
-  transparent 50%
-);
+$textPrimary_glow: rgba(34, 137, 197, 0.4);
+$textPrimary_glow1: rgba(57, 163, 224, 0.4);
+$textPrimary_glow2: rgba(80, 191, 255, 0.4);
+
+$textPrimary_topFade: linear-gradient(0deg, $textPrimary_seeThrough2 0%, transparent 100%);
+$textPrimary_topFade1: linear-gradient(0deg, $textPrimary_seeThrough2 0%, transparent 70%);
+$textPrimary_topFade2: linear-gradient(0deg, $textPrimary_seeThrough2 0%, transparent 50%);
 
 $textPrimaryFaded: rgba(12, 98, 148, 0.5);

@@ -1,17 +1,12 @@
-import {
-  ExerciseAim,
-  FitnessDifficulty,
-  MuscleSpecificity,
-  SpecializedSetType,
-  WorkoutOrigin,
-} from "./enums.model";
+import { ExerciseAim, FitnessDifficulty, MuscleSpecificity, SpecializedSetType } from "./enums.model";
 import { ExerciseLink } from "./exercise.model";
 import { BaseEntityModel, WorkoutLink } from "./shared.model";
 
-export interface RegimenFormView {
+export interface RegimenFormView extends BaseEntityModel {
   regimenId: string;
   regimenName: string;
   difficulty: FitnessDifficulty;
+  regimenDescription: string;
   startDate: Date;
   endDate: Date;
   workouts: WorkoutLink[];
@@ -21,11 +16,11 @@ export interface RegimenFormView {
 export interface WorkoutDto extends BaseEntityModel {
   workoutId: string;
   workoutName: string;
-  memberId: string;
+  workoutDescription: string;
   difficulty: FitnessDifficulty;
   exerciseAssignments: WorkoutExerciseAssignment[];
   backupExercises: ExerciseLink[];
-  workoutOrigin: WorkoutOrigin;
+  workoutLabels: string[];
 }
 
 export interface WorkoutEntryFormView extends BaseEntityModel {
@@ -58,8 +53,15 @@ export interface WorkoutExerciseAssignment {
   specialSetIdentifier: string;
   exerciseId: string;
   exerciseName: string;
-  aimBonusCutoff: number;
-  exerciseAim: ExerciseAim;
+  heavyAim: ExerciseAimInfo;
+  conditionedAim: ExerciseAimInfo;
+  durableAim: ExerciseAimInfo;
   specializedSetType: SpecializedSetType | null;
   musclesWorked: string[];
+}
+
+export interface ExerciseAimInfo {
+  aimBonusCutoff: number;
+  exerciseAim: ExerciseAim;
+  aimUnit: string;
 }

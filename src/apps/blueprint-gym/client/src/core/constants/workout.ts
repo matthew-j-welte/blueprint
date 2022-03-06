@@ -1,15 +1,10 @@
-export const BasicMuscleGroups = [
-  "Chest",
-  "Shoulders",
-  "Back",
-  "Arms",
-  "Abs",
-  "Legs",
-];
+export const BasicMuscleGroups = ["Chest", "Shoulders", "Back", "Arms", "Abs", "Legs"];
 
 export const FocusedMuscleGroups = [
   "Lower Chest",
   "Upper Chest",
+  "Lower Back",
+  "Upper Back",
   "Shoulders",
   "Biceps",
   "Triceps",
@@ -36,4 +31,15 @@ export const ExerciseLabels = [
   "Weight Loss",
   "6-pack",
   "BFA (Big Fat Ass)",
+];
+
+export const WorkoutLabels = [
+  "Cardio",
+  "Kettlebells",
+  "Resistance Bands",
+  "Outdoors",
+  "Weight Loss",
+  "6-pack",
+  "Under 30 Minutes",
+  "Cant Walk After",
 ];

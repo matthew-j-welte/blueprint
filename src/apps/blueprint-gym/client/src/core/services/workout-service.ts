@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { WorkoutLink } from "../models/shared.model";
+import { WorkoutLink, WorkoutLookupDto } from "../models/shared.model";
 import { WorkoutFormView } from "../models/workout.model";
 
 const instance = axios.create({
@@ -17,12 +17,11 @@ const requests = {
 
 export const WorkoutService = {
   // workout
-  getWorkoutFormView: (workoutId: string): Promise<WorkoutFormView> =>
-    requests.get(`get/${workoutId}`),
-  saveWorkout: (workout: WorkoutFormView): Promise<WorkoutFormView> =>
-    requests.put("save", workout),
-  deleteWorkout: (workoutId: string): Promise<boolean> =>
-    requests.delete(`delete/${workoutId}`),
-  searchWorkoutLinks: (name: string): Promise<WorkoutLink[]> =>
-    requests.get(`search/links/${name}`),
+  getWorkoutFormView: (workoutId: string): Promise<WorkoutFormView> => requests.get(`get/${workoutId}`),
+  saveWorkout: (workout: WorkoutFormView): Promise<WorkoutFormView> => requests.put("save", workout),
+  deleteWorkout: (workoutId: string): Promise<boolean> => requests.delete(`delete/${workoutId}`),
+  searchWorkoutLinks: (name: string): Promise<WorkoutLink[]> => requests.get(`search/links/${name}`),
+  searchWorkoutLookups: (name: string): Promise<WorkoutLookupDto[]> => requests.get(`search/links/${name}`),
+  getAllWorkoutLinks: (): Promise<WorkoutLink[]> => requests.get("search/all-links"),
+  getAllWorkoutLookups: (): Promise<WorkoutLookupDto[]> => requests.get("search/all-lookups"),
 };

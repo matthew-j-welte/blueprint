@@ -1,24 +1,28 @@
 export interface SelectablePillInput {
-  onSelect: () => any;
-  onDelete: () => any;
+  onSelect?: () => any | undefined;
+  onDelete?: () => any | undefined;
   selected: boolean;
   content: any;
+  seeThrough?: boolean | undefined;
 }
 
 function SelectablePill(props: SelectablePillInput) {
   return (
-    <button
-      type="button"
-      key={props.content}
-      onClick={() =>
-        props.selected === false ? props.onSelect() : props.onDelete()
-      }
-      className={`pt-2 pb-1 px-5 text-center selectable-pill d-flex ${
-        props.selected ? "selectable-pill-selected" : ""
-      }`}
-    >
-      {props.content}
-    </button>
+    <div>
+      <button
+        type="button"
+        key={props.content}
+        disabled={props.onSelect == undefined && props.onDelete == undefined}
+        onClick={() =>
+          props.selected === false && props.onSelect ? props.onSelect() : props.onDelete ? props.onDelete() : null
+        }
+        className={`pt-2 pb-1 px-5 text-center selectable-pill d-flex ${
+          props.selected ? "selectable-pill-selected" : ""
+        }`}
+      >
+        {props.content}
+      </button>
+    </div>
   );
 }
 

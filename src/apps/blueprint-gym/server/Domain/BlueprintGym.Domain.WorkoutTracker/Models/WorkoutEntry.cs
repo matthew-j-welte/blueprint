@@ -7,7 +7,7 @@ namespace BlueprintGym.Domain.WorkoutTracker.Models
 {
   public class WorkoutEntry : CosmosEntity, ICosmosEntity
   {
-    public override PartitionKey PK => new PartitionKey($"{this.GetType().Name}-{this.WorkoutId}");
+    public override string PK => $"{this.GetType().Name}-{this.WorkoutId}";
     public string WorkoutId { get; set; }
     public string RegimenId { get; set; }
     public int WorkoutIndex { get; set; }

@@ -1,43 +1,29 @@
 import { useEffect, useState } from "react";
 import { ExerciseLookupDto } from "../../core/models/shared.model";
-import {
-  ExerciseFormView,
-  ExerciseLink,
-} from "../../core/models/exercise.model";
+import { ExerciseFormView, ExerciseLink } from "../../core/models/exercise.model";
 import { ExerciseService } from "../../core/services/exercise-service";
 import {
-  enumToDropdownOptionsList,
+  enumToSelectOptions,
   ExerciseState,
   FitnessDifficulty,
   FitnessDifficultyLookup,
+  MuscleGroupToLabelMap,
+  MuscleSpecificity,
 } from "../../core/models/enums.model";
 import "../../shared/scss/blueprint-globals/all.scss";
 import { Link, useParams } from "react-router-dom";
 import { AppRoutes } from "../../core/constants/routes";
-import {
-  BasicMuscleGroups,
-  ExerciseLabels,
-  FocusedMuscleGroups,
-} from "../../core/constants/workout";
-import {
-  faLayerGroup,
-  faMultiply,
-  faPerson,
-  faSitemap,
-} from "@fortawesome/free-solid-svg-icons";
+import { BasicMuscleGroups, ExerciseLabels, FocusedMuscleGroups } from "../../core/constants/workout";
+import { faPerson, faSitemap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SelectablePill from "../../shared/components/selectable-pill/selectable-pill";
-
-declare type MuscleGroupings = "basic" | "focused" | "trainer";
+import Select from "react-select";
 
 function ExerciseForm() {
   const { exerciseId } = useParams();
   const [nameEditCofirmed, set_nameEditCofirmed] = useState(false);
-  const [activeMuscleGroupBtn, set_activeMuscleGroupBtn] =
-    useState<MuscleGroupings>("focused");
-  const [exerciseLookups, set_exerciseLookups] = useState<ExerciseLookupDto[]>(
-    []
-  );
+  const [activeMuscleGroupBtn, set_activeMuscleGroupBtn] = useState(MuscleSpecificity.Focused);
+  const [exerciseLookups, set_exerciseLookups] = useState<ExerciseLookupDto[]>([]);
 
   // exercise
   const [id, set_id] = useState<string | null>();
@@ -47,9 +33,8 @@ function ExerciseForm() {
   const [musclesWorked, set_musclesWorked] = useState<string[]>();
   const [exerciseLabels, set_exerciseLabels] = useState<string[]>();
   const [state, set_state] = useState<ExerciseState>();
-  const [difficulty, set_difficulty] = useState<FitnessDifficulty>();
-  const [parentVariationExercise, set_parentVariationExercise] =
-    useState<ExerciseLink>();
+  const [difficulty, set_difficulty] = useState<FitnessDifficulty>(FitnessDifficulty.Beginner);
+  const [parentVariationExercise, set_parentVariationExercise] = useState<ExerciseLink>();
 
   const [loadedExercise, set_loadedExercise] = useState<ExerciseFormView>();
 
@@ -93,20 +78,22 @@ function ExerciseForm() {
 
   const searchExercise = (text: string) => {
     set_exerciseName(text);
-    ExerciseService.searchExerciseLookups(text, ExerciseState.Personal)
-      .then((data) => {
-        set_exerciseLookups(data);
-      })
-      .catch((err) => {
-        alert(err);
-      });
+    if (text) {
+      ExerciseService.searchExerciseLookups(text, ExerciseState.Personal)
+        .then((data) => {
+          set_exerciseLookups(data);
+        })
+        .catch((err) => {
+          alert(err);
+        });
+    }
   };
 
   const saveForm = () => {
+    console.log(getForm());
     ExerciseService.saveExercise(getForm())
       .then((res) => {
         console.log(res);
-        alert("SAVED!!!!!!");
       })
       .catch((err) => {
         console.log(err);
@@ -115,36 +102,24 @@ function ExerciseForm() {
   };
 
   const isNewForm = exerciseId == null;
-  const editWorkoutLink = (
-    <Link to={AppRoutes.editWorkout()}>creating workouts</Link>
-  );
+  const editWorkoutLink = <Link to={AppRoutes.editWorkout()}>creating workouts</Link>;
 
-  const muscleGroupToLabelMap: { [key: string]: string } = {
-    basic: "Basic",
-    focused: "Focused",
-    trainer: "Trainer Level",
-  };
-
-  const muscleGroupButtons = Object.keys(muscleGroupToLabelMap).map(
-    (k: any) => (
-      <button
-        type="button"
-        key={k}
-        onClick={() => set_activeMuscleGroupBtn(k)}
-        className={`flex-fill btn-sm btn-primary-fade btn-nav mx-0 ${
-          activeMuscleGroupBtn === k ? "active" : ""
-        }`}
-      >
-        {muscleGroupToLabelMap[k]}
-      </button>
-    )
-  );
+  const muscleGroupButtons = Object.keys(MuscleGroupToLabelMap).map((k: any) => (
+    <button
+      type="button"
+      key={k}
+      onClick={() => set_activeMuscleGroupBtn(k)}
+      className={`flex-fill btn-sm btn-primary-fade btn-nav mx-0 ${activeMuscleGroupBtn === k ? "active" : ""}`}
+    >
+      {MuscleGroupToLabelMap[k]}
+    </button>
+  ));
 
   const musclesWorkedSet = new Set(musclesWorked);
   const exerciseLabelsSet = new Set(exerciseLabels);
 
   const muscleGroupingComponents = (
-    activeMuscleGroupBtn === "basic" ? BasicMuscleGroups : FocusedMuscleGroups
+    activeMuscleGroupBtn === MuscleSpecificity.Basic ? BasicMuscleGroups : FocusedMuscleGroups
   ).map((muscleGroup) => {
     const selected = musclesWorkedSet?.has(muscleGroup);
     return (
@@ -154,15 +129,9 @@ function ExerciseForm() {
           selected={selected}
           key={muscleGroup}
           onSelect={() =>
-            set_musclesWorked(
-              musclesWorked && !selected
-                ? [...musclesWorked, muscleGroup]
-                : [muscleGroup]
-            )
+            set_musclesWorked(musclesWorked && !selected ? [...musclesWorked, muscleGroup] : [muscleGroup])
           }
-          onDelete={() =>
-            set_musclesWorked(musclesWorked?.filter((x) => x !== muscleGroup))
-          }
+          onDelete={() => set_musclesWorked(musclesWorked?.filter((x) => x !== muscleGroup))}
         />
       </div>
     );
@@ -176,14 +145,8 @@ function ExerciseForm() {
           content={label}
           selected={selected}
           key={label}
-          onSelect={() =>
-            set_exerciseLabels(
-              exerciseLabels && !selected ? [...exerciseLabels, label] : [label]
-            )
-          }
-          onDelete={() =>
-            set_exerciseLabels(exerciseLabels?.filter((x) => x !== label))
-          }
+          onSelect={() => set_exerciseLabels(exerciseLabels && !selected ? [...exerciseLabels, label] : [label])}
+          onDelete={() => set_exerciseLabels(exerciseLabels?.filter((x) => x !== label))}
         />
       </div>
     );
@@ -194,10 +157,9 @@ function ExerciseForm() {
       <h1 className="page-title">{isNewForm ? "New" : "Edit"} Exercise</h1>
       {isNewForm ? (
         <p className="p-3 page-title-subtext">
-          Add an exercise here and use it later when {editWorkoutLink} - where
-          you can assign goals, a workout aim and combine them with other
-          exercises for a specialized set. If you're confident with this
-          exercise and want to share it with the community, you can publish it.
+          Add an exercise here and use it later when {editWorkoutLink} - where you can assign goals, a workout aim and
+          combine them with other exercises for a specialized set. If you're confident with this exercise and want to
+          share it with the community, you can publish it.
         </p>
       ) : null}
       <hr />
@@ -214,26 +176,21 @@ function ExerciseForm() {
             <div className="col-md-8 col-12 form-group">
               <label>Exercise Name</label>
               <input
-                className="form-control form-control-sm"
+                className="form-control"
                 readOnly={!isNewForm && !nameEditCofirmed}
                 type="text"
                 id="exerciseName"
+                name="exerciseName"
                 value={exerciseName}
                 onChange={(e) => searchExercise(e.target.value)}
               />
             </div>
             <div className="col-md-4 col-12 form-group">
               <label>Difficulty</label>
-              <select
-                className="form-control form-control-sm"
-                id="difficulty"
-                value={difficulty}
-              >
-                {enumToDropdownOptionsList(
-                  FitnessDifficultyLookup,
-                  set_difficulty
-                )}
-              </select>
+              <Select
+                options={enumToSelectOptions<FitnessDifficulty>(FitnessDifficultyLookup)}
+                onChange={(e) => set_difficulty(e?.value)}
+              />
             </div>
           </div>
 
@@ -242,6 +199,7 @@ function ExerciseForm() {
             <textarea
               className="form-control form-control-sm"
               rows={4}
+              name="description"
               id="description"
               value={description}
               onChange={(e) => set_description(e.target.value)}
@@ -250,16 +208,13 @@ function ExerciseForm() {
 
           <div className="form-group pt-4">
             <label>Exercise Labels</label>
-            <div className="px-5 mt-2 d-flex flex-wrap">
-              {exerciseLabelComponents}
-            </div>
+            <div className="px-5 mt-2 d-flex flex-wrap">{exerciseLabelComponents}</div>
             <hr className="dim-hr" />
           </div>
           <p className="mt-2 form-section-subtext">
             <em>
-              Assigning labels to an exercise allows you (and others if you
-              decide to publish) to group exercises with similar characteristics
-              later, which can help with creating workouts!
+              Assigning labels to an exercise allows you (and others if you decide to publish) to group exercises with
+              similar characteristics later, which can help with creating workouts!
             </em>
           </p>
         </div>
@@ -274,8 +229,7 @@ function ExerciseForm() {
           <hr className="form-section-title-underline" />
           <div className="form-section-subtext">
             <p className="px-3 pt-3 mb-1">
-              When creating an exercise, you can choose between 3 different
-              muscle group specificity levels{" "}
+              When creating an exercise, you can choose between 3 different muscle group specificity levels{" "}
             </p>
             <ul>
               <li>
@@ -292,10 +246,14 @@ function ExerciseForm() {
           <div className="px-5">
             <div className="d-flex mt-4">{muscleGroupButtons}</div>
             <div className="form-group mt-2">
+              <label className="mt-2">
+                Muscle Specificity:{" "}
+                <strong>
+                  <em>{MuscleGroupToLabelMap[activeMuscleGroupBtn]}</em>
+                </strong>
+              </label>
               <div className="selectable-pills-pane">
-                <div className="d-flex flex-wrap py-3">
-                  {muscleGroupingComponents}
-                </div>
+                <div className="d-flex flex-wrap py-3">{muscleGroupingComponents}</div>
                 <hr className="dim-hr" />
               </div>
             </div>

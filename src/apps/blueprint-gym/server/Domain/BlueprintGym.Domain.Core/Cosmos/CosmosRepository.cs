@@ -21,7 +21,7 @@ namespace BlueprintGym.Domain.Core.Cosmos
     public async Task<T> AddAsync(T entity)
     {
       entity.ModifiedOn = DateTimeOffset.UtcNow;
-      return (await this.container.CreateItemAsync(entity, entity.PK).ConfigureAwait(false)).Resource;
+      return (await this.container.CreateItemAsync(entity, new PartitionKey(entity.PK)).ConfigureAwait(false)).Resource;
     }
 
     public async Task DeleteByIdAsync(string id, string partiionKey)
@@ -62,7 +62,7 @@ namespace BlueprintGym.Domain.Core.Cosmos
       try
       {
         var partitionKey = ((T)Activator.CreateInstance(typeof(T))).PK;
-        return (await this.container.ReadItemAsync<T>(id, partitionKey).ConfigureAwait(false)).Resource;
+        return (await this.container.ReadItemAsync<T>(id, new PartitionKey(partitionKey)).ConfigureAwait(false)).Resource;
       }
       catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
       {
@@ -111,7 +111,7 @@ namespace BlueprintGym.Domain.Core.Cosmos
     public async Task<T> UpsertAsync(T entity)
     {
       entity.ModifiedOn = DateTimeOffset.UtcNow;
-      return (await this.container.UpsertItemAsync(entity, entity.PK).ConfigureAwait(false)).Resource;
+      return (await this.container.UpsertItemAsync(entity, new PartitionKey(entity.PK)).ConfigureAwait(false)).Resource;
     }
   }
 }

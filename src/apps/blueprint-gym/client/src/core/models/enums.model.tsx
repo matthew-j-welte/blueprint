@@ -15,7 +15,6 @@ export enum FitnessDifficulty {
 
 export enum ExerciseAim {
   Heavy,
-  Balanced,
   Conditioned,
   Durable,
 }
@@ -27,24 +26,18 @@ export enum SpecializedSetType {
   XbyY,
 }
 
-export enum WorkoutOrigin {
-  Personal,
-  TemplateCopy,
-  TemplateOrigin,
-}
-
 export enum MuscleSpecificity {
   Basic,
   Focused,
   Trainer,
 }
 
-export const enumToDropdownOptionsList = (map: Map<any, any>, setter: any) =>
-  getMapKeys(map).map((k) => (
-    <option key={k} onSelect={() => setter(k)}>
-      {FitnessDifficultyLookup.get(k)}
-    </option>
-  ));
+export function enumToSelectOptions<T1>(map: Map<T1, string>): {
+  value: any;
+  label: string | undefined;
+}[] {
+  return getMapKeys(map).map((k) => ({ value: k, label: map.get(k) }));
+}
 
 export const getMapKeys = (map: Map<any, any>) => {
   const list = [];
@@ -61,4 +54,16 @@ export const FitnessDifficultyLookup: Map<FitnessDifficulty, string> = new Map([
   [FitnessDifficulty.Advanced, "Advanced"],
   [FitnessDifficulty.Expert, "Expert"],
   [FitnessDifficulty.Dangerous, "Dangerous"],
+]);
+
+export const MuscleGroupToLabelMap: { [key: string]: string } = {
+  [MuscleSpecificity.Basic]: "Basic",
+  [MuscleSpecificity.Focused]: "Focused",
+  [MuscleSpecificity.Trainer]: "Trainer Level",
+};
+
+export const MuscleSpecificityToLabelLookup: Map<MuscleSpecificity, string> = new Map([
+  [MuscleSpecificity.Basic, "Basic"],
+  [MuscleSpecificity.Focused, "Focused"],
+  [MuscleSpecificity.Trainer, "Trainer Level"],
 ]);

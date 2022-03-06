@@ -10,6 +10,7 @@ namespace BlueprintGym.Business.WorkoutTracker.Models
     public string RegimenId { get; set; }
     public string RegimenName { get; set; }
     public FitnessDifficulty Difficulty { get; set; }
+    public string RegimenDescription { get; set; }
     public DateOnly StartDate { get; set; }
     public DateOnly EndDate { get; set; }
     public IEnumerable<WorkoutLink> Workouts { get; set; }

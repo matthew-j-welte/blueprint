@@ -1,5 +1,4 @@
 using System;
-using Microsoft.Azure.Cosmos;
 
 namespace BlueprintGym.Domain.Core.Interfaces
 {
@@ -8,7 +7,7 @@ namespace BlueprintGym.Domain.Core.Interfaces
 
     string Id { get; set; }
     string Type { get; }
-    PartitionKey PK { get; }
+    string PK { get; }
     DateTimeOffset ModifiedOn { get; set; }
   }
 }

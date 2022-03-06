@@ -1,0 +1,72 @@
+[
+  {
+    "PK": "Workout-d844b0fd-083d-4633-8274-18311c2d1370",
+    "WorkoutId": "d844b0fd-083d-4633-8274-18311c2d1370",
+    "WorkoutName": "First Workout",
+    "WorkoutDescription": "A very basic workout",
+    "Difficulty": 1,
+    "ExerciseAssignments": [
+      {
+        "Order": 0,
+        "SpecialSetIdentifier": null,
+        "ExerciseId": "221b47e8-8985-44fb-befe-955fbc1ec30d",
+        "ExerciseName": "Push Ups",
+        "HeavyAim": {
+          "AimBonusCutoff": 0,
+          "ExerciseAim": 0
+        },
+        "ConditionedAim": {
+          "AimBonusCutoff": 12,
+          "ExerciseAim": 1
+        },
+        "DurableAim": {
+          "AimBonusCutoff": 3,
+          "ExerciseAim": 2
+        },
+        "SpecializedSetType": null,
+        "MusclesWorked": [
+          "Upper Chest",
+          "Lower Chest",
+          "Upper Back",
+          "Shoulders",
+          "Triceps",
+          "Inner Abs"
+        ]
+      },
+      {
+        "Order": 0,
+        "SpecialSetIdentifier": null,
+        "ExerciseId": "7a1ad751-d3d7-421a-add2-192721d39586",
+        "ExerciseName": "Squats",
+        "HeavyAim": {
+          "AimBonusCutoff": 215,
+          "ExerciseAim": 0
+        },
+        "ConditionedAim": {
+          "AimBonusCutoff": 0,
+          "ExerciseAim": 1
+        },
+        "DurableAim": {
+          "AimBonusCutoff": 8,
+          "ExerciseAim": 2
+        },
+        "SpecializedSetType": null,
+        "MusclesWorked": [
+          "Inner Abs",
+          "Glutes",
+          "Upper Front Legs",
+          "Lower Legs",
+          "Lower Back"
+        ]
+      }
+    ],
+    "BackupExercises": [],
+    "WorkoutLabels": [
+      "Cardio",
+      "Under 30 Minutes"
+    ],
+    "Id": "d844b0fd-083d-4633-8274-18311c2d1370",
+    "Type": "Workout",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  }
+]

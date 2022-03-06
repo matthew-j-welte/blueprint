@@ -32,11 +32,19 @@ namespace BlueprintGym.Web.ExerciseTracker.Controllers
     public async Task<bool> DeleteExercise(string exerciseId)
       => await this.exerciseService.DeleteExercise(exerciseId).ConfigureAwait(false);
 
-    [HttpGet("search/links/{name}/{searchType}")]
+    [HttpGet("search/all-links/{searchType}")]
+    public async Task<IEnumerable<ExerciseLink>> GetAllExerciseLinks(ExerciseState searchType)
+      => await this.exerciseService.GetAllExerciseLinks(searchType).ConfigureAwait(false);
+
+    [HttpGet("search/links/{searchType}/{name}")]
     public async Task<IEnumerable<ExerciseLink>> SearchExerciseLinksByName(string name, ExerciseState searchType)
       => await this.exerciseService.SearchExerciseLinksByName(name, searchType).ConfigureAwait(false);
 
-    [HttpGet("search/lookups/{name}/{searchType}")]
+    [HttpGet("search/all-lookups/{searchType}")]
+    public async Task<IEnumerable<ExerciseLookupDto>> GetAllExerciseLookups(ExerciseState searchType)
+      => await this.exerciseService.GetAllExerciseLookups(searchType).ConfigureAwait(false);
+
+    [HttpGet("search/lookups/{searchType}/{name}")]
     public async Task<IEnumerable<ExerciseLookupDto>> SearchExerciseLookupsByName(string name, ExerciseState searchType)
       => await this.exerciseService.SearchExerciseLookupsByName(name, searchType).ConfigureAwait(false);
   }

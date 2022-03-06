@@ -1,4 +1,7 @@
 using AutoMapper;
+using BlueprintGym.Business.WorkoutTracker.Interfaces;
+using BlueprintGym.Business.WorkoutTracker.Mappings;
+using BlueprintGym.Business.WorkoutTracker.Services;
 using BlueprintGym.Domain.WorkoutTracker.Interfaces;
 using BlueprintGym.Domain.WorkoutTracker.Models;
 using BlueprintGym.Domain.WorkoutTracker.Options;
@@ -30,7 +33,7 @@ namespace BlueprintGym.Web.WorkoutTracker
 
       var mapper = new MapperConfiguration(mc =>
       {
-        // mc.AddProfile<WorkoutProfile>();
+        mc.AddProfile<WorkoutProfile>();
       }).CreateMapper();
       services.AddSingleton<IMapper>(mapper);
 
@@ -44,7 +47,7 @@ namespace BlueprintGym.Web.WorkoutTracker
       this.apiStartupSvc.SetDatabaseName(dbOptions.DatabaseName);
       this.apiStartupSvc.SetContainerName(dbOptions.DatabaseContainers.WorkoutContainer.Name);
 
-      this.apiStartupSvc.ConfigureRepository<IWorkoutRepository, WorkoutRepository, Workout>(services);
+      this.apiStartupSvc.ConfigureRepository<IWorkoutRepository, WorkoutRepository, Workout, WorkoutRef, WorkoutEntry, WorkoutSet>(services);
 
       var isLocalDbMode = this.apiStartupSvc.IsLocalDbMode();
       if (isLocalDbMode)
@@ -57,7 +60,7 @@ namespace BlueprintGym.Web.WorkoutTracker
 
       }
 
-      // services.AddScoped<IWorkoutService, WorkoutService>();
+      services.AddScoped<IWorkoutService, WorkoutService>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

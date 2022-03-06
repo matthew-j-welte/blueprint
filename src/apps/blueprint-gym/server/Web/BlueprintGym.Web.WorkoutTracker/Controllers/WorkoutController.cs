@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using BlueprintGym.Business.Shared.Models;
 using BlueprintGym.Business.WorkoutTracker.Interfaces;
 using BlueprintGym.Business.WorkoutTracker.Models;
 using BlueprintGym.Domain.Core.Models;
@@ -33,5 +34,17 @@ namespace BlueprintGym.Web.WorkoutTracker.Controllers
     [HttpGet("search/links/{name}")]
     public async Task<IEnumerable<WorkoutLink>> SearchWorkoutLinksByName(string name)
       => await this.workoutService.SearchWorkoutLinksByName(name).ConfigureAwait(false);
+
+    [HttpGet("search/lookups/{name}")]
+    public async Task<IEnumerable<WorkoutLookupDto>> SearchWorkoutLookupsByName(string name)
+      => await this.workoutService.SearchWorkoutLookupsByName(name).ConfigureAwait(false);
+
+    [HttpGet("search/all-links")]
+    public async Task<IEnumerable<WorkoutLink>> GatAllWorkoutLinks()
+      => await this.workoutService.GatAllWorkoutLinks().ConfigureAwait(false);
+
+    [HttpGet("search/all-lookups")]
+    public async Task<IEnumerable<WorkoutLookupDto>> GatAllWorkoutLookups()
+      => await this.workoutService.GatAllWorkoutLookups().ConfigureAwait(false);
   }
 }

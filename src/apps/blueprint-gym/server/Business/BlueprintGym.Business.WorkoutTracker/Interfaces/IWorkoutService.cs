@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BlueprintGym.Business.Shared.Models;
 using BlueprintGym.Business.WorkoutTracker.Models;
 using BlueprintGym.Domain.Core.Models;
 
@@ -14,5 +15,8 @@ namespace BlueprintGym.Business.WorkoutTracker.Interfaces
 
     // Search
     Task<IEnumerable<WorkoutLink>> SearchWorkoutLinksByName(string name);
+    Task<IEnumerable<WorkoutLookupDto>> SearchWorkoutLookupsByName(string name);
+    Task<IEnumerable<WorkoutLink>> GatAllWorkoutLinks();
+    Task<IEnumerable<WorkoutLookupDto>> GatAllWorkoutLookups();
   }
 }

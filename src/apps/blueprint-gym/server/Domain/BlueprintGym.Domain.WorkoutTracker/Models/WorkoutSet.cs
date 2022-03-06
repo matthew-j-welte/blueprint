@@ -3,13 +3,12 @@
 using BlueprintGym.Domain.Constants.Enums;
 using BlueprintGym.Domain.Core.Cosmos;
 using BlueprintGym.Domain.Core.Interfaces;
-using Microsoft.Azure.Cosmos;
 
 namespace BlueprintGym.Domain.WorkoutTracker.Models
 {
   public class WorkoutSet : CosmosEntity, ICosmosEntity
   {
-    public override PartitionKey PK => new PartitionKey($"{this.GetType().Name}-{this.WorkoutEntryId}");
+    public override string PK => $"{this.GetType().Name}-{this.WorkoutEntryId}";
     public string EntryId { get; set; }
     public string WorkoutEntryId { get; set; }
     public string SetIdentifier { get; set; }

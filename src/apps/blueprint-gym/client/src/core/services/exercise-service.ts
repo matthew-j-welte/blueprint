@@ -17,20 +17,15 @@ const requests = {
 };
 
 export const ExerciseService = {
-  getExerciseFormView: (exerciseId: string): Promise<ExerciseFormView> =>
-    requests.get(`get/${exerciseId}`),
-  saveExercise: (exercise: ExerciseFormView): Promise<ExerciseFormView> =>
-    requests.put("save", exercise),
-  deleteExercise: (exerciseId: string): Promise<boolean> =>
-    requests.delete(`delete/${exerciseId}`),
-  searchExerciseLinks: (
-    name: string,
-    searchType: ExerciseState
-  ): Promise<ExerciseLink[]> =>
-    requests.get(`search/links/${name}/${searchType}`),
-  searchExerciseLookups: (
-    name: string,
-    searchType: ExerciseState
-  ): Promise<ExerciseLookupDto[]> =>
-    requests.get(`search/lookups/${name}/${searchType}`),
+  getExerciseFormView: (exerciseId: string): Promise<ExerciseFormView> => requests.get(`get/${exerciseId}`),
+  saveExercise: (exercise: ExerciseFormView): Promise<ExerciseFormView> => requests.put("save", exercise),
+  deleteExercise: (exerciseId: string): Promise<boolean> => requests.delete(`delete/${exerciseId}`),
+  getAllExerciseLinks: (searchType: ExerciseState): Promise<ExerciseLink[]> =>
+    requests.get(`search/all-links/${searchType}`),
+  getAllExerciseLookups: (searchType: ExerciseState): Promise<ExerciseLookupDto[]> =>
+    requests.get(`search/all-lookups/${searchType}`),
+  searchExerciseLinks: (name: string, searchType: ExerciseState): Promise<ExerciseLink[]> =>
+    requests.get(`search/links/${searchType}/${name}`),
+  searchExerciseLookups: (name: string, searchType: ExerciseState): Promise<ExerciseLookupDto[]> =>
+    requests.get(`search/lookups/${searchType}/${name}`),
 };

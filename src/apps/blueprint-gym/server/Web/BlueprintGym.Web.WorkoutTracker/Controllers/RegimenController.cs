@@ -16,15 +16,15 @@ namespace BlueprintGym.Web.WorkoutTracker.Controllers
       this.regimenService = regimenService;
     }
 
-    [HttpGet("{regimenId}")]
+    [HttpGet("get/{regimenId}")]
     public async Task<RegimenFormView> GetRegimen(string regimenId)
       => await this.regimenService.GetRegimen(regimenId).ConfigureAwait(false);
 
-    [HttpPut]
+    [HttpPut("save")]
     public async Task<RegimenFormView> SaveRegimen(RegimenFormView regimen)
       => await this.regimenService.SaveRegimen(regimen).ConfigureAwait(false);
 
-    [HttpDelete("{regimenId}")]
+    [HttpDelete("delete/{regimenId}")]
     public async Task<bool> DeleteRegimen(string regimenId)
       => await this.regimenService.DeleteRegimen(regimenId).ConfigureAwait(false);
   }
