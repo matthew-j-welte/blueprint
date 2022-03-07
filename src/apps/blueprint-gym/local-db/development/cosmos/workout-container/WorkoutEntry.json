@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "PK": "WorkoutEntry-d9b70fcd-91e3-4c6e-b6c3-9f9048793ef0",
+    "WorkoutEntryId": "3f3ccdd5-18cb-4f39-931c-c0a2917583a4",
+    "WorkoutId": "d9b70fcd-91e3-4c6e-b6c3-9f9048793ef0",
+    "RegimenId": "b81812a5-0765-4956-8d00-75271529fd3c",
+    "WorkoutIndex": 0,
+    "TimeSubmitted": "2022-03-07T07:51:26.448+00:00",
+    "PointsEarned": 394,
+    "Id": "3f3ccdd5-18cb-4f39-931c-c0a2917583a4",
+    "Type": "WorkoutEntry",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  }
+]

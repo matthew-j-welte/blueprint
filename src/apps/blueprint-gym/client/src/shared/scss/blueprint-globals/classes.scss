@@ -112,11 +112,7 @@ label {
 }
 
 .form-section-title-underline {
-  @include left-middle-right-gradient-hr(
-    rgb(187, 187, 187),
-    rgb(187, 187, 187),
-    transparent
-  );
+  @include left-middle-right-gradient-hr(rgb(187, 187, 187), rgb(187, 187, 187), transparent);
   margin-top: -8px;
 }
 
@@ -192,6 +188,16 @@ label {
   font-weight: 100;
   font-size: 14px;
   color: rgb(27, 27, 27);
+}
+
+.btn {
+  font-family: $thin-modern-title;
+  font-weight: 400;
+}
+
+.btn-sm {
+  font-family: $thin-modern-title;
+  font-weight: 400;
 }
 
 .save-btn {
@@ -330,4 +336,21 @@ input::-webkit-inner-spin-button {
 
 .tall-input {
   height: 60px !important;
+}
+
+.wide-btn {
+  height: 44px;
+  width: 300px;
+}
+
+.text-72 {
+  font-size: 72px;
+}
+
+.neg-mt-10px {
+  margin-top: -10px;
+}
+
+.neg-mt-20px {
+  margin-top: -20px;
 }

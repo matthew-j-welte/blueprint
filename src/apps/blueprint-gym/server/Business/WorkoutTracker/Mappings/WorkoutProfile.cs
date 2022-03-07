@@ -12,6 +12,7 @@ namespace BlueprintGym.Business.WorkoutTracker.Mappings
     public WorkoutProfile()
     {
       CreateMap<Workout, WorkoutRef>();
+      CreateMap<Workout, WorkoutLink>();
       CreateMap<Workout, WorkoutLookupDto>();
 
       CreateMap<WorkoutRef, WorkoutLink>();

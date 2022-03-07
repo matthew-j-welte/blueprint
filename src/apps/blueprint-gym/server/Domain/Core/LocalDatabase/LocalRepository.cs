@@ -100,6 +100,14 @@ namespace BlueprintGym.Domain.Core.LocalDatabase
 
     public async Task<T> AddAsync(T entity) => await this.UpsertAsync(entity);
 
+    public async Task<IEnumerable<T>> AddAsync(IEnumerable<T> entities)
+    {
+      foreach (var entity in entities)
+      {
+        await this.UpsertAsync(entity).Result;
+      }
+    }
+
     public Task<IEnumerable<T>> GetByQueryAsync(string sql)
     {
       throw new NotImplementedException();

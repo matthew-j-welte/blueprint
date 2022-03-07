@@ -357,7 +357,7 @@ function WorkoutForm() {
           {exerciseToAdd && exerciseToAdd.exerciseId ? exerciseSelectionPanel : null}
         </div>
 
-        {exerciseAssignmentsGrid}
+        {exerciseAssignments && exerciseAssignments.length > 0 ? exerciseAssignmentsGrid : null}
 
         <div className="container mt-5">
           <button className="save-btn" type="button" onClick={() => saveForm()}>

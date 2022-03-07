@@ -20,6 +20,11 @@ namespace BlueprintGym.Domain.Core.Repositories
       return await this.databaseRepository.AddAsync(entity);
     }
 
+    public async Task<IEnumerable<T>> AddAsync(IEnumerable<T> entities)
+    {
+      return await this.databaseRepository.AddAsync(entities);
+    }
+
     public async Task DeleteByIdAsync(string id, string partiionKey)
     {
       await this.databaseRepository.DeleteByIdAsync(id, partiionKey);

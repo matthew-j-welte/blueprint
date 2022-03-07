@@ -21,7 +21,7 @@ namespace BlueprintGym.Web.WorkoutTracker.Controllers
     public async Task<IEnumerable<WorkoutEntryFormView>> GetWorkoutEntries(string workoutId)
       => await this.workoutEntryService.GetWorkoutEntries(workoutId).ConfigureAwait(false);
 
-    [HttpPut]
+    [HttpPut("save")]
     public async Task<WorkoutEntryFormView> SaveWorkoutEntry(WorkoutEntryFormView workoutEntry)
       => await this.workoutEntryService.SaveWorkoutEntry(workoutEntry).ConfigureAwait(false);
 

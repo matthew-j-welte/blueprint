@@ -1,0 +1,5 @@
+/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Workout/obj/Debug/net6.0/BlueprintGym.Domain.Workout.csproj.AssemblyReference.cache
+/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Workout/obj/Debug/net6.0/BlueprintGym.Domain.Workout.GeneratedMSBuildEditorConfig.editorconfig
+/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Workout/obj/Debug/net6.0/BlueprintGym.Domain.Workout.AssemblyInfoInputs.cache
+/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Workout/obj/Debug/net6.0/BlueprintGym.Domain.Workout.AssemblyInfo.cs
+/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Workout/obj/Debug/net6.0/BlueprintGym.Domain.Workout.csproj.CoreCompileInputs.cache

@@ -24,8 +24,7 @@ function Navbar() {
 
   useEffect(() => {}, []);
 
-  const isActiveNav = (isActive: boolean) =>
-    `NavItem ${isActive ? "ActiveNavLink" : ""}`;
+  const isActiveNav = (isActive: boolean) => `NavItem ${isActive ? "ActiveNavLink" : ""}`;
 
   return (
     <div>
@@ -33,26 +32,14 @@ function Navbar() {
         <div className="Navbar container-fluid">
           <div className="d-flex">
             <nav className="NavSection LinkNavSection d-flex justify-content-start">
-              <NavLink
-                className={({ isActive }) => isActiveNav(isActive)}
-                to={AppRoutes.home}
-              >
-                <FontAwesomeIcon icon={faHome} />{" "}
-                <span className="pl-1">Home</span>
+              <NavLink className={({ isActive }) => isActiveNav(isActive)} to={AppRoutes.home}>
+                <FontAwesomeIcon icon={faHome} /> <span className="pl-1">Home</span>
               </NavLink>
-              <NavLink
-                className={({ isActive }) => isActiveNav(isActive)}
-                to={AppRoutes.regimenEntryPage()}
-              >
-                <FontAwesomeIcon icon={faDumbbell} />{" "}
-                <span className="pl-1">My Regimen</span>
+              <NavLink className={({ isActive }) => isActiveNav(isActive)} to={AppRoutes.regimenEntryPage()}>
+                <FontAwesomeIcon icon={faDumbbell} /> <span className="pl-1">My Regimen</span>
               </NavLink>
-              <NavLink
-                className={({ isActive }) => isActiveNav(isActive)}
-                to={"/"}
-              >
-                <FontAwesomeIcon icon={faChartBar} />{" "}
-                <span className="pl-1">View Progress</span>
+              <NavLink className={({ isActive }) => isActiveNav(isActive)} to={"/"}>
+                <FontAwesomeIcon icon={faChartBar} /> <span className="pl-1">View Progress</span>
               </NavLink>
             </nav>
             <div className="NavSection LogoNavSection text-center">
@@ -72,20 +59,6 @@ function Navbar() {
               </div>
               <div className="NavItem ProfileNavItem">
                 <FontAwesomeIcon icon={faBell} />
-              </div>
-              <div
-                role="button"
-                onClick={() => setDropdownVisible(!dropdownVisible)}
-                className="NavItem PlayerNavItem d-flex pt-0 px-2"
-              >
-                <span className="NavItemIcon px-2">{"SomeUser"}</span>
-                <span>
-                  <img
-                    className="NavProfileImage"
-                    src={profileImg}
-                    alt={"ME"}
-                  />
-                </span>
               </div>
             </div>
           </div>

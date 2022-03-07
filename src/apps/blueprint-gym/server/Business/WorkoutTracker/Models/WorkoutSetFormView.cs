@@ -1,3 +1,4 @@
+using BlueprintGym.Business.Shared.Models;
 using BlueprintGym.Domain.Constants.Enums;
 using BlueprintGym.Domain.WorkoutTracker.Models.Containers;
 
@@ -14,6 +15,7 @@ namespace BlueprintGym.Business.WorkoutTracker.Models
     public ExerciseAimInfo ConditionedAim { get; set; }
     public ExerciseAimInfo DurableAim { get; set; }
     public SpecializedSetType? SpecializedSetType { get; set; }
+    // TODO: Switch these to a list and change this model to a more meaningful name
     public int Weight { get; set; }
     public int Reps { get; set; }
   }

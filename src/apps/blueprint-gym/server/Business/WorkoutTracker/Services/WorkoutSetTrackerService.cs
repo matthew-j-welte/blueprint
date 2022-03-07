@@ -57,7 +57,10 @@ namespace BlueprintGym.Business.WorkoutTracker.Services
 
     public async Task<IEnumerable<WorkoutSetFormView>> SaveWorkoutSets(IEnumerable<WorkoutSetFormView> workoutSets)
     {
-      return await Task.WhenAll(workoutSets.Select(x => this.SaveWorkoutSet(x))).ConfigureAwait(false);
+      return await this.mapper.Map<IEnumerable<WorkoutSetFormView>>(
+        await this.workoutRepository.WorkoutSet.AddAsync(
+          mapper.Map<IEnumerable<WorkoutSet>>(workoutSets)
+      ));
     }
   }
 }

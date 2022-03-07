@@ -9,6 +9,7 @@ namespace BlueprintGym.Business.WorkoutTracker.Models
   public class WorkoutDto : BaseEntityModel
   {
     public string WorkoutId { get; set; }
+    public string RegimenId { get; set; }
     public string WorkoutName { get; set; }
     public string WorkoutDescription { get; set; }
     public FitnessDifficulty Difficulty { get; set; }

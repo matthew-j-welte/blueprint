@@ -11,6 +11,7 @@ namespace BlueprintGym.Domain.WorkoutTracker.Models
   {
     public override string PK => $"{this.GetType().Name}-{this.WorkoutId}";
     public string WorkoutId => this.Id;
+    public string RegimenId { get; set; }
     public string WorkoutName { get; set; }
     public string WorkoutDescription { get; set; }
     public FitnessDifficulty Difficulty { get; set; }

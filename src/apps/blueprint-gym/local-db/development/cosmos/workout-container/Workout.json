@@ -8,6 +8,7 @@
     "ExerciseAssignments": [
       {
         "Order": 0,
+        "SetIdentifier": "93af6ebe-e51f-441f-8ef7-c1c1ce86212d",
         "SpecialSetIdentifier": null,
         "ExerciseId": "221b47e8-8985-44fb-befe-955fbc1ec30d",
         "ExerciseName": "Push Ups",
@@ -35,6 +36,7 @@
       },
       {
         "Order": 0,
+        "SetIdentifier": "6d33a1d2-2b0f-45c3-b750-bb861102873c",
         "SpecialSetIdentifier": null,
         "ExerciseId": "7a1ad751-d3d7-421a-add2-192721d39586",
         "ExerciseName": "Squats",
@@ -66,6 +68,106 @@
       "Under 30 Minutes"
     ],
     "Id": "d844b0fd-083d-4633-8274-18311c2d1370",
+    "Type": "Workout",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Workout-d9b70fcd-91e3-4c6e-b6c3-9f9048793ef0",
+    "WorkoutId": "d9b70fcd-91e3-4c6e-b6c3-9f9048793ef0",
+    "WorkoutName": "Second Workout",
+    "WorkoutDescription": "Another Test!",
+    "Difficulty": 1,
+    "ExerciseAssignments": [
+      {
+        "Order": 0,
+        "SetIdentifier": "04d38eef-f492-44c4-81c8-7ac16a076365",
+        "SpecialSetIdentifier": null,
+        "ExerciseId": "221b47e8-8985-44fb-befe-955fbc1ec30d",
+        "ExerciseName": "Push Ups",
+        "HeavyAim": {
+          "AimBonusCutoff": 0,
+          "ExerciseAim": 0
+        },
+        "ConditionedAim": {
+          "AimBonusCutoff": 40,
+          "ExerciseAim": 1
+        },
+        "DurableAim": {
+          "AimBonusCutoff": 12,
+          "ExerciseAim": 2
+        },
+        "SpecializedSetType": null,
+        "MusclesWorked": [
+          "Upper Chest",
+          "Lower Chest",
+          "Upper Back",
+          "Shoulders",
+          "Triceps",
+          "Inner Abs"
+        ]
+      },
+      {
+        "Order": 0,
+        "SetIdentifier": "8f4194fa-bba2-44e0-a593-eee7689f911a",
+        "SpecialSetIdentifier": null,
+        "ExerciseId": "7a1ad751-d3d7-421a-add2-192721d39586",
+        "ExerciseName": "Squats",
+        "HeavyAim": {
+          "AimBonusCutoff": 215,
+          "ExerciseAim": 0
+        },
+        "ConditionedAim": {
+          "AimBonusCutoff": 12,
+          "ExerciseAim": 1
+        },
+        "DurableAim": {
+          "AimBonusCutoff": 0,
+          "ExerciseAim": 2
+        },
+        "SpecializedSetType": null,
+        "MusclesWorked": [
+          "Inner Abs",
+          "Glutes",
+          "Upper Front Legs",
+          "Lower Legs",
+          "Lower Back"
+        ]
+      },
+      {
+        "Order": 0,
+        "SetIdentifier": "c5ef31b1-6579-4396-818d-1df96c1261bf",
+        "SpecialSetIdentifier": null,
+        "ExerciseId": "221b47e8-8985-44fb-befe-955fbc1ec30d",
+        "ExerciseName": "Push Ups",
+        "HeavyAim": {
+          "AimBonusCutoff": 60,
+          "ExerciseAim": 0
+        },
+        "ConditionedAim": {
+          "AimBonusCutoff": 20,
+          "ExerciseAim": 1
+        },
+        "DurableAim": {
+          "AimBonusCutoff": 0,
+          "ExerciseAim": 2
+        },
+        "SpecializedSetType": null,
+        "MusclesWorked": [
+          "Upper Chest",
+          "Lower Chest",
+          "Upper Back",
+          "Shoulders",
+          "Triceps",
+          "Inner Abs"
+        ]
+      }
+    ],
+    "BackupExercises": [],
+    "WorkoutLabels": [
+      "Cardio",
+      "Kettlebells"
+    ],
+    "Id": "d9b70fcd-91e3-4c6e-b6c3-9f9048793ef0",
     "Type": "Workout",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
   }

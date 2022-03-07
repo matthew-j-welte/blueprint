@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using BlueprintGym.Domain.Constants.Enums;
 
@@ -6,7 +7,7 @@ namespace BlueprintGym.Domain.WorkoutTracker.Models.Containers
   public class WorkoutExerciseAssignment
   {
     public int Order { get; set; }
-    public string SetIdentifier { get; set; } = new Guid.ToString();
+    public string SetIdentifier { get; set; } = Guid.NewGuid().ToString();
     public string SpecialSetIdentifier { get; set; }
     public string ExerciseId { get; set; }
     public string ExerciseName { get; set; }

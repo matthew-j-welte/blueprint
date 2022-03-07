@@ -37,13 +37,13 @@ namespace BlueprintGym.Business.WorkoutTracker.Services
     public async Task<IEnumerable<WorkoutLink>> GatAllWorkoutLinks()
     {
       return mapper.Map<IEnumerable<WorkoutLink>>(
-        await this.workoutRepository.Workout.GetAllAsync().ConfigureAwait(false));
+        await this.workoutRepository.WorkoutRef.GetAllAsync().ConfigureAwait(false));
     }
 
     public async Task<IEnumerable<WorkoutLookupDto>> GatAllWorkoutLookups()
     {
       return mapper.Map<IEnumerable<WorkoutLookupDto>>(
-        await this.workoutRepository.Workout.GetAllAsync().ConfigureAwait(false));
+        await this.workoutRepository.WorkoutRef.GetAllAsync().ConfigureAwait(false));
     }
 
     public async Task<WorkoutFormView> GetWorkout(string workoutId)
@@ -66,13 +66,13 @@ namespace BlueprintGym.Business.WorkoutTracker.Services
     public async Task<IEnumerable<WorkoutLink>> SearchWorkoutLinksByName(string name)
     {
       return mapper.Map<IEnumerable<WorkoutLink>>(
-        await this.workoutRepository.Workout.GetAllAsync().ConfigureAwait(false));
+        await this.workoutRepository.WorkoutRef.GetAllAsync().ConfigureAwait(false));
     }
 
     public async Task<IEnumerable<WorkoutLookupDto>> SearchWorkoutLookupsByName(string name)
     {
       return mapper.Map<IEnumerable<WorkoutLookupDto>>(
-        await this.workoutRepository.Workout.GetAllAsync().ConfigureAwait(false));
+        await this.workoutRepository.WorkoutRef.GetAllAsync().ConfigureAwait(false));
     }
   }
 }

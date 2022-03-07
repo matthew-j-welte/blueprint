@@ -1,1 +1,54 @@
-[]
+[
+  {
+    "PK": "WorkoutSet-5325d790-84db-4c02-9062-e1afcb37819a",
+    "EntryId": "2e92c054-9956-4887-93de-ffc285133d65",
+    "WorkoutEntryId": "5325d790-84db-4c02-9062-e1afcb37819a",
+    "SetIdentifier": null,
+    "ExerciseId": "221b47e8-8985-44fb-befe-955fbc1ec30d",
+    "ExerciseName": "Push Ups",
+    "HeavyAim": {
+      "AimBonusCutoff": 60,
+      "ExerciseAim": 0
+    },
+    "ConditionedAim": {
+      "AimBonusCutoff": 20,
+      "ExerciseAim": 1
+    },
+    "DurableAim": {
+      "AimBonusCutoff": 0,
+      "ExerciseAim": 2
+    },
+    "SpecializedSetType": null,
+    "Weight": 40,
+    "Reps": 65,
+    "Id": "2e92c054-9956-4887-93de-ffc285133d65",
+    "Type": "WorkoutSet",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "WorkoutSet-aa22ec50-4489-4d8f-bbb0-4d97236f5011",
+    "EntryId": "6b90faed-6a23-4875-bd53-22dd87d46d39",
+    "WorkoutEntryId": "aa22ec50-4489-4d8f-bbb0-4d97236f5011",
+    "SetIdentifier": null,
+    "ExerciseId": "7a1ad751-d3d7-421a-add2-192721d39586",
+    "ExerciseName": "Squats",
+    "HeavyAim": {
+      "AimBonusCutoff": 215,
+      "ExerciseAim": 0
+    },
+    "ConditionedAim": {
+      "AimBonusCutoff": 12,
+      "ExerciseAim": 1
+    },
+    "DurableAim": {
+      "AimBonusCutoff": 0,
+      "ExerciseAim": 2
+    },
+    "SpecializedSetType": null,
+    "Weight": 225,
+    "Reps": 8,
+    "Id": "6b90faed-6a23-4875-bd53-22dd87d46d39",
+    "Type": "WorkoutSet",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  }
+]]

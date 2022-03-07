@@ -8,6 +8,7 @@ namespace BlueprintGym.Domain.Core.Interfaces
   public interface IDatabaseRepository<T> where T : ICosmosEntity
   {
     Task<T> AddAsync(T entity);
+    Task<IEnumerable<T>> AddAsync(IEnumerable<T> entities);
     Task<T> UpsertAsync(T entity);
     Task<T> GetByIdAsync(string id);
     Task<T> GetByIdAsync(string id, string partiionKey);
