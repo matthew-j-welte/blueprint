@@ -5,23 +5,23 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{A895CE0B-2591-45B6-BEB8-EC2D8D10C4B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Business.ExerciseTracker", "Business\BlueprintGym.Business.ExerciseTracker\BlueprintGym.Business.ExerciseTracker.csproj", "{FF42DD66-B5D8-4F23-96B0-4D4B87B600A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Business.ExerciseTracker", "Business\ExerciseTracker\BlueprintGym.Business.ExerciseTracker.csproj", "{FF42DD66-B5D8-4F23-96B0-4D4B87B600A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Business.Shared", "Business\BlueprintGym.Business.Shared\BlueprintGym.Business.Shared.csproj", "{92F9DA6B-D411-423C-A222-C7904CE69A75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Business.Shared", "Business\Shared\BlueprintGym.Business.Shared.csproj", "{92F9DA6B-D411-423C-A222-C7904CE69A75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Business.WorkoutTracker", "Business\BlueprintGym.Business.WorkoutTracker\BlueprintGym.Business.WorkoutTracker.csproj", "{5009F19F-74CC-4255-BA3B-631657713B49}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Business.WorkoutTracker", "Business\WorkoutTracker\BlueprintGym.Business.WorkoutTracker.csproj", "{5009F19F-74CC-4255-BA3B-631657713B49}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{BA914F1C-79DA-4BD4-9C7C-F5E834DE7154}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Domain.Constants", "Domain\BlueprintGym.Domain.Constants\BlueprintGym.Domain.Constants.csproj", "{50BD6F0B-5003-4436-A4C7-9C6E693181F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Domain.Constants", "Domain\Constants\BlueprintGym.Domain.Constants.csproj", "{50BD6F0B-5003-4436-A4C7-9C6E693181F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Domain.Core", "Domain\BlueprintGym.Domain.Core\BlueprintGym.Domain.Core.csproj", "{BBE6609E-6E32-412B-B5E2-AC9B9615092E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Domain.Core", "Domain\Core\BlueprintGym.Domain.Core.csproj", "{BBE6609E-6E32-412B-B5E2-AC9B9615092E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{90401F13-2653-4157-99AB-BA01F58ED2D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Infrastructure.Core", "Infrastructure\BlueprintGym.Infrastructure.Core\BlueprintGym.Infrastructure.Core.csproj", "{31D19FFC-92E9-479D-980E-3F72742A8356}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Infrastructure.Core", "Infrastructure\Core\BlueprintGym.Infrastructure.Core.csproj", "{31D19FFC-92E9-479D-980E-3F72742A8356}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Infrastructure.Web", "Infrastructure\BlueprintGym.Infrastructure.Web\BlueprintGym.Infrastructure.Web.csproj", "{BECB69D6-9B5F-40D4-BF13-2C6771BA37C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Infrastructure.Web", "Infrastructure\Web\BlueprintGym.Infrastructure.Web.csproj", "{BECB69D6-9B5F-40D4-BF13-2C6771BA37C1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{B912D761-6FD6-4A4F-A11A-E7111C584FA5}"
 EndProject
@@ -31,17 +31,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Integration", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Jobs", "Jobs", "{B22B7BB1-E8FE-486E-8EA4-6C85F3A11690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Jobs.ExerciseTracker", "Jobs\BlueprintGym.Jobs.ExerciseTracker\BlueprintGym.Jobs.ExerciseTracker.csproj", "{B34BE8DE-D003-4E3D-AE8A-207D4F6E40CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Jobs.ExerciseTracker", "Jobs\ExerciseTracker\BlueprintGym.Jobs.ExerciseTracker.csproj", "{B34BE8DE-D003-4E3D-AE8A-207D4F6E40CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{5F1904DE-F3D8-481D-BE5E-3853FB6EDD44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Web.ExerciseTracker", "Web\BlueprintGym.Web.ExerciseTracker\BlueprintGym.Web.ExerciseTracker.csproj", "{D8021904-BE3E-41B0-AD2F-147560647C80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Web.ExerciseTracker", "Web\ExerciseTracker\BlueprintGym.Web.ExerciseTracker.csproj", "{D8021904-BE3E-41B0-AD2F-147560647C80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Web.WorkoutTracker", "Web\BlueprintGym.Web.WorkoutTracker\BlueprintGym.Web.WorkoutTracker.csproj", "{F26C50CE-E051-4FE9-97C0-5DF6EB1FD1A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Web.WorkoutTracker", "Web\WorkoutTracker\BlueprintGym.Web.WorkoutTracker.csproj", "{F26C50CE-E051-4FE9-97C0-5DF6EB1FD1A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Domain.WorkoutTracker", "Domain\BlueprintGym.Domain.WorkoutTracker\BlueprintGym.Domain.WorkoutTracker.csproj", "{F8E28A84-7CF7-4692-9480-E28075ECE0BD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Domain.WorkoutTracker", "Domain\WorkoutTracker\BlueprintGym.Domain.WorkoutTracker.csproj", "{F8E28A84-7CF7-4692-9480-E28075ECE0BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Domain.ExerciseTracker", "Domain\BlueprintGym.Domain.ExerciseTracker\BlueprintGym.Domain.ExerciseTracker.csproj", "{D63713AE-D34C-4AB6-972F-4736BA48DB4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueprintGym.Domain.ExerciseTracker", "Domain\ExerciseTracker\BlueprintGym.Domain.ExerciseTracker.csproj", "{D63713AE-D34C-4AB6-972F-4736BA48DB4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

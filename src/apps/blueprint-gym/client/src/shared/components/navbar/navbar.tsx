@@ -89,38 +89,6 @@ function Navbar() {
               </div>
             </div>
           </div>
-          <div
-            className={
-              dropdownVisible
-                ? "PlayerNavDropdown PlayerNavDropdownActive"
-                : "PlayerNavDropdown"
-            }
-          >
-            <div className="DropdownNavItem mt-0">
-              <Link to={"/"}>
-                <span className="pr-3">Profile</span>
-                <FontAwesomeIcon icon={faUsersCog} />{" "}
-              </Link>
-            </div>
-            <div className="DropdownNavItem">
-              <Link to={"/"}>
-                <span className="pr-3">Player Card</span>
-                <FontAwesomeIcon icon={faAddressCard} />{" "}
-              </Link>
-            </div>
-            <div className="DropdownNavItem">
-              <Link to={"/"}>
-                <span className="pr-3">Settings</span>
-                <FontAwesomeIcon icon={faCogs} />{" "}
-              </Link>
-            </div>
-            <div className="DropdownNavItem">
-              <Link to={"/"}>
-                <span className="pr-3">Log Out</span>
-                <FontAwesomeIcon icon={faSignOutAlt} />{" "}
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </div>

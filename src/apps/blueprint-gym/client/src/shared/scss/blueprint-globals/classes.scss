@@ -112,7 +112,11 @@ label {
 }
 
 .form-section-title-underline {
-  @include left-middle-right-gradient-hr(rgb(187, 187, 187), rgb(187, 187, 187), transparent);
+  @include left-middle-right-gradient-hr(
+    rgb(187, 187, 187),
+    rgb(187, 187, 187),
+    transparent
+  );
   margin-top: -8px;
 }
 
@@ -274,6 +278,18 @@ input::-webkit-inner-spin-button {
   }
 }
 
+.w-5 {
+  width: 5%;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
 .w-40 {
   width: 40%;
 }
@@ -310,4 +326,8 @@ input::-webkit-inner-spin-button {
 
 .card {
   background-color: $pillBackground;
+}
+
+.tall-input {
+  height: 60px !important;
 }

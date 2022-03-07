@@ -1,4 +1,9 @@
-import { ExerciseAim, FitnessDifficulty, MuscleSpecificity, SpecializedSetType } from "./enums.model";
+import {
+  ExerciseAim,
+  FitnessDifficulty,
+  MuscleSpecificity,
+  SpecializedSetType,
+} from "./enums.model";
 import { ExerciseLink } from "./exercise.model";
 import { BaseEntityModel, WorkoutLink } from "./shared.model";
 
@@ -37,7 +42,7 @@ export interface WorkoutFormView extends WorkoutDto {}
 export interface WorkoutSetFormView {
   entryId: string;
   workoutId: string;
-  setIdentifier?: string;
+  setIdentifier: string;
   exerciseId: string;
   exerciseName: string;
   workoutEntryId: string;
@@ -51,6 +56,7 @@ export interface WorkoutSetFormView {
 
 export interface WorkoutExerciseAssignment {
   order: number;
+  setIdentifier: string;
   specialSetIdentifier: string;
   exerciseId: string;
   exerciseName: string;

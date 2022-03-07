@@ -126,6 +126,7 @@ function ExerciseForm() {
       <div key={muscleGroup} className="mx-3 my-2">
         <SelectablePill
           content={muscleGroup}
+          classNames={"pt-2 pb-1 px-5"}
           selected={selected}
           key={muscleGroup}
           onSelect={() =>
@@ -143,6 +144,7 @@ function ExerciseForm() {
       <div key={label} className="mx-3 my-2">
         <SelectablePill
           content={label}
+          classNames={"pt-2 pb-1 px-5"}
           selected={selected}
           key={label}
           onSelect={() => set_exerciseLabels(exerciseLabels && !selected ? [...exerciseLabels, label] : [label])}

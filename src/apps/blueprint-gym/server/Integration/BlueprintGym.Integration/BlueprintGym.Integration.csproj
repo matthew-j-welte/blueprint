@@ -2,11 +2,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BlueprintGym.Integration.Contracts\BlueprintGym.Integration.Contracts.csproj" />
-    <ProjectReference Include="..\..\Domain\BlueprintGym.Domain.Core\BlueprintGym.Domain.Core.csproj" />
+    <ProjectReference Include="..\..\Domain\Core\BlueprintGym.Domain.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
   </ItemGroup>
 
   <PropertyGroup>

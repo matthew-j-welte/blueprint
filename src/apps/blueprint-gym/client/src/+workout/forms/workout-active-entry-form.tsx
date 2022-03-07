@@ -6,6 +6,7 @@ import { WorkoutDto, WorkoutExerciseAssignment, WorkoutSetFormView } from "../..
 import { WorkoutService } from "../../core/services/workout-service";
 import SelectablePill from "../../shared/components/selectable-pill/selectable-pill";
 import { v4 as uuidv4 } from "uuid";
+import './workout-active-entry-form.scss';
 
 function WorkoutActiveEntryForm() {
   const { workoutId } = useParams();
@@ -19,11 +20,13 @@ function WorkoutActiveEntryForm() {
     if (workoutId) {
       console.log(workoutId);
       WorkoutService.getWorkoutFormView(workoutId).then((res) => {
-        set_workout(res);
-        const firstExercise = res.exerciseAssignments[0] ?? undefined;
-        if (firstExercise) {
-          set_activeExercise(firstExercise);
-          set_activeSet(newSetInit(firstExercise));
+        if (res) {
+          set_workout(res);
+          const firstExercise = res.exerciseAssignments[0] ?? undefined;
+          if (firstExercise) {
+            set_activeExercise(firstExercise);
+            set_activeSet(newSetInit(firstExercise));
+          }
         }
       });
     } else {
@@ -37,45 +40,41 @@ function WorkoutActiveEntryForm() {
       ...exerciseAssignemt,
       workoutId: workoutId as string,
       entryId: uuidv4(),
-      workoutEntryId: uuidv4(),
+      workoutEntryId: uuidv4()
     };
   };
 
-  const exerciseSetPills = setEntries?.map((entry, index: number) => {
-    return (
+  const exerciseSetPills = setEntries?.filter(x => activeExercise?.setIdentifier === x.setIdentifier)?.map((entry) => {
+    const content = <div className="d-flex align-items-center justify-content-between">
+      <div className="mx-1">
+        {(entry.weight ?? "N/A")}
+      </div>
       <div className="mx-2">
+        |
+      </div>
+      <div className="mx-1">
+        {entry.reps ?? "N/A"}
+      </div>
+    </div>
+    
+    return (
+      <div className="mx-2 p-2">
         <SelectablePill
-          content={index + 1 + ") " + entry.weight ?? "N/A" + " | " + entry.reps ?? "N/A"}
+          content={content}
           selected={false}
           key={entry.entryId}
+          classNames="py-1 px-2"
         />
       </div>
     );
   });
 
-  const weightInput = (
-    <div className="d-flex justify-content-center">
-      <div className="text-center">
-        <input
-          className="form-control text-center mx-2 number-input-without-arrows"
-          placeholder="Enter Weight..."
-          type="number"
-          id="weight"
-          name="weight"
-          value={activeSet?.weight}
-          onChange={(e) => set_activeSet({ ...activeSet, weight: +e.target.value } as WorkoutSetFormView)}
-        />
-        <label className="mt-2 text-center unit-label">lbs</label>
-      </div>
-    </div>
-  );
-
   return (
     <div>
       <div id="exerciseSetPillsPanel" className="container-fluid">
-        <div className="d-flex flex-wrap">{exerciseSetPills}</div>
-        <div className="d-flex justify-content-between align-items-center">
-          <hr className="flex-fill dim-hr" />
+        <div className="d-flex align-items-center flex-wrap pt-2 previous-sets-panel">{exerciseSetPills}</div>
+        <div className="d-flex align-items-center">
+          <hr className="w-5 dim-hr" />
           <div className="text-center px-3">
             <h6 className="text-primary">Previous Sets</h6>
           </div>
@@ -87,13 +86,10 @@ function WorkoutActiveEntryForm() {
         <div className="d-flex justify-content-center">
           <h1 className="thin text-primary">{activeExercise?.exerciseName}</h1>
         </div>
-        <h2 className="text-center">
-          <em>make all of this much bigger + fix sets above ^</em>
-        </h2>
         <div className="d-flex justify-content-around mt-4">
           <div className="text-center">
             <input
-              className="form-control text-center ml-1 number-input-without-arrows"
+              className="form-control text-center ml-1 number-input-without-arrows tall-input"
               placeholder="Enter Weight..."
               type="number"
               id="weight"
@@ -105,7 +101,7 @@ function WorkoutActiveEntryForm() {
           </div>
           <div className="text-center">
             <input
-              className="form-control text-center ml-1 number-input-without-arrows"
+              className="form-control text-center ml-1 number-input-without-arrows tall-input"
               placeholder="Enter Reps..."
               type="number"
               id="reps"
@@ -120,7 +116,7 @@ function WorkoutActiveEntryForm() {
           <button
             type="button"
             onClick={() => (activeSet ? set_setEntries(setEntries ? [...setEntries, activeSet] : [activeSet]) : null)}
-            className="btn btn-secondary px-5"
+            className="btn btn-secondary px-5 tall-input"
           >
             Complete Set
           </button>
@@ -190,7 +186,7 @@ function WorkoutActiveEntryForm() {
 
                 const newActiveExercise = workout?.exerciseAssignments[newIndex] ?? undefined;
                 if (newActiveExercise) {
-                  set_activeExercise(newActiveExercise);
+                  set_activeExercise({...newActiveExercise});
                   set_activeSet(newSetInit(newActiveExercise));
                 }
               }}

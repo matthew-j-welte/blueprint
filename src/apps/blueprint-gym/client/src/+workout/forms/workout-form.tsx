@@ -130,6 +130,7 @@ function WorkoutForm() {
           content={label}
           selected={selected}
           key={label}
+          classNames={"pt-2 pb-1 px-5"}
           onSelect={() => set_workoutLabels(workoutLabels && !selected ? [...workoutLabels, label] : [label])}
           onDelete={() => set_workoutLabels(workoutLabels?.filter((x) => x !== label))}
         />
