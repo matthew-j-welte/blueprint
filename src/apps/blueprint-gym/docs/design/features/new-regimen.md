@@ -21,8 +21,8 @@ public class RegimenFormView
   public string RegimenId { get; set; }
   public string RegimenName { get; set; }
   public Difficulty Difficulty { get; set; }
-  public DateOnly StartDate { get; set; }
-  public DateOnly EndDate { get; set; }
+  public DateTimeOffset StartDate { get; set; }
+  public DateTimeOffset EndDate { get; set; }
   public IEnumerable<RegimenWorkoutDto> Workouts { get; set; }
   public MuscleSpecificity MuscleSpecificity { get; set; }
 }
@@ -54,8 +54,8 @@ public class Regimen
   public string RegimenId { get; set; }
   public string RegimenName { get; set; }
   public Difficulty Difficulty { get; set; }
-  public DateOnly StartDate { get; set; }
-  public DateOnly EndDate { get; set; }
+  public DateTimeOffset StartDate { get; set; }
+  public DateTimeOffset EndDate { get; set; }
   public IEnumerable<RegimenWorkout> Workouts { get; set; }
   public MuscleSpecificity MuscleSpecificity { get; set; }
 }

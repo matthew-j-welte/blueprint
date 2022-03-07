@@ -48,6 +48,7 @@ namespace BlueprintGym.Web.WorkoutTracker
       this.apiStartupSvc.SetContainerName(dbOptions.DatabaseContainers.WorkoutContainer.Name);
 
       this.apiStartupSvc.ConfigureRepository<IWorkoutRepository, WorkoutRepository, Workout, WorkoutRef, WorkoutEntry, WorkoutSet>(services);
+      this.apiStartupSvc.ConfigureRepository<IRegimenRepository, RegimenRepository, Regimen>(services);
 
       var isLocalDbMode = this.apiStartupSvc.IsLocalDbMode();
       if (isLocalDbMode)
@@ -61,6 +62,9 @@ namespace BlueprintGym.Web.WorkoutTracker
       }
 
       services.AddScoped<IWorkoutService, WorkoutService>();
+      services.AddScoped<IWorkoutEntryService, WorkoutEntryService>();
+      services.AddScoped<IWorkoutSetService, WorkoutSetService>();
+      services.AddScoped<IRegimenService, RegimenService>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

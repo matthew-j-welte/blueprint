@@ -10,9 +10,9 @@ namespace BlueprintGym.Web.WorkoutTracker.Controllers
   [Route("[controller]")]
   public class WorkoutSetController : ControllerBase
   {
-    private readonly IWorkoutSetTrackerService workoutEntryService;
+    private readonly IWorkoutSetService workoutEntryService;
 
-    public WorkoutSetController(IWorkoutSetTrackerService workoutEntryService)
+    public WorkoutSetController(IWorkoutSetService workoutEntryService)
     {
       this.workoutEntryService = workoutEntryService;
     }

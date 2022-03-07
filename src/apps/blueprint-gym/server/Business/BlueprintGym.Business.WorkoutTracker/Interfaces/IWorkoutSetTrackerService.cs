@@ -4,7 +4,7 @@ using BlueprintGym.Business.WorkoutTracker.Models;
 
 namespace BlueprintGym.Business.WorkoutTracker.Interfaces
 {
-  public interface IWorkoutSetTrackerService
+  public interface IWorkoutSetService
   {
     Task<IEnumerable<WorkoutSetFormView>> GetWorkoutSets(string workoutEntryId);
     Task<WorkoutSetFormView> SaveWorkoutSet(WorkoutSetFormView workoutSet);

@@ -11,8 +11,8 @@ import { WorkoutLink, WorkoutLookupDto } from "../../core/models/shared.model";
 import { WorkoutService } from "../../core/services/workout-service";
 import Select from "react-select";
 import {
-  faArrowAltCircleLeft,
   faArrowAltCircleRight,
+  faLongArrowRight,
   faQuestionCircle,
   faTimeline,
 } from "@fortawesome/free-solid-svg-icons";
@@ -79,16 +79,34 @@ function RegimenForm() {
     } as RegimenFormView);
 
   const saveForm = () => {
-    console.log(getForm());
     RegimenService.saveRegimen(getForm())
       .then((res) => {
-        console.log(res);
+        set_loadedRegimen(res);
       })
       .catch((err) => {
         console.log(err);
         alert("Failed!!!!!!!!!!!");
       });
   };
+
+  const selectedWorkoutCards: JSX.Element[] = [];
+  const workoutCount = workouts?.length ?? 0;
+  workouts.forEach((workout, index) => {
+    selectedWorkoutCards.push(
+      <div className="card m-2 p-3">
+        <h5 className="thin">{workout.workoutName}</h5>
+        <hr className="dim-hr" />
+      </div>
+    );
+    if (index !== workoutCount - 1) {
+      selectedWorkoutCards.push(
+        <div className="m-2">
+          <FontAwesomeIcon icon={faLongArrowRight}></FontAwesomeIcon>
+        </div>
+      );
+    }
+  });
+  const selectedExercisesGrid = <div className="d-flex flex-row align-items-center">{selectedWorkoutCards}</div>;
 
   const isNewForm = regimenId == null;
   const workoutLookupOptions = workoutookups.map((x) => ({
@@ -118,7 +136,7 @@ function RegimenForm() {
             <div className="d-flex align-items-center">
               <div className="flex-fill form-group text-center">
                 <DatePicker
-                  className="datepicker border w-75"
+                  className="datepicker border w-75 text-center"
                   selected={startDate}
                   onChange={(date: Date) => set_startDate(date)}
                 />
@@ -131,7 +149,7 @@ function RegimenForm() {
               </div>
               <div className="flex-fill form-group text-center">
                 <DatePicker
-                  className="datepicker border w-75"
+                  className="datepicker border w-75 text-center"
                   selected={endDate}
                   onChange={(date: Date) => set_endDate(date)}
                 />
@@ -188,36 +206,32 @@ function RegimenForm() {
           </div>
         </div>
 
-        <div className="mt-5">
-          <div className="container pt-2">
-            <h3 className="form-section-title mt-5 ">
-              <span className="text-primary">
-                <FontAwesomeIcon icon={faTimeline} />
-              </span>
-              {" Workout Selection"}
-            </h3>
-            <hr className="form-section-title-underline" />
+        <div className="mt-4 container pt-2">
+          <h3 className="form-section-title mt-5 ">
+            <span className="text-primary">
+              <FontAwesomeIcon icon={faTimeline} />
+            </span>
+            {" Workout Selection"}
+          </h3>
+          <hr className="form-section-title-underline" />
 
-            <div className="form-group mt-4">
-              <Select
-                placeholder="Choose a Workout ..."
-                options={workoutLookupOptions}
-                onChange={(e) => {
-                  set_workouts([
-                    ...workouts,
-                    {
-                      workoutId: e?.value?.workoutId,
-                      workoutName: e?.value?.workoutName,
-                    } as WorkoutLink,
-                  ]);
-                }}
-              />
-            </div>
-            {/* {exerciseToAdd && exerciseToAdd.exerciseId ? exerciseSelectionPanel : null} */}
+          <div className="form-group mt-4">
+            <Select
+              placeholder="Choose a Workout ..."
+              options={workoutLookupOptions}
+              onChange={(e) => {
+                set_workouts([
+                  ...workouts,
+                  {
+                    workoutId: e?.value?.workoutId,
+                    workoutName: e?.value?.workoutName,
+                  } as WorkoutLink,
+                ]);
+              }}
+            />
           </div>
+          <div className="mt-4">{selectedExercisesGrid}</div>
         </div>
-
-        {/* {exerciseAssignmentsGrid} */}
 
         <div className="container mt-5">
           <button className="save-btn" type="button" onClick={() => saveForm()}>

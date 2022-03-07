@@ -13,6 +13,6 @@ namespace BlueprintGym.Domain.WorkoutTracker.Repositories
       this.baseRepository = baseRepository;
     }
 
-    public IBaseRepository<Regimen> Base => this.baseRepository;
+    public IBaseRepository<Regimen> Regimen => this.baseRepository;
   }
 }

@@ -21,8 +21,6 @@ import { ExerciseLookupDto, WorkoutLink } from "../../core/models/shared.model";
 import { ExerciseLink } from "../../core/models/exercise.model";
 import ExerciseGrid from "../components/exercise-grid";
 
-declare type MuscleGroupings = "basic" | "focused" | "trainer";
-
 export interface ExerciseAimButtonInfo {
   aimLookupKey: string;
   buttonLabel: string;
@@ -47,7 +45,6 @@ function WorkoutForm() {
 
   const [loadedWorkout, set_loadedWorkout] = useState<WorkoutFormView>();
   const [nameEditCofirmed, set_nameEditCofirmed] = useState(false);
-  const [activeMuscleGroupBtn, set_activeMuscleGroupBtn] = useState<MuscleGroupings>("focused");
   const [workoutLinks, set_workoutLinks] = useState<WorkoutLink[]>([]);
   const [exerciseLookups, set_exerciseLookups] = useState<ExerciseLookupDto[]>([]);
   const [exerciseToAdd, set_exerciseToAdd] = useState<WorkoutExerciseAssignment>();

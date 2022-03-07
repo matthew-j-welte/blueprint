@@ -37,15 +37,16 @@ export interface WorkoutFormView extends WorkoutDto {}
 export interface WorkoutSetFormView {
   entryId: string;
   workoutId: string;
-  setIdentifier: string;
+  setIdentifier?: string;
   exerciseId: string;
   exerciseName: string;
   workoutEntryId: string;
-  aimBonusCutoff: number;
-  exerciseAim: ExerciseAim;
+  heavyAim: ExerciseAimInfo;
+  conditionedAim: ExerciseAimInfo;
+  durableAim: ExerciseAimInfo;
   specializedSetType: SpecializedSetType | null;
-  weight: number;
-  reps: number;
+  weight?: number | undefined;
+  reps?: number | undefined;
 }
 
 export interface WorkoutExerciseAssignment {

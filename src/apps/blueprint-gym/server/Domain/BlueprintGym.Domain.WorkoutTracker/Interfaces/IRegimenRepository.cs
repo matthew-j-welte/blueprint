@@ -5,6 +5,6 @@ namespace BlueprintGym.Domain.WorkoutTracker.Interfaces
 {
   public interface IRegimenRepository
   {
-    IBaseRepository<Regimen> Base { get; }
+    IBaseRepository<Regimen> Regimen { get; }
   }
 }

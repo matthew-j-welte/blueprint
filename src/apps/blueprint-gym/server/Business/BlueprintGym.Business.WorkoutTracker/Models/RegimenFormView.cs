@@ -11,8 +11,8 @@ namespace BlueprintGym.Business.WorkoutTracker.Models
     public string RegimenName { get; set; }
     public FitnessDifficulty Difficulty { get; set; }
     public string RegimenDescription { get; set; }
-    public DateOnly StartDate { get; set; }
-    public DateOnly EndDate { get; set; }
+    public DateTimeOffset StartDate { get; set; }
+    public DateTimeOffset EndDate { get; set; }
     public IEnumerable<WorkoutLink> Workouts { get; set; }
     public MuscleSpecificity MuscleSpecificity { get; set; }
   }

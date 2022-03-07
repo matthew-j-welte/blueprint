@@ -10,13 +10,13 @@ using BlueprintGym.Domain.WorkoutTracker.Options;
 
 namespace BlueprintGym.Business.WorkoutTracker.Services
 {
-  public class WorkoutSetTrackerService : IWorkoutSetTrackerService
+  public class WorkoutSetService : IWorkoutSetService
   {
     private readonly IMapper mapper;
     private readonly WorkoutServiceOptions workoutServiceOptions;
     private readonly IWorkoutRepository workoutRepository;
 
-    public WorkoutSetTrackerService(
+    public WorkoutSetService(
       IMapper mapper,
       WorkoutServiceOptions workoutServiceOptions,
       IWorkoutRepository workoutRepository)
