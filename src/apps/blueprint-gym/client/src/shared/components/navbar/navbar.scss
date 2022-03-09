@@ -16,20 +16,23 @@
   max-width: 1920px;
   height: 40px;
   background-color: $navbarBackground;
-  color: $navbarFontColor;
+  color: $navbarTextColor;
   // overflow: hidden;
 }
 
 .Logo {
-  letter-spacing: 8px;
-  font-size: 30px;
+  letter-spacing: 12px;
+  text-transform: uppercase;
+  font-family: $thin-modern-title;
+  font-size: 22px;
   color: whitesmoke;
-  text-shadow: 1px 1px 4px $navbarIconColor, 1px 1px 3px $navbarIconColor;
+  text-shadow: 2px 1px 4px rgb(12, 32, 95), 2px 1px 3px rgb(12, 32, 95);
   transition: all 0.2s ease-in-out;
 }
 
 .Logo:hover {
-  letter-spacing: 10px;
+  color: white;
+  text-shadow: 4px 1px 4px rgb(12, 32, 95), 4px 1px 3px rgb(12, 32, 95);
 }
 
 .NavItem {
@@ -37,11 +40,15 @@
   padding-left: 3%;
   padding-right: 3%;
   padding-top: 8px;
+  font-family: $thin-modern-title;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgb(12, 32, 95), 1px 1px 3px rgb(12, 32, 95);
   transition: all 0.1s ease-in-out;
 }
 
 .NavItem:hover {
-  border-bottom: 4px solid $navbarIconColor;
+  border-bottom: 4px solid $navbarTextColor;
   cursor: pointer;
 }
 
@@ -57,26 +64,36 @@
   width: 42%;
 
   a {
-    color: $navbarIconColor;
+    color: $navbarTextColor;
   }
 
   span {
-    color: $navbarFontColor;
+    color: $navbarTextColor;
   }
 }
 
 .LogoNavSection {
-  width: 16%;
-  height: 48px;
+  width: 320px;
+  height: 40px;
   border-radius: 10px;
   background-color: $navbarBackground;
-  padding: 6px 0px 0px 0px;
+  padding: 8px 0px 0px 0px;
   transition: all 0.2s ease-in-out;
+
+  .HoverPrompt {
+    letter-spacing: 2px;
+    opacity: 0;
+  }
 }
 
 .LogoNavSection:hover {
   cursor: pointer;
-  border-bottom: 4px solid $navbarIconColor;
+  height: 70px;
+  border-bottom: 4px solid $navbarTextColor;
+
+  .HoverPrompt {
+    opacity: 1;
+  }
 }
 
 .ProfileNavSection {
@@ -115,11 +132,11 @@
   transition: all 0.2s ease-in-out;
 
   a {
-    color: $navbarIconColor;
+    color: $navbarTextColor;
   }
 
   span {
-    color: $navbarFontColor;
+    color: $navbarTextColor;
   }
 }
 
@@ -129,12 +146,12 @@
 }
 
 .DropdownNavItem:hover {
-  box-shadow: $navbarIconColor 0px 11px 21px -9px;
+  box-shadow: $navbarTextColor 0px 11px 21px -9px;
   cursor: pointer;
 }
 
 .ActiveNavLink {
-  border-bottom: 4px solid $navbarIconColor;
+  border-bottom: 4px solid $navbarTextColor;
 }
 
 .PlayerNavItem {

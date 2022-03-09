@@ -1,0 +1,261 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Jobs/BlueprintGym.Jobs.ExerciseTracker/BlueprintGym.Jobs.ExerciseTracker.csproj": {}
+  },
+  "projects": {
+    "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Constants/BlueprintGym.Domain.Constants.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Constants/BlueprintGym.Domain.Constants.csproj",
+        "projectName": "BlueprintGym.Domain.Constants",
+        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Constants/BlueprintGym.Domain.Constants.csproj",
+        "packagesPath": "/home/mwelte/.nuget/packages/",
+        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Constants/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mwelte/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Core/BlueprintGym.Domain.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Core/BlueprintGym.Domain.Core.csproj",
+        "projectName": "BlueprintGym.Domain.Core",
+        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Core/BlueprintGym.Domain.Core.csproj",
+        "packagesPath": "/home/mwelte/.nuget/packages/",
+        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mwelte/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Azure.Cosmos": {
+              "target": "Package",
+              "version": "[3.17.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.ExerciseTracker/BlueprintGym.Domain.ExerciseTracker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.ExerciseTracker/BlueprintGym.Domain.ExerciseTracker.csproj",
+        "projectName": "BlueprintGym.Domain.ExerciseTracker",
+        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.ExerciseTracker/BlueprintGym.Domain.ExerciseTracker.csproj",
+        "packagesPath": "/home/mwelte/.nuget/packages/",
+        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.ExerciseTracker/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mwelte/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Constants/BlueprintGym.Domain.Constants.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Constants/BlueprintGym.Domain.Constants.csproj"
+              },
+              "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Core/BlueprintGym.Domain.Core.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Core/BlueprintGym.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Jobs/BlueprintGym.Jobs.ExerciseTracker/BlueprintGym.Jobs.ExerciseTracker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Jobs/BlueprintGym.Jobs.ExerciseTracker/BlueprintGym.Jobs.ExerciseTracker.csproj",
+        "projectName": "BlueprintGym.Jobs.ExerciseTracker",
+        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Jobs/BlueprintGym.Jobs.ExerciseTracker/BlueprintGym.Jobs.ExerciseTracker.csproj",
+        "packagesPath": "/home/mwelte/.nuget/packages/",
+        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Jobs/BlueprintGym.Jobs.ExerciseTracker/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mwelte/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Constants/BlueprintGym.Domain.Constants.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Constants/BlueprintGym.Domain.Constants.csproj"
+              },
+              "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Core/BlueprintGym.Domain.Core.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.Core/BlueprintGym.Domain.Core.csproj"
+              },
+              "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.ExerciseTracker/BlueprintGym.Domain.ExerciseTracker.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/BlueprintGym.Domain.ExerciseTracker/BlueprintGym.Domain.ExerciseTracker.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[4.1.2, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "221b47e8-8985-44fb-befe-955fbc1ec30d",
+    "ExerciseName": "Push Ups",
+    "DescriptionSnippet": "You know what a pushup is",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Shoulders",
+      "Triceps",
+      "Inner Abs"
+    ],
+    "Difficulty": 1,
+    "State": 0,
+    "Id": "221b47e8-8985-44fb-befe-955fbc1ec30d",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "7a1ad751-d3d7-421a-add2-192721d39586",
+    "ExerciseName": "Squats",
+    "DescriptionSnippet": "You know what a squat is, the ass workout",
+    "MusclesWorked": [
+      "Inner Abs",
+      "Glutes",
+      "Upper Front Legs",
+      "Lower Legs",
+      "Lower Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "7a1ad751-d3d7-421a-add2-192721d39586",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  }
+]

@@ -1,0 +1,29 @@
+containerPort: 5003
+
+localdbEnv: integration
+
+image:
+  repository: sentraindev.azurecr.io/integration/mwelte/milestone-tracker
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets:
+  - name: acr-dev-secret
+
+service:
+  port: 5003
+  targetPort: 5003
+  type: NodePort
+  nodePort: 30003
+
+environment:
+  - name: ASPNETCORE_URLS
+    value: http://+:5003
+  - name: ASPNETCORE_ENVIRONMENT
+    value: Integration
+  - name: DOTNET_HOSTBUILDER__RELOADCONFIGONCHANGE
+    value: "false"
+  - name: CACHING_DISABLED
+    value: true
+  - name: SENTRAIN_PATH
+    value: /data

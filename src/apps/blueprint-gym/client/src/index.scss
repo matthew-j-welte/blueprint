@@ -1,13 +1,54 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./shared/scss/colors.scss";
+@import "./shared/scss/fonts.scss";
+
+@import "./shared/scss/blueprint-globals/all.scss";
+
 body {
+  background-color: $background;
+  color: $bodyTextColor;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  //   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: $jumbotronHeader;
+  // color: $sectionHeader;
+}
+
+a {
+  text-decoration: unset;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration: unset;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+// body {
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }

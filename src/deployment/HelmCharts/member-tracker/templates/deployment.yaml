@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "member-tracker.fullname" . }}
+  labels:
+{{ include "member-tracker.labels" . | indent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "member-tracker.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "member-tracker.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{ if .Values.hasLocalVolume }}       
+      volumes:
+        - name: local-db-storage
+          persistentVolumeClaim:
+            claimName: member-tracker-claim
+      {{ end }}          
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.containerPort }}
+              protocol: TCP
+          {{- with .Values.environment }}
+          env:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{ if .Values.hasLocalVolume }}       
+          volumeMounts:
+          - mountPath: "/data/local-db/{{ .Values.localdbEnv }}/"
+            name: local-db-storage
+          {{ end }}
+{{ if .Values.hasLocalVolume }}
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: member-tracker-volume
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 512Mi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/data/local-db/{{ .Values.localdbEnv }}/"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: member-tracker-claim
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 512Mi
+{{ end }}

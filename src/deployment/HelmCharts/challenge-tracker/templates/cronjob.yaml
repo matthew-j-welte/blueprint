@@ -1,0 +1,37 @@
+{{- range $job, $val := .Values.cronjobs.crons }}
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ include "challenge-tracker.fullname" . }}
+  labels:
+{{ include "challenge-tracker.labels" . | indent 4 }}
+spec:
+  schedule: {{ .schedule | quote }}
+  concurrencyPolicy: Allow
+  parallelism: {{ .replicas }}
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          labels:
+            app: {{ .name }}
+        spec:
+          containers:
+          - name: {{ .Chart.Name }}
+            image: "{{ .Values.image.repository }}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }}
+            {{- with .Values.environment }}
+            env:
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
+              - name: JOB_WORKER_KEY
+                value: {{ .jobKey }}
+              - name: JOB_TZ_KEY
+                value: {{ .jobTZ }}
+          {{- with .Values.imagePullSecrets }}
+          restartPolicy: OnFailure
+          imagePullSecrets:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+---
+{{- end}}

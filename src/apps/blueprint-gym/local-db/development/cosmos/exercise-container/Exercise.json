@@ -1,0 +1,60 @@
+[
+  {
+    "PK": "Exercise-221b47e8-8985-44fb-befe-955fbc1ec30d",
+    "ExerciseId": "221b47e8-8985-44fb-befe-955fbc1ec30d",
+    "ExerciseName": "Push Ups",
+    "Description": "You know what a pushup is",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Shoulders",
+      "Triceps",
+      "Inner Abs"
+    ],
+    "ExerciseLabels": [
+      "Cardio",
+      "Bodyweight Possible",
+      "Resistance Bands",
+      "Weight Vest Possible",
+      "Outdoors"
+    ],
+    "State": 0,
+    "Difficulty": 1,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "221b47e8-8985-44fb-befe-955fbc1ec30d",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-7a1ad751-d3d7-421a-add2-192721d39586",
+    "ExerciseId": "7a1ad751-d3d7-421a-add2-192721d39586",
+    "ExerciseName": "Squats",
+    "Description": "You know what a squat is, the ass workout",
+    "MusclesWorked": [
+      "Inner Abs",
+      "Glutes",
+      "Upper Front Legs",
+      "Lower Legs",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Cardio",
+      "Bodyweight Possible",
+      "Resistance Bands",
+      "Weight Vest Possible",
+      "Outdoors",
+      "Barbell",
+      "Kettlebells",
+      "6-pack"
+    ],
+    "State": 0,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "7a1ad751-d3d7-421a-add2-192721d39586",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  }
+]

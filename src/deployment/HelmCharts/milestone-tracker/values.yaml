@@ -1,0 +1,27 @@
+replicaCount: 1
+containerPort:
+
+image:
+  repository:
+  tag: latest
+  pullPolicy: IfNotPresent
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  port:
+  targetPort:
+  type:
+  nodePort:
+
+volumes: []
+
+resources: {}
+
+environment: []
+
+hasLocalVolume: false
+
+localDbPath:
