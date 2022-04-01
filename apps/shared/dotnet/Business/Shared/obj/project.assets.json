@@ -6894,11 +6894,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/Shared/BlueprintGym.Business.Shared.csproj",
+      "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/BlueprintGym.Business.Shared.csproj",
       "projectName": "BlueprintGym.Business.Shared",
-      "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/Shared/BlueprintGym.Business.Shared.csproj",
+      "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/BlueprintGym.Business.Shared.csproj",
       "packagesPath": "/home/mwelte/.nuget/packages/",
-      "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/Shared/obj/",
+      "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mwelte/.nuget/NuGet/NuGet.Config"
@@ -6913,17 +6913,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/Core/BlueprintGym.Domain.Core.csproj": {
-              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Domain/Core/BlueprintGym.Domain.Core.csproj"
+            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj"
             },
-            "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj": {
-              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj"
+            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj"
             },
-            "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
-              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj"
+            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj"
             },
-            "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj": {
-              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj"
+            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj"
             }
           }
         }
@@ -6966,7 +6966,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.201/RuntimeIdentifierGraph.json"
       }
     }
   }

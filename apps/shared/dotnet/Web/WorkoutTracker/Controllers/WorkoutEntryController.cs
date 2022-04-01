@@ -18,7 +18,7 @@ namespace BlueprintGym.Web.WorkoutTracker.Controllers
     }
 
     [HttpGet("get/{workoutId}")]
-    public async Task<IEnumerable<WorkoutEntryFormView>> GetWorkoutEntries(string workoutId)
+    public async Task<IEnumerable<WorkoutEntryLookupDto>> GetWorkoutEntries(string workoutId)
       => await this.workoutEntryService.GetWorkoutEntries(workoutId).ConfigureAwait(false);
 
     [HttpPut("save")]
@@ -28,9 +28,5 @@ namespace BlueprintGym.Web.WorkoutTracker.Controllers
     [HttpDelete("delete/{workoutEntryId}")]
     public async Task<bool> DeleteWorkoutEntry(string workoutEntryId)
       => await this.workoutEntryService.DeleteWorkoutEntry(workoutEntryId).ConfigureAwait(false);
-
-    [HttpDelete("delete-all/{workoutId}")]
-    public async Task<int> DeleteWorkoutEntries(string workoutId)
-      => await this.workoutEntryService.DeleteWorkoutEntries(workoutId).ConfigureAwait(false);
   }
 }

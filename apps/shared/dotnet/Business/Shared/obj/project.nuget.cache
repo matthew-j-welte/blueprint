@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4xkM6OJJZs6fN7h3iQNoxUlXhtWyXChsKJjpRkrzLGii5W3/gXuTJFS8UXHzGeP3MSKAvHkOqq+61T5SNi8Pfw==",
+  "dgSpecHash": "oN7pL+g3uVZe2+ogW1RutkZFndNfoUPZ6K+YMLAEb4rdHZH1EMZQow8ZjRlcpLFKYeaO3ah3URy8dFkG9KtiUg==",
   "success": true,
-  "projectFilePath": "/home/mwelte/github/matthew-j-welte/blueprint/src/apps/blueprint-gym/server/Business/Shared/BlueprintGym.Business.Shared.csproj",
+  "projectFilePath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/BlueprintGym.Business.Shared.csproj",
   "expectedPackageFiles": [
     "/home/mwelte/.nuget/packages/automapper/11.0.1/automapper.11.0.1.nupkg.sha512",
     "/home/mwelte/.nuget/packages/azure.core/1.3.0/azure.core.1.3.0.nupkg.sha512",

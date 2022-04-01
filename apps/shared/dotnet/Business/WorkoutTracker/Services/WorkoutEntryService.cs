@@ -26,33 +26,27 @@ namespace BlueprintGym.Business.WorkoutTracker.Services
       this.workoutRepository = workoutRepository;
     }
 
-    public async Task<int> DeleteWorkoutEntries(string workoutId)
-    {
-      var deletionTasks = (await this.workoutRepository.WorkoutEntry
-        .GetByQueryAsync(x => x.WorkoutId == workoutId).ConfigureAwait(false))
-          .Select(x => this.workoutRepository.WorkoutEntry.DeleteByIdAsync(x.Id, x.PK.ToString()));
-      await Task.WhenAll(deletionTasks).ConfigureAwait(false);
-      return deletionTasks.Count();
-    }
-
     public async Task<bool> DeleteWorkoutEntry(string workoutEntryId)
     {
       await this.workoutRepository.WorkoutEntry.DeleteByIdAsync(workoutEntryId, workoutEntryId).ConfigureAwait(false);
       return true;
     }
 
-    public async Task<IEnumerable<WorkoutEntryFormView>> GetWorkoutEntries(string workoutId)
+    public async Task<IEnumerable<WorkoutEntryLookupDto>> GetWorkoutEntries(string workoutId)
     {
-      return this.mapper.Map<IEnumerable<WorkoutEntryFormView>>(
-        await this.workoutRepository.WorkoutEntry
+      return this.mapper.Map<IEnumerable<WorkoutEntryLookupDto>>(
+        await this.workoutRepository.WorkoutEntryRef
           .GetByQueryAsync(x => x.WorkoutId == workoutId).ConfigureAwait(false));
     }
 
     public async Task<WorkoutEntryFormView> SaveWorkoutEntry(WorkoutEntryFormView workoutEntry)
     {
-      return this.mapper.Map<WorkoutEntryFormView>(
-        await this.workoutRepository.WorkoutEntry.UpsertAsync(
-          mapper.Map<WorkoutEntry>(workoutEntry)).ConfigureAwait(false));
+      var upsertedWorkoutEntry = await this.workoutRepository.WorkoutEntry.UpsertAsync(
+          mapper.Map<WorkoutEntry>(workoutEntry)).ConfigureAwait(false);
+      await this.workoutRepository.WorkoutEntryRef.UpsertAsync(
+          mapper.Map<WorkoutEntryRef>(workoutEntry)).ConfigureAwait(false)
+
+      return this.mapper.Map<WorkoutEntryFormView>(upsertedWorkoutEntry));
     }
   }
 }

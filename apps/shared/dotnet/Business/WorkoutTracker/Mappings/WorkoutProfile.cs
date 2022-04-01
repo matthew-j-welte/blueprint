@@ -22,6 +22,8 @@ namespace BlueprintGym.Business.WorkoutTracker.Mappings
         .ForMember(x => x.MusclesWorked, memberOptions => memberOptions.MapFrom(x => x.ExerciseAssignments.SelectMany(y => y.MusclesWorked)));
 
       CreateMap<WorkoutEntryFormView, WorkoutEntry>().ReverseMap();
+      CreateMap<WorkoutEntryFormView, WorkoutEntryRef>();
+      CreateMap<WorkoutEntryLookupDto, WorkoutEntryRef>().ReverseMap();
 
       CreateMap<RegimenFormView, Regimen>().ReverseMap();
 

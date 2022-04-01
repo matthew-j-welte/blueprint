@@ -9,5 +9,6 @@ namespace BlueprintGym.Domain.WorkoutTracker.Interfaces
     IBaseRepository<WorkoutRef> WorkoutRef { get; }
     IBaseRepository<WorkoutEntry> WorkoutEntry { get; }
     IBaseRepository<WorkoutSet> WorkoutSet { get; }
+    IBaseRepository<WorkoutEntryRef> WorkoutEntryRef { get; }
   }
 }
