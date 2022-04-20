@@ -11,9 +11,6 @@ import { WorkoutSetService } from "../../core/services/workout-set-service";
 import { WorkoutEntryService } from "../../core/services/workout-entry-service";
 
 function WorkoutActiveEntryForm() {
-  const weightInputRef = useRef<HTMLInputElement>(null);
-  const repsInputRef = useRef<HTMLInputElement>(null);
-
   const { workoutId } = useParams();
   const [activeSet, set_activeSet] = useState<WorkoutSetFormView>();
   const [setEntries, set_setEntries] = useState<WorkoutSetFormView[]>();
@@ -23,11 +20,12 @@ function WorkoutActiveEntryForm() {
   const [nextExerciseName, set_nextExerciseName] = useState<string>();
   const [previousExerciseName, set_previousExerciseName] = useState<string>();
 
+  const weightInputRef = useRef<HTMLInputElement>(null);
+  const repsInputRef = useRef<HTMLInputElement>(null);
   const workoutEntryId = uuidv4();
 
   useEffect(() => {
     if (workoutId) {
-      console.log(workoutId);
       WorkoutService.getWorkoutFormView(workoutId).then((res) => {
         if (res) {
           set_workout(res);

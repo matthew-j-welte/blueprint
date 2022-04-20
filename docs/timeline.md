@@ -3,14 +3,11 @@
 - Have a working golang backend
 - Current frontend working with golang backend
 
-**April 17th**
+**April 24th**
 
 - _Cant Hurt Me_ book complete
 - Cleanup
 - Cleanup frontend/backend code to make for a clean development process going forward
-
-**April 24th**
-
 - Finish Bulk Entry Page
 - Finish remaining "view pages" for phase 1
 

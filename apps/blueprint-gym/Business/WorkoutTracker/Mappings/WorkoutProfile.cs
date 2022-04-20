@@ -4,7 +4,6 @@ using BlueprintGym.Business.Shared.Models;
 using BlueprintGym.Business.WorkoutTracker.Models;
 using BlueprintGym.Domain.Core.Models;
 using BlueprintGym.Domain.WorkoutTracker.Models;
-using BlueprintGym.Domain.WorkoutTracker.Models.Containers;
 
 namespace BlueprintGym.Business.WorkoutTracker.Mappings
 {
@@ -27,8 +26,6 @@ namespace BlueprintGym.Business.WorkoutTracker.Mappings
       CreateMap<WorkoutEntryLookupDto, WorkoutEntryRef>().ReverseMap();
 
       CreateMap<RegimenFormView, Regimen>().ReverseMap();
-
-      CreateMap<WorkoutSetFormView, WorkoutSet>().ReverseMap();
     }
   }
 }

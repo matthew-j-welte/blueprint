@@ -1,7 +1,4 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import "./shared/scss/colors.scss";
-@import "./shared/scss/fonts.scss";
-
 @import "./shared/scss/blueprint-globals/all.scss";
 
 body {
@@ -35,8 +32,7 @@ a:hover {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 // body {

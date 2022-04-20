@@ -3,20 +3,8 @@ import { useEffect, useState } from "react";
 import "./navbar.scss";
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAddressCard,
-  faBell,
-  faChartBar,
-  faCogs,
-  faDumbbell,
-  faEnvelope,
-  faHome,
-  faSignOutAlt,
-  faUsersCog,
-  faWeight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBell, faChartBar, faDumbbell, faEnvelope, faHome } from "@fortawesome/free-solid-svg-icons";
 
-import profileImg from "../../../assets/default-profile-img.png";
 import { AppRoutes } from "../../../core/constants/routes";
 
 function Navbar() {

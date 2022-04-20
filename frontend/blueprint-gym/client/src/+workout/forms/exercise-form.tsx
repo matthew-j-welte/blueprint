@@ -21,11 +21,6 @@ import Select from "react-select";
 
 function ExerciseForm() {
   const { exerciseId } = useParams();
-  const [nameEditCofirmed, set_nameEditCofirmed] = useState(false);
-  const [activeMuscleGroupBtn, set_activeMuscleGroupBtn] = useState(MuscleSpecificity.Focused);
-  const [exerciseLookups, set_exerciseLookups] = useState<ExerciseLookupDto[]>([]);
-
-  // exercise
   const [id, set_id] = useState<string | null>();
   const [modifiedOn, set_modifiedOn] = useState<Date | null>();
   const [exerciseName, set_exerciseName] = useState<string>();
@@ -37,6 +32,9 @@ function ExerciseForm() {
   const [parentVariationExercise, set_parentVariationExercise] = useState<ExerciseLink>();
 
   const [loadedExercise, set_loadedExercise] = useState<ExerciseFormView>();
+  const [nameEditCofirmed, set_nameEditCofirmed] = useState(false);
+  const [activeMuscleGroupBtn, set_activeMuscleGroupBtn] = useState(MuscleSpecificity.Focused);
+  const [exerciseLookups, set_exerciseLookups] = useState<ExerciseLookupDto[]>([]);
 
   const updateForm = (exercise: ExerciseFormView) => {
     set_id(exercise.id);
@@ -66,7 +64,6 @@ function ExerciseForm() {
 
   useEffect(() => {
     if (exerciseId) {
-      console.log(exerciseId);
       ExerciseService.getExerciseFormView(exerciseId).then((res) => {
         set_loadedExercise(res);
         updateForm(res);
