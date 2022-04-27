@@ -27,8 +27,8 @@ type WorkoutEntry struct {
 	RegimenId     string
 	WorkoutIndex  int
 	TimeSubmitted primitive.DateTime
-	SetGoals      []WorkoutSet
-	SetEntries    []WorkoutSet
+	SetGoals      []WorkoutSetEntry
+	SetEntries    []WorkoutSetEntry
 }
 
 type WorkoutEntryRef struct {
@@ -46,9 +46,6 @@ type WorkoutExerciseAssignment struct {
 	SpecialSetIdentifier string
 	ExerciseId           string
 	ExerciseName         string
-	HeavyAim             ExerciseAimInfo
-	ConditionedAim       ExerciseAimInfo
-	DurableAim           ExerciseAimInfo
 	SpecializedSetType   SpecializedSetType
 	MusclesWorked        []string
 }
@@ -58,7 +55,7 @@ type ExerciseAimInfo struct {
 	ExerciseAim    ExerciseAim
 }
 
-type WorkoutSet struct {
+type WorkoutSetEntry struct {
 	EntryId       string
 	SetIdentifier string
 	Weight        int

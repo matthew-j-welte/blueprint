@@ -25,7 +25,7 @@ namespace BlueprintGym.Domain.Core.LocalDatabase
         throw new SystemException("Must set BLUEPRINT_GYM_PATH path!");
       }
 
-      var localDbStoragePath = Path.Join(blueprintPath, "local-db", env.ToLower());
+      var localDbStoragePath = Path.Join(blueprintPath, "_local-db", env.ToLower());
 
       Directory.CreateDirectory(localDbStoragePath);
       localDbStoragePath = Path.Join(localDbStoragePath, "cosmos");

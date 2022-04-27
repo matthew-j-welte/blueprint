@@ -1,10 +1,4 @@
-import {
-  faArrowDown91,
-  faHand,
-  faLayerGroup,
-  faShuffle,
-  faWaveSquare,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown91, faHand, faLayerGroup, faShuffle, faWaveSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { WorkoutExerciseAssignment } from "../../core/models/workout.model";
 import "../../shared/scss/blueprint-globals/all.scss";
@@ -25,8 +19,7 @@ function ExerciseGrid(props: ExerciseGridInput) {
           <FontAwesomeIcon icon={faLayerGroup}></FontAwesomeIcon> CrossFit Mode
         </button>
         <button className="nounderline btn btn-link text-secondary small">
-          <FontAwesomeIcon icon={faArrowDown91}></FontAwesomeIcon> Countdown
-          Mode
+          <FontAwesomeIcon icon={faArrowDown91}></FontAwesomeIcon> Countdown Mode
         </button>
       </div>
       <div className="py-4">
@@ -35,29 +28,23 @@ function ExerciseGrid(props: ExerciseGridInput) {
             <h5>Exercise</h5>
           </div>
           <div className="col-2 text-center border pt-2">
-            <h5>Aim Weight</h5>
+            <h5>Post Break Goal</h5>
           </div>
           <div className="col-2 text-center border pt-2">
-            <h5>Aim Reps</h5>
+            <h5>Set Goal</h5>
           </div>
           <div className="col-2 text-center border pt-2">
-            <h5>Aim Sets</h5>
+            <h5>Muscles</h5>
           </div>
         </div>
         {props.exercises.map((x) => {
           return (
-            <div>
+            <div key={x.setIdentifier}>
               <div className="row">
                 <div className="col-6 d-flex align-items-center">
                   <button
                     type="button"
-                    onClick={() =>
-                      props.exercisesSetter(
-                        props.exercises.filter(
-                          (y) => x.exerciseId !== y.exerciseId
-                        )
-                      )
-                    }
+                    onClick={() => props.exercisesSetter(props.exercises.filter((y) => x.exerciseId !== y.exerciseId))}
                     className="btn btn-link text-danger nounderline"
                   >
                     {" "}
@@ -66,15 +53,13 @@ function ExerciseGrid(props: ExerciseGridInput) {
                   <h6 className="less-thin mb-0">{x.exerciseName}</h6>
                 </div>
                 <div className="col-2 d-flex justify-content-center align-items-center">
-                  <h6 className="mb-0 thin">{x.heavyAim?.aimBonusCutoff}</h6>
+                  <h6 className="mb-0 thin">{x.heavyAim}</h6>
                 </div>
                 <div className="col-2 d-flex justify-content-center align-items-center">
-                  <h6 className="mb-0 thin">
-                    {x.conditionedAim?.aimBonusCutoff}
-                  </h6>
+                  <h6 className="mb-0 thin">{x.conditionedAim}</h6>
                 </div>
                 <div className="col-2 d-flex justify-content-center align-items-center">
-                  <h6 className="mb-0 thin">{x.durableAim?.aimBonusCutoff}</h6>
+                  <h6 className="mb-0 thin">{x.durableAim}</h6>
                 </div>
               </div>
               <hr className="dim-hr my-1" />

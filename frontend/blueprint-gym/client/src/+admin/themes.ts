@@ -1,6 +1,6 @@
-import { SentrainThemeInfo } from "./services/theme-service";
+import { ThemeInfo } from "./admin.models";
 
-export const BlueDream: SentrainThemeInfo = {
+export const BlueDream: ThemeInfo = {
   themeName: "BlueDream",
   themeFields: {
     navbarBackground: "rgb(47, 163, 230)",
@@ -22,29 +22,7 @@ export const BlueDream: SentrainThemeInfo = {
   },
 };
 
-export const Durkorange: SentrainThemeInfo = {
-  themeName: "Durkorange",
-  themeFields: {
-    bodyHeaderColor: "rgb(245, 122, 85)",
-    jumbotronSubheaderColor: "rgb(245, 122, 85)",
-    jumbotronHeaderColor: "rgb(202, 143, 250)",
-    jumbotronIconColor: "rgb(173, 71, 250)",
-    bodyBackground: "rgb(57, 53, 60)",
-    jumbotronBackground: "rgb(41, 35, 45)",
-    cardBackground: "rgb(63, 58, 65)",
-    navbarBackground: "rgb(245, 122, 85)",
-    bodyTextColor: "rgb(255, 239, 241)",
-    jumbotronTextColor: "rgb(255, 239, 241)",
-    navbarTextColor: "rgb(63, 58, 65)",
-    textDanger: "rgb(200, 41, 62)",
-    textInfo: "rgb(250, 167, 66)",
-    textPrimary: "rgb(245, 122, 85)",
-    textSuccess: "rgb(202, 143, 250)",
-    textWarning: "rgb(245, 91, 35)",
-  },
-};
-
-export const NewOneV2: SentrainThemeInfo = {
+export const NewOneV2: ThemeInfo = {
   themeName: "NewOneV2",
   themeFields: {
     navbarBackground: "rgb(130, 220, 196)",
@@ -66,29 +44,7 @@ export const NewOneV2: SentrainThemeInfo = {
   },
 };
 
-export const PurpleNurple: SentrainThemeInfo = {
-  themeName: "PurpleNurple",
-  themeFields: {
-    navbarBackground: "rgb(132, 24, 240)",
-    navbarTextColor: "rgb(255, 253, 239)",
-    bodyBackground: "rgb(244, 240, 245)",
-    bodyHeaderColor: "rgb(32, 6, 45)",
-    cardBackground: "rgb(248, 245, 250)",
-    jumbotronBackground: "rgb(244, 240, 245)",
-    jumbotronHeaderColor: "rgb(132, 24, 240)",
-    jumbotronIconColor: "rgb(132, 24, 240)",
-    jumbotronSubheaderColor: "rgb(32, 6, 45)",
-    jumbotronTextColor: "rgb(21, 2, 30)",
-    bodyTextColor: "rgb(21, 2, 30)",
-    textPrimary: "rgb(132, 24, 240)",
-    textDanger: "rgb(140, 11, 33)",
-    textInfo: "rgb(71, 125, 255)",
-    textWarning: "rgb(245, 232, 160)",
-    textSuccess: "rgb(174, 230, 136)",
-  },
-};
-
-export const RetroSentrain: SentrainThemeInfo = {
+export const RetroSentrain: ThemeInfo = {
   themeName: "RetroSentrain",
   themeFields: {
     navbarBackground: "rgb(177, 10, 130)",
@@ -110,7 +66,7 @@ export const RetroSentrain: SentrainThemeInfo = {
   },
 };
 
-export const TheOrangeDude: SentrainThemeInfo = {
+export const TheOrangeDude: ThemeInfo = {
   themeName: "TheOrangeDude",
   themeFields: {
     navbarBackground: "rgb(245, 112, 60)",
@@ -132,11 +88,4 @@ export const TheOrangeDude: SentrainThemeInfo = {
   },
 };
 
-export const ALL_THEMES = [
-  NewOneV2,
-  RetroSentrain,
-  TheOrangeDude,
-  BlueDream,
-  Durkorange,
-  PurpleNurple,
-];
+export const ALL_THEMES = [NewOneV2, RetroSentrain, TheOrangeDude, BlueDream];

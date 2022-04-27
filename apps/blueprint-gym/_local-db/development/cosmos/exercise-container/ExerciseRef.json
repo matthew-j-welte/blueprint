@@ -1,0 +1,208 @@
+[
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "b3faa490-d8b6-4d98-8935-2ded7b052a89",
+    "ExerciseName": "Decline Press",
+    "DescriptionSnippet": "Like a chest press, but declined!",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Shoulders",
+      "Triceps",
+      "Forearms/Grip"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "b3faa490-d8b6-4d98-8935-2ded7b052a89",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "423133a5-f5c4-4acf-bf8a-47fc88fc0326",
+    "ExerciseName": "Hammer Press",
+    "DescriptionSnippet": "Pulling weight over your head... like a hammer",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Shoulders",
+      "Triceps",
+      "Forearms/Grip"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "423133a5-f5c4-4acf-bf8a-47fc88fc0326",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "96e5c74f-2d6c-4c7d-a3b6-18a276330ed2",
+    "ExerciseName": "Shoulder Press",
+    "DescriptionSnippet": "Pressing weight over your head",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Shoulders",
+      "Triceps",
+      "Forearms/Grip",
+      "Upper Back"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "96e5c74f-2d6c-4c7d-a3b6-18a276330ed2",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "2877100a-f8dc-4419-92ba-3763f66f4bb7",
+    "ExerciseName": "Wide Grip Pullups",
+    "DescriptionSnippet": "You know, pullups",
+    "MusclesWorked": [
+      "Forearms/Grip",
+      "Upper Back",
+      "Biceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "2877100a-f8dc-4419-92ba-3763f66f4bb7",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "95ae5026-b7fb-45fc-87b1-c51cb466311c",
+    "ExerciseName": "Bicep Curls",
+    "DescriptionSnippet": "You know, bicep curls",
+    "MusclesWorked": [
+      "Forearms/Grip",
+      "Biceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "95ae5026-b7fb-45fc-87b1-c51cb466311c",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "0490ec08-e6b3-4515-8726-f679b9945fa8",
+    "ExerciseName": "Squats",
+    "DescriptionSnippet": "You know, squats",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Glutes",
+      "Lower Legs",
+      "Inner Abs",
+      "Outer Abs"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "0490ec08-e6b3-4515-8726-f679b9945fa8",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "3144fac6-fb40-4749-9c1b-7dafcb420153",
+    "ExerciseName": "Calf Raises",
+    "DescriptionSnippet": "You know, calves",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Lower Legs",
+      "Glutes"
+    ],
+    "Difficulty": 1,
+    "State": 0,
+    "Id": "3144fac6-fb40-4749-9c1b-7dafcb420153",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "0088a302-8c9a-43ce-9405-de6b6430cd68",
+    "ExerciseName": "Chest Flies",
+    "DescriptionSnippet": "You know, chest flies",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Shoulders",
+      "Triceps",
+      "Forearms/Grip"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "0088a302-8c9a-43ce-9405-de6b6430cd68",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "3ae41320-688a-4982-ac25-453a7c1ca598",
+    "ExerciseName": "Deadlifts",
+    "DescriptionSnippet": "You know, deadlifts",
+    "MusclesWorked": [
+      "Shoulders",
+      "Forearms/Grip",
+      "Upper Back",
+      "Upper Back Legs",
+      "Glutes",
+      "Outer Abs"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "3ae41320-688a-4982-ac25-453a7c1ca598",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "b7974a96-caa8-421a-b928-aeca3cb945ac",
+    "ExerciseName": "Side Lunge",
+    "DescriptionSnippet": "You know, side lunge",
+    "MusclesWorked": [
+      "Glutes",
+      "Upper Front Legs"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "b7974a96-caa8-421a-b928-aeca3cb945ac",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "4ea190d2-5223-4a23-a7b6-52704bed049f",
+    "ExerciseName": "Burpees",
+    "DescriptionSnippet": "JJump",
+    "MusclesWorked": [
+      "Lower Chest",
+      "Lower Back",
+      "Shoulders",
+      "Triceps",
+      "Glutes",
+      "Upper Front Legs",
+      "Inner Abs",
+      "Outer Abs"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "4ea190d2-5223-4a23-a7b6-52704bed049f",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "5bbc2b12-6e37-4bff-9315-7e55663277c5",
+    "ExerciseName": "Ab Rolls",
+    "DescriptionSnippet": "Abbiesssss",
+    "MusclesWorked": [
+      "Shoulders",
+      "Inner Abs",
+      "Outer Abs"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "5bbc2b12-6e37-4bff-9315-7e55663277c5",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  }
+]

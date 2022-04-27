@@ -1,26 +1,4 @@
-export interface SentrainThemeInfo {
-  themeName?: string | undefined;
-  themeFields: SentrainThemeFields;
-}
-
-export interface SentrainThemeFields {
-  navbarBackground: string;
-  navbarTextColor: string;
-  bodyBackground: string;
-  cardBackground: string;
-  jumbotronBackground: string;
-  jumbotronHeaderColor: string;
-  jumbotronSubheaderColor: string;
-  jumbotronTextColor: string;
-  jumbotronIconColor: string;
-  bodyHeaderColor: string;
-  bodyTextColor: string;
-  textPrimary: string;
-  textDanger: string;
-  textInfo: string;
-  textWarning: string;
-  textSuccess: string;
-}
+import { ThemeFields } from "../admin.models";
 
 const colorVariations = ["Light", "Lighter", "Dark", "Darker", "Fade"];
 const shadeVariationMap: { [key: string]: number } = {
@@ -30,7 +8,7 @@ const shadeVariationMap: { [key: string]: number } = {
   Darker: -30,
 };
 
-const setTheme = (theme: any | SentrainThemeFields): void => {
+const setTheme = (theme: any | ThemeFields): void => {
   Object.keys(theme).forEach((k) => {
     document.documentElement.style.setProperty(`--${k}`, theme[k]);
     // Add dynamic variables
@@ -47,8 +25,7 @@ const setTheme = (theme: any | SentrainThemeFields): void => {
         document.documentElement.style.setProperty(variationKey, shadedRGB);
       } else {
         const increment = shadeVariationMap[variableVariation];
-        const incrementer = (num: number, inc: number) =>
-          num + inc > 255 ? 255 : num + inc < 0 ? 0 : num + inc;
+        const incrementer = (num: number, inc: number) => (num + inc > 255 ? 255 : num + inc < 0 ? 0 : num + inc);
 
         red = incrementer(red, increment);
         green = incrementer(green, increment);

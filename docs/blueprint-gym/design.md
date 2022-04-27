@@ -85,17 +85,90 @@ Nav Opts:
 
 - Can probably just have rows with each exercise and then each cell is weight + reps
 
-## Analytics Page
+## Scoring
 
-- place where we can go through and analyze all past data from previous workouts.
-- make use of charts and different graphics for this, as well as the smart score.
+_Key to remember: Given a person with a perfectly balanced human body and a set of exercises Y, earning 10 smart points for exercise X should require equal physical exertion as earning 10 smart points from any exercise in set Y._
 
-Design Mockups
-[X] Homepage
-[X] New Exercise Page
-[X] New Workout Page
-[X] New Regimen Page
-[X] Workout - Active Entry Page
-[ ] Workout - Bulk Entry Page (and active entry review)
-[ ] Regimen Page
-[ ] Workout Entry Page
+### Questions
+
+Customizable formulas?
+
+Where do we set the numbers for each exercise?
+
+- On exercise publish?
+  - That would ensure everyone is working towards a well balanced body, regardless of where they currently are
+  - Allows global competition to be straight forward
+
+What effect should goal bonuses have?
+
+- We can use the metrics collected from goals to establish a user's consistency and expectations.
+
+How do we prevent people from setting unrealistically low goals ?
+
+- I guess we could penalize ppl for being way over their goals.
+
+What do you get from earning smart points?
+
+- It will be the overall ranking system.
+- If we go with a leveling system it will be used to get to new levels
+- It will be used to more easily track exercise/workout/regimen progress (as opposed to passing around weight/rep/workoutType etc..)
+
+Is smart points the main driver behind a user's ranking/improvement?
+
+- See above (yes)
+
+How do we calculate smart points for a given exercise?
+
+- Each exercise will be assigned a dynamic formula.
+- These formulas (in the form of a string) will accept the following parameters
+  - reps - mostly will mean regular reps, but for cardio it could be time
+  - (optional) weight - will always mean the weight you're lifting / additional weight (from weight vest for ex)
+  - (optional) Body Weight - only used for exercises where your body weight matters
+
+How will formulas/smart points look in code on the backend?
+
+- Use a service that parses formulas, decides which inputs are needed, validates the input provided is valid, then executes the formula.
+- Have a separate formula creation service that accepts dto(s) specifying the type of formula it is, and based on those fields, create a string repr.
+- I guess I could have an ExerciseFormulaParser and an ExerciseFormulaExecutor.. or just one svc.. we shall see.
+
+How will formulas/smart points look in code on the frontend?
+
+- For assigning formulas, this should be done during "Final Validation" after a user requests to publish the exercise.
+- Need to create an admin page that pulls an exercise's details
+- Use a service that parses formulas, decides which inputs are needed, validates the input provided is valid, then executes the formula.
+- Could we use blazor/WASM for this to avoid duplicate logic?
+  - or we could write tests in a way so that they are exactly the same
+  - use a loaded json file in both c# and TS and ensure they give the exact same results (put expected result in the JSON)
+
+How do we calculate goal based points for a given exercise?
+
+- It should definitely be percentage based (10% away from rep goal / 5% away from weight goal)
+- How do I combine rep+weight diffs cleanly though. (before or after overall calc?)
+
+  - before: prolly best option since every exercise might have different fields.
+  - examples:
+    - 10% rep over -- 10% weight under
+    - 10% rep under -- BODYWEIGHT,
+    - 20% time under -- RUNNING
+  - expected payload being sent to backend:
+
+  ```json
+  {
+    <entryId>: { repDiff: 0.1, weightDiff: -0.1 },
+    <entryId>: { repDiff: -0.1 },
+    <entryId>: { repDiff: -0.2 },
+  }
+  ```
+
+  - from here on the backend calculate + store + return:
+    - amount of diffs above goal
+    - amount of diffs under goal
+    - overall goal diff average = sum(avg(repDiff, weightDiff)) / count(sets)
+    - label for your overall goal diff
+
+- Should be able to set goals when creating a Workout.
+  - This is mainly where goals will be set
+- Can also open the above form in a modal
+  - This modal will be prompted for before starting active/bulk entry
+  - It will use the same component/save/edit logic as editting a workout
+    - Or should it be a specific API call to update just the formula?

@@ -16,7 +16,7 @@ class WorkoutSetExercise {
   setAimCutoff: number; // Weight for heavy aim, reps for cardio aim
 }
 
-class WorkoutSet {
+class WorkoutSetEntry {
   setType: string;
   setAim: string;
   exercises: WorkoutSetExercise[];
@@ -27,7 +27,7 @@ class Workout {
   workoutId: string;
   name: string;
   author: string;
-  workoutSets: WorkoutSet[];
+  workoutSets: WorkoutSetEntry[];
 }
 
 class SetGoal {

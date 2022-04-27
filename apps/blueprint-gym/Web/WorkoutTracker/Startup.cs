@@ -47,7 +47,7 @@ namespace BlueprintGym.Web.WorkoutTracker
       this.apiStartupSvc.SetDatabaseName(dbOptions.DatabaseName);
       this.apiStartupSvc.SetContainerName(dbOptions.DatabaseContainers.WorkoutContainer.Name);
 
-      this.apiStartupSvc.ConfigureRepository<IWorkoutRepository, WorkoutRepository, Workout, WorkoutRef, WorkoutEntry>(services);
+      this.apiStartupSvc.ConfigureRepository<IWorkoutRepository, WorkoutRepository, Workout, WorkoutRef, WorkoutEntry, WorkoutEntryRef>(services);
       this.apiStartupSvc.ConfigureRepository<IRegimenRepository, RegimenRepository, Regimen>(services);
 
       var isLocalDbMode = this.apiStartupSvc.IsLocalDbMode();

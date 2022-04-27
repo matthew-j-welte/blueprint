@@ -1,0 +1,317 @@
+[
+  {
+    "PK": "Exercise-b3faa490-d8b6-4d98-8935-2ded7b052a89",
+    "ExerciseId": "b3faa490-d8b6-4d98-8935-2ded7b052a89",
+    "ExerciseName": "Decline Press",
+    "Description": "Like a chest press, but declined!",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Shoulders",
+      "Triceps",
+      "Forearms/Grip"
+    ],
+    "ExerciseLabels": [
+      "Kettlebells",
+      "Barbell",
+      "Resistance Bands"
+    ],
+    "State": 0,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "b3faa490-d8b6-4d98-8935-2ded7b052a89",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-423133a5-f5c4-4acf-bf8a-47fc88fc0326",
+    "ExerciseId": "423133a5-f5c4-4acf-bf8a-47fc88fc0326",
+    "ExerciseName": "Hammer Press",
+    "Description": "Pulling weight over your head... like a hammer",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Shoulders",
+      "Triceps",
+      "Forearms/Grip"
+    ],
+    "ExerciseLabels": [
+      "Kettlebells",
+      "Barbell",
+      "Resistance Bands"
+    ],
+    "State": 0,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "423133a5-f5c4-4acf-bf8a-47fc88fc0326",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-96e5c74f-2d6c-4c7d-a3b6-18a276330ed2",
+    "ExerciseId": "96e5c74f-2d6c-4c7d-a3b6-18a276330ed2",
+    "ExerciseName": "Shoulder Press",
+    "Description": "Pressing weight over your head",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Shoulders",
+      "Triceps",
+      "Forearms/Grip",
+      "Upper Back"
+    ],
+    "ExerciseLabels": [
+      "Kettlebells",
+      "Barbell",
+      "Resistance Bands",
+      "Bodyweight Possible"
+    ],
+    "State": 0,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "96e5c74f-2d6c-4c7d-a3b6-18a276330ed2",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-2877100a-f8dc-4419-92ba-3763f66f4bb7",
+    "ExerciseId": "2877100a-f8dc-4419-92ba-3763f66f4bb7",
+    "ExerciseName": "Wide Grip Pullups",
+    "Description": "You know, pullups",
+    "MusclesWorked": [
+      "Forearms/Grip",
+      "Upper Back",
+      "Biceps"
+    ],
+    "ExerciseLabels": [
+      "Bodyweight Possible",
+      "Weight Vest Possible"
+    ],
+    "State": 0,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "2877100a-f8dc-4419-92ba-3763f66f4bb7",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-95ae5026-b7fb-45fc-87b1-c51cb466311c",
+    "ExerciseId": "95ae5026-b7fb-45fc-87b1-c51cb466311c",
+    "ExerciseName": "Bicep Curls",
+    "Description": "You know, bicep curls",
+    "MusclesWorked": [
+      "Forearms/Grip",
+      "Biceps"
+    ],
+    "ExerciseLabels": [
+      "Kettlebells",
+      "Barbell",
+      "Resistance Bands"
+    ],
+    "State": 0,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "95ae5026-b7fb-45fc-87b1-c51cb466311c",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-0490ec08-e6b3-4515-8726-f679b9945fa8",
+    "ExerciseId": "0490ec08-e6b3-4515-8726-f679b9945fa8",
+    "ExerciseName": "Squats",
+    "Description": "You know, squats",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Glutes",
+      "Lower Legs",
+      "Inner Abs",
+      "Outer Abs"
+    ],
+    "ExerciseLabels": [
+      "Kettlebells",
+      "Barbell",
+      "Resistance Bands",
+      "Cardio",
+      "Bodyweight Possible",
+      "Weight Vest Possible",
+      "Outdoors",
+      "Weight Loss",
+      "6-pack",
+      "BFA (Big Fat Ass)"
+    ],
+    "State": 0,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "0490ec08-e6b3-4515-8726-f679b9945fa8",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-3144fac6-fb40-4749-9c1b-7dafcb420153",
+    "ExerciseId": "3144fac6-fb40-4749-9c1b-7dafcb420153",
+    "ExerciseName": "Calf Raises",
+    "Description": "You know, calves",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Lower Legs",
+      "Glutes"
+    ],
+    "ExerciseLabels": [
+      "Kettlebells",
+      "Barbell",
+      "Resistance Bands",
+      "Bodyweight Possible",
+      "Weight Vest Possible",
+      "Outdoors",
+      "BFA (Big Fat Ass)",
+      "Injury Prone"
+    ],
+    "State": 0,
+    "Difficulty": 1,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "3144fac6-fb40-4749-9c1b-7dafcb420153",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-0088a302-8c9a-43ce-9405-de6b6430cd68",
+    "ExerciseId": "0088a302-8c9a-43ce-9405-de6b6430cd68",
+    "ExerciseName": "Chest Flies",
+    "Description": "You know, chest flies",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Shoulders",
+      "Triceps",
+      "Forearms/Grip"
+    ],
+    "ExerciseLabels": [
+      "Kettlebells",
+      "Resistance Bands",
+      "Injury Prone"
+    ],
+    "State": 0,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "0088a302-8c9a-43ce-9405-de6b6430cd68",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-3ae41320-688a-4982-ac25-453a7c1ca598",
+    "ExerciseId": "3ae41320-688a-4982-ac25-453a7c1ca598",
+    "ExerciseName": "Deadlifts",
+    "Description": "You know, deadlifts",
+    "MusclesWorked": [
+      "Shoulders",
+      "Forearms/Grip",
+      "Upper Back",
+      "Upper Back Legs",
+      "Glutes",
+      "Outer Abs"
+    ],
+    "ExerciseLabels": [
+      "Kettlebells",
+      "Resistance Bands",
+      "Injury Prone",
+      "Cardio",
+      "Barbell",
+      "BFA (Big Fat Ass)"
+    ],
+    "State": 0,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "3ae41320-688a-4982-ac25-453a7c1ca598",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-b7974a96-caa8-421a-b928-aeca3cb945ac",
+    "ExerciseId": "b7974a96-caa8-421a-b928-aeca3cb945ac",
+    "ExerciseName": "Side Lunge",
+    "Description": "You know, side lunge",
+    "MusclesWorked": [
+      "Glutes",
+      "Upper Front Legs"
+    ],
+    "ExerciseLabels": [
+      "Kettlebells",
+      "Resistance Bands",
+      "Injury Prone",
+      "Cardio",
+      "Barbell",
+      "BFA (Big Fat Ass)"
+    ],
+    "State": 0,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "b7974a96-caa8-421a-b928-aeca3cb945ac",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-4ea190d2-5223-4a23-a7b6-52704bed049f",
+    "ExerciseId": "4ea190d2-5223-4a23-a7b6-52704bed049f",
+    "ExerciseName": "Burpees",
+    "Description": "JJump",
+    "MusclesWorked": [
+      "Lower Chest",
+      "Lower Back",
+      "Shoulders",
+      "Triceps",
+      "Glutes",
+      "Upper Front Legs",
+      "Inner Abs",
+      "Outer Abs"
+    ],
+    "ExerciseLabels": [
+      "Cardio",
+      "Bodyweight Possible",
+      "Weight Vest Possible",
+      "Injury Prone",
+      "Outdoors",
+      "Weight Loss",
+      "6-pack",
+      "BFA (Big Fat Ass)"
+    ],
+    "State": 0,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "4ea190d2-5223-4a23-a7b6-52704bed049f",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-5bbc2b12-6e37-4bff-9315-7e55663277c5",
+    "ExerciseId": "5bbc2b12-6e37-4bff-9315-7e55663277c5",
+    "ExerciseName": "Ab Rolls",
+    "Description": "Abbiesssss",
+    "MusclesWorked": [
+      "Shoulders",
+      "Inner Abs",
+      "Outer Abs"
+    ],
+    "ExerciseLabels": [
+      "Cardio",
+      "Bodyweight Possible",
+      "Injury Prone",
+      "Outdoors",
+      "6-pack"
+    ],
+    "State": 0,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "Id": "5bbc2b12-6e37-4bff-9315-7e55663277c5",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  }
+]

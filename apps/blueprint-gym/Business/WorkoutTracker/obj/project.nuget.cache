@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "o3XWNVvus0J9kYG2mGEHCWgwHqXDXRFyrJCEW3SZV8bSARy2HIxAwgSuCAn5VZg2u3GEwHcZaNhwZJGVcZHmKQ==",
+  "dgSpecHash": "S240Xdt9x/DnmERc+LnDKQRYh7XisTgC3dUKv/DDo0BOXoPOVXJtV9yF19jd20JlBxyoyOfO8Wmw7SHBFxdIYg==",
   "success": true,
   "projectFilePath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/WorkoutTracker/BlueprintGym.Business.WorkoutTracker.csproj",
   "expectedPackageFiles": [

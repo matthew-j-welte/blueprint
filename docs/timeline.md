@@ -1,82 +1,63 @@
-**April 10th**
-
-- Have a working golang backend
-- Current frontend working with golang backend
-
-**April 24th**
-
-- _Cant Hurt Me_ book complete
-- Cleanup
-- Cleanup frontend/backend code to make for a clean development process going forward
-- Finish Bulk Entry Page
-- Finish remaining "view pages" for phase 1
-
 **May 1st**
 
-- Have all phase 1 functionality covered under BDD integration tests
+- _Cant Hurt Me_ book complete
 
-**May 8th**
+**May 15th**
 
-- _Microservices: Designing Fine Grained Systems_ book complete
-- Have a full plan and timeline to make blueprint-gym "production ready"
-
-**May 22nd**
-
-- _Spark_ book complete
-- Blueprint Gym production ready
+- _Hooked_ book complete
+- Frontend Complete w/ different views / local mode working for each top level components
+- Have
 
 **May 29th**
 
-- Standardization of reusable backend/frontend/infra code to prepare for new applications
-- CI/CD pipeline configured
+- _Spark_ book complete
+- All BDD tests created
 
-**June 5th**
+**June 19th**
 
-- _Kubernetes IN ACTION_ book complete
-- Blueprint Gym deployed to test env
-- Integration tests run on merge
+- _Microservices: Designing Fine Grained Systems_ book complete
+- Backend created
+- All BDDs passing
 
-**June 12th**
+**July 3rd**
 
-- _Desigining Data Intensive Application_ graph data section complete
-- Have a full plan and timeline ready for blueprint-office
-
-**June 26th**
-
+- microm draft shell working with blueprint-gym
+- infra is clean and ready to be attempted for test-env deployment
 - _Caste: The Origin of our Discontent_ book complete
-  .
-  .
-  .
 
 **July 10th**
 
-- _Leetcode_
-  - Begin making a leetcode/hackerrank presence
-  - Focus on graph problems to facilitate the notes data modeling work
+- Have a deployment plan in place
+
+**July 17th**
+
+_Kubernetes IN ACTION_ book complete
+
+- Blueprint Gym deployed to test environment
 
 **July 24th**
 
 - _The Body Keeps the Score_ book complete
-- Blueprint Office deployed to test env
+- Come up with a weekly checklist of things to check/validate for your deployed app
+- Come up with a list of needed improvements for Blueprint Gym
+- Establish a v2 if you feel you have enough features
+- Start work on high level blueprint-kitchen timeline
 
 **July 31st**
 
-- All current notes hosted on Blueprint Office
-- Have a full plan and timeline ready for creating the top level blueprint
+- Fully established blueprint-kitchen timeline
+- All needed tasks created in trello
 
 **August 14th**
 
-- _Switch: How to Change Things When Change is Hard_ book complete
-- top level blueprint deployed and working with both Gym and Office
-- have a homepage with the different app choices and a few "Coming Soon" boxes as well
-- possible designs =
-  - a house with blueprint type colors/lines
-  - a full page view that looks like a blueprint and the different apps are evenly scattered
+- _The Full life Framework_ book
 
 **FUTURE**
 
-- _The Full life Framework_ book
-
+- Homepage with the different app choices and a few "Coming Soon" boxes as well
+- possible designs =
+  - a house with blueprint type colors/lines
+  - a full page view that looks like a blueprint and the different apps are evenly scattered
 - Blueprint Gym
   - Stats/Achievements improvements
 - Blueprint Office

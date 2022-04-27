@@ -14,7 +14,6 @@ namespace BlueprintGym.Domain.WorkoutTracker.Models
     public string RegimenId { get; set; }
     public int WorkoutIndex { get; set; }
     public DateTimeOffset TimeSubmitted { get; set; }
-    public IEnumerable<WorkoutSet> WorkoutSetGoals { get; set; }
-    public IEnumerable<WorkoutSet> WorkoutSetEntries { get; set; }
+    public IEnumerable<WorkoutSetEntry> WorkoutSetEntries { get; set; }
   }
 }

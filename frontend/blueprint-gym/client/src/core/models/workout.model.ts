@@ -25,30 +25,17 @@ export interface WorkoutDto extends BaseEntityModel {
 }
 
 export interface WorkoutEntryFormView extends BaseEntityModel {
+  workoutEntryId: string;
   workoutId: string;
   regimenId: string;
-  workoutIndex?: number | undefined;
-  workoutEntryId?: string | undefined;
+  workoutIndex: number | null;
   timeSubmitted: Date;
   pointsEarned: number;
+  workoutSetGoals: WorkoutSetEntry[];
+  workoutSetEntries: WorkoutSetEntry[];
 }
 
 export interface WorkoutFormView extends WorkoutDto {}
-
-export interface WorkoutSetFormView {
-  entryId: string;
-  workoutId: string;
-  setIdentifier: string;
-  exerciseId: string;
-  exerciseName: string;
-  workoutEntryId: string;
-  heavyAim: ExerciseAimInfo;
-  conditionedAim: ExerciseAimInfo;
-  durableAim: ExerciseAimInfo;
-  specializedSetType: SpecializedSetType | null;
-  weight?: number | undefined;
-  reps?: number | undefined;
-}
 
 export interface WorkoutExerciseAssignment {
   order: number;
@@ -56,15 +43,15 @@ export interface WorkoutExerciseAssignment {
   specialSetIdentifier: string;
   exerciseId: string;
   exerciseName: string;
-  heavyAim: ExerciseAimInfo;
-  conditionedAim: ExerciseAimInfo;
-  durableAim: ExerciseAimInfo;
   specializedSetType: SpecializedSetType | null;
   musclesWorked: string[];
 }
 
-export interface ExerciseAimInfo {
-  aimBonusCutoff: number;
-  exerciseAim: ExerciseAim;
-  aimUnit: string;
+// Containers
+
+export interface WorkoutSetEntry {
+  entryId: string;
+  setIdentifier: string;
+  weight: number;
+  reps: number;
 }

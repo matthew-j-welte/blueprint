@@ -2,23 +2,33 @@ import { faCheckCircle, faLeftLong, faPlusSquare, faRightLong } from "@fortaweso
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-import { WorkoutDto, WorkoutExerciseAssignment, WorkoutSetFormView } from "../../core/models/workout.model";
+import {
+  WorkoutDto,
+  WorkoutExerciseAssignment,
+  WorkoutFormView,
+  WorkoutSetEntry,
+} from "../../core/models/workout.model";
 import { WorkoutService } from "../../core/services/workout-service";
 import SelectablePill from "../../shared/components/selectable-pill/selectable-pill";
 import { v4 as uuidv4 } from "uuid";
 import "./workout-active-entry-form.scss";
-import { WorkoutSetService } from "../../core/services/workout-set-service";
 import { WorkoutEntryService } from "../../core/services/workout-entry-service";
 
 function WorkoutActiveEntryForm() {
   const { workoutId } = useParams();
-  const [activeSet, set_activeSet] = useState<WorkoutSetFormView>();
-  const [setEntries, set_setEntries] = useState<WorkoutSetFormView[]>();
   const [workout, set_workout] = useState<WorkoutDto>();
   const [activeExercise, set_activeExercise] = useState<WorkoutExerciseAssignment>();
   const [activeExerciseIndex, set_activeExerciseIndex] = useState(0);
   const [nextExerciseName, set_nextExerciseName] = useState<string>();
   const [previousExerciseName, set_previousExerciseName] = useState<string>();
+
+  const [activeSet, set_activeSet] = useState<WorkoutSetEntry>();
+  const [setEntries, set_setEntries] = useState<WorkoutSetEntry[]>();
+  const [activeSetGoal, set_activeSetGoal] = useState<WorkoutSetEntry>();
+  const [setEntryGoals, set_setEntryGoals] = useState<WorkoutSetEntry[]>([]);
+  const [activeSetHeavyCutoff, set_activeSetHeavyCutoff] = useState<number | null>();
+  const [activeSetConditionedCutoff, set_activeSetConditionedCutoff] = useState<number | null>();
+  const [activeSetDurableCutoff, set_activeSetDurableCutoff] = useState<number | null>();
 
   const weightInputRef = useRef<HTMLInputElement>(null);
   const repsInputRef = useRef<HTMLInputElement>(null);
@@ -27,43 +37,42 @@ function WorkoutActiveEntryForm() {
   useEffect(() => {
     if (workoutId) {
       WorkoutService.getWorkoutFormView(workoutId).then((res) => {
-        if (res) {
-          set_workout(res);
-          setActiveExerciseInfo(res.exerciseAssignments, 0);
-        }
+        loadWorkout(res);
       });
     } else {
     }
   }, []);
 
-  const completeWorkout = () => {
-    if (setEntries) {
-      WorkoutSetService.saveWorkoutSets(setEntries)
-        .then((res) => {
-          if (res) {
-            console.log(res);
-          }
-        })
-        .then((_) => {
-          WorkoutEntryService.saveWorkoutEntry({
-            pointsEarned: setEntries.map((x) => x.reps).reduce((partialSum, a) => (partialSum ?? 0) + (a ?? 0), 0) ?? 0,
-            regimenId: workout?.regimenId ?? uuidv4(),
-            timeSubmitted: new Date(),
-            workoutId: workoutId ?? "",
-            workoutEntryId: workoutEntryId,
-          }).then((res2) => {
-            console.log(res2);
-          });
-        });
+  const loadWorkout = (workout: WorkoutFormView) => {
+    if (workout) {
+      set_workout(workout);
+      setActiveExerciseInfo(workout.exerciseAssignments, 0);
     }
   };
 
-  const newSetInit = (exerciseAssignemt: WorkoutExerciseAssignment): WorkoutSetFormView => {
+  const completeWorkout = () => {
+    if (setEntries) {
+      WorkoutEntryService.saveWorkoutEntry({
+        pointsEarned: setEntries.map((x) => x.reps).reduce((partialSum, a) => (partialSum ?? 0) + (a ?? 0), 0) ?? 0,
+        regimenId: workout?.regimenId ?? uuidv4(),
+        timeSubmitted: new Date(),
+        workoutSetEntries: setEntries,
+        workoutSetGoals: setEntryGoals,
+        workoutId: workoutId ?? "",
+        workoutEntryId: workoutEntryId,
+        workoutIndex: null,
+      }).then((res) => {
+        console.log(res);
+      });
+    }
+  };
+
+  const getNewSet = (exerciseAssignemt: WorkoutExerciseAssignment): WorkoutSetEntry => {
     return {
-      ...exerciseAssignemt,
-      workoutId: workoutId as string,
       entryId: uuidv4(),
-      workoutEntryId: workoutEntryId,
+      setIdentifier: exerciseAssignemt.setIdentifier,
+      reps: 0,
+      weight: 0,
     };
   };
 
@@ -72,7 +81,7 @@ function WorkoutActiveEntryForm() {
     const currentExercise = exercises[index] ?? undefined;
     if (currentExercise) {
       set_activeExercise(currentExercise);
-      set_activeSet(newSetInit(currentExercise));
+      set_activeSet(getNewSet(currentExercise));
     }
 
     const _nextExerciseIndex = index + 1 === exerciseCount ? 0 : index + 1;
@@ -90,29 +99,27 @@ function WorkoutActiveEntryForm() {
     set_activeExerciseIndex(index);
   };
 
-  const previousExercise = () => {
+  const loadActiveExercise = (direction: "increment" | "decrement") => {
     const exerciseCount = workout?.exerciseAssignments?.length ?? 0;
-    let newIndex = activeExerciseIndex - 1;
-    if (newIndex < 0) {
-      newIndex = exerciseCount - 1;
+    let newIndex = activeExerciseIndex;
+    if (direction === "increment") {
+      newIndex++;
+      if (newIndex >= exerciseCount) {
+        newIndex = 0;
+      }
+    } else {
+      newIndex--;
+      if (newIndex < 0) {
+        newIndex = exerciseCount - 1;
+      }
     }
 
     const newActiveExercise = workout?.exerciseAssignments[newIndex] ?? undefined;
     if (newActiveExercise) {
       setActiveExerciseInfo(workout?.exerciseAssignments ?? [], newIndex);
-    }
-  };
-
-  const nextExercise = () => {
-    const exerciseCount = workout?.exerciseAssignments?.length ?? 0;
-    let newIndex = activeExerciseIndex + 1;
-    if (newIndex >= exerciseCount) {
-      newIndex = 0;
-    }
-
-    const newActiveExercise = workout?.exerciseAssignments[newIndex] ?? undefined;
-    if (newActiveExercise) {
-      setActiveExerciseInfo(workout?.exerciseAssignments ?? [], newIndex);
+      set_activeSetHeavyCutoff(newActiveExercise.heavyAim);
+      set_activeSetConditionedCutoff(newActiveExercise.conditionedAim);
+      set_activeSetDurableCutoff(newActiveExercise.durableAim);
     }
   };
 
@@ -153,7 +160,11 @@ function WorkoutActiveEntryForm() {
 
       <div id="workoutEntryPanel" className="container mt-5">
         <div className="d-flex justify-content-center align-items-center">
-          <h2 role="button" onClick={() => previousExercise()} className="thin text-secondary mx-2 see-through-50">
+          <h2
+            role="button"
+            onClick={() => loadActiveExercise("decrement")}
+            className="thin text-secondary mx-2 see-through-50"
+          >
             {previousExerciseName}
           </h2>
           <h6 className="mx-5">
@@ -163,7 +174,11 @@ function WorkoutActiveEntryForm() {
           <h6 className="mx-5">
             <FontAwesomeIcon icon={faRightLong} />
           </h6>
-          <h2 role="button" onClick={() => nextExercise()} className="thin text-secondary mx-2 see-through-50">
+          <h2
+            role="button"
+            onClick={() => loadActiveExercise("increment")}
+            className="thin text-secondary mx-2 see-through-50"
+          >
             {nextExerciseName}
           </h2>
         </div>
@@ -171,19 +186,19 @@ function WorkoutActiveEntryForm() {
           <div className="text-center">
             <label>Goal Weight</label>
             <p className="my-1">
-              {activeSet?.heavyAim.aimBonusCutoff} <em className="unit-label">lbs</em>
+              {activeSetHeavyCutoff} <em className="unit-label">lbs</em>
             </p>
           </div>
           <div className="text-center">
             <label>Goal Sets</label>
             <p className="my-1">
-              {activeSet?.durableAim.aimBonusCutoff} <em className="unit-label">sets</em>
+              {activeSetDurableCutoff} <em className="unit-label">sets</em>
             </p>
           </div>
           <div className="text-center">
             <label>Goal Reps</label>
             <p className="my-1">
-              {activeSet?.conditionedAim.aimBonusCutoff} <em className="unit-label">reps</em>
+              {activeSetConditionedCutoff} <em className="unit-label">reps</em>
             </p>
           </div>
         </div>
@@ -197,7 +212,7 @@ function WorkoutActiveEntryForm() {
               id="weight"
               name="weight"
               value={activeSet?.weight}
-              onChange={(e) => set_activeSet({ ...activeSet, weight: +e.target.value } as WorkoutSetFormView)}
+              onChange={(e) => set_activeSet({ ...activeSet, weight: +e.target.value } as WorkoutSetEntry)}
             />
             <label className="mt-2 text-center unit-label">lbs</label>
           </div>
@@ -210,7 +225,7 @@ function WorkoutActiveEntryForm() {
               id="reps"
               name="reps"
               value={activeSet?.reps}
-              onChange={(e) => set_activeSet({ ...activeSet, reps: +e.target.value } as WorkoutSetFormView)}
+              onChange={(e) => set_activeSet({ ...activeSet, reps: +e.target.value } as WorkoutSetEntry)}
             />
             <label className="mt-2 text-center unit-label">reps</label>
           </div>

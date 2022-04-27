@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ExerciseAimInfo, WorkoutExerciseAssignment, WorkoutFormView } from "../../core/models/workout.model";
+import { WorkoutExerciseAssignment, WorkoutFormView } from "../../core/models/workout.model";
 import { WorkoutService } from "../../core/services/workout-service";
 import {
   enumToSelectOptions,
@@ -23,13 +23,11 @@ import ExerciseGrid from "../components/exercise-grid";
 
 export interface ExerciseAimButtonInfo {
   aimLookupKey: string;
-  buttonLabel: string;
+  aimLabel: string;
   aimUnit: string;
   enum: ExerciseAim;
   aimNumber: number | undefined;
-  selected: boolean;
   aimNumberSetter: any;
-  aimSelectedSetter: any;
 }
 
 function WorkoutForm() {
@@ -51,9 +49,6 @@ function WorkoutForm() {
   const [heavyAim, set_heavyAim] = useState<number | undefined>(undefined);
   const [conditionedAim, set_conditionedAim] = useState<number | undefined>(undefined);
   const [durableAim, set_durableAim] = useState<number | undefined>(undefined);
-  const [heavyAimSelected, set_heavyAimSelected] = useState(false);
-  const [conditionedAimSelected, set_conditionedAimSelected] = useState(false);
-  const [durableAimSelected, set_durableAimSelected] = useState(false);
 
   useEffect(() => {
     if (workoutId) {
@@ -140,31 +135,18 @@ function WorkoutForm() {
 
   const addExerciseToWorkout = () => {
     if (exerciseToAdd) {
-      exerciseToAdd.heavyAim ??= {
-        exerciseAim: ExerciseAim.Heavy,
-      } as ExerciseAimInfo;
-      exerciseToAdd.conditionedAim ??= {
-        exerciseAim: ExerciseAim.Conditioned,
-      } as ExerciseAimInfo;
-      exerciseToAdd.durableAim ??= {
-        exerciseAim: ExerciseAim.Durable,
-      } as ExerciseAimInfo;
-
       if (heavyAim) {
-        exerciseToAdd.heavyAim.aimBonusCutoff = heavyAim;
+        exerciseToAdd.heavyAim = heavyAim;
       }
       if (conditionedAim) {
-        exerciseToAdd.conditionedAim.aimBonusCutoff = conditionedAim;
+        exerciseToAdd.conditionedAim = conditionedAim;
       }
       if (durableAim) {
-        exerciseToAdd.durableAim.aimBonusCutoff = durableAim;
+        exerciseToAdd.durableAim = durableAim;
       }
 
       set_exerciseAssignments([...exerciseAssignments, exerciseToAdd]);
       set_exerciseToAdd(undefined);
-      set_heavyAimSelected(false);
-      set_conditionedAimSelected(false);
-      set_durableAimSelected(false);
       set_heavyAim(undefined);
       set_conditionedAim(undefined);
       set_durableAim(undefined);
@@ -174,33 +156,27 @@ function WorkoutForm() {
   const exerciseAimButtonInfo: ExerciseAimButtonInfo[] = [
     {
       aimLookupKey: "heavyAim",
-      buttonLabel: "Heavy",
+      aimLabel: "Heavy",
       aimUnit: "lbs",
       enum: ExerciseAim.Heavy,
       aimNumber: heavyAim,
-      selected: heavyAimSelected,
       aimNumberSetter: set_heavyAim,
-      aimSelectedSetter: set_heavyAimSelected,
     },
     {
       aimLookupKey: "conditionedAim",
-      buttonLabel: "Conditioned",
+      aimLabel: "Conditioned",
       aimUnit: "reps",
       enum: ExerciseAim.Conditioned,
       aimNumber: conditionedAim,
-      selected: conditionedAimSelected,
       aimNumberSetter: set_conditionedAim,
-      aimSelectedSetter: set_conditionedAimSelected,
     },
     {
       aimLookupKey: "durableAim",
-      buttonLabel: "Durable",
+      aimLabel: "Durable",
       aimUnit: "sets",
       enum: ExerciseAim.Durable,
       aimNumber: durableAim,
-      selected: durableAimSelected,
       aimNumberSetter: set_durableAim,
-      aimSelectedSetter: set_durableAimSelected,
     },
   ];
 
@@ -208,22 +184,15 @@ function WorkoutForm() {
     return (
       <div key={x.enum} className="m-4">
         <div className="d-flex justify-content-center">
-          <button
-            className={`nounderline btn btn-link text-secondary px-4 ${x.selected ? "active" : ""}`}
-            type="button"
-            onClick={() => x.aimSelectedSetter(!x.selected)}
-          >
-            {x.buttonLabel}
-          </button>
+          <h5 className={`thin text-secondary px-4`}>{x.aimLabel}</h5>
         </div>
         <div className="text-center mt-2">
           <input
             className="form-control text-center ml-1 number-input-without-arrows"
             type="number"
-            disabled={!x.selected}
             id={x.aimLookupKey}
             name={x.aimLookupKey}
-            value={x.selected ? x.aimNumber : ""}
+            value={x.aimNumber ?? ""}
             onChange={(e) => x.aimNumberSetter(+e.target.value)}
           />
         </div>

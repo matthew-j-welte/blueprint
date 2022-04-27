@@ -65,9 +65,10 @@ function RegimenForm() {
     set_muscleSpecificity(regimen.muscleSpecificity);
   };
 
-  const getForm = () =>
+  const getForm = (): RegimenFormView =>
     ({
       id,
+      regimenId: regimenId,
       modifiedOn,
       regimenName,
       regimenDescription,

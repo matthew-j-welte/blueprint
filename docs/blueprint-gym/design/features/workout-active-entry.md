@@ -69,7 +69,7 @@ public class WorkoutEntry
   public int PointsEarned { get; set; }
 }
 
-public class WorkoutSet
+public class WorkoutSetEntry
 {
   public string PK = $"{this.GetType().Name}-{this.WorkoutEntryId}";
   public string EntryId { get; set; }
@@ -115,7 +115,7 @@ WorkoutService > WorkoutEntryController.Save(WorkoutEntryDto workout) > WorkoutE
     - SaveWorkoutEntry(WorkoutEntry workout)
 ```
 
-3a. When saving WorkoutSet (Active Entry Mode -> Complete Set click):
+3a. When saving WorkoutSetEntry (Active Entry Mode -> Complete Set click):
 
 ```ts
 workoutService.saveWorkoutSet(set: WorkoutSetFormView) -> Observable<WorkoutSetFormView>
@@ -126,7 +126,7 @@ workoutService.saveWorkoutSet(set: WorkoutSetFormView) -> Observable<WorkoutSetF
 ```
 WorkoutService > WorkoutEntryController.SaveSet(WorkoutSetFormView set) > WorkoutEntryService.SaveSet():
   - WorkoutRepository:
-    - SaveWorkoutSet(WorkoutSet set)
+    - SaveWorkoutSet(WorkoutSetEntry set)
 ```
 
 3b. When saving WorkoutSets (Bulk Entry Mode -> every X seconds auto save):
@@ -140,7 +140,7 @@ workoutService.saveWorkoutSets(sets: WorkoutSetFormView[]) -> Observable<Workout
 ```
 WorkoutService > WorkoutEntryController.SaveSets(WorkoutSetFormView[] sets) > WorkoutEntryService.SaveSets():
   - WorkoutRepository:
-    - SaveWorkoutSets(WorkoutSet[] sets)
+    - SaveWorkoutSets(WorkoutSetEntry[] sets)
 ```
 
 3c. When saving WorkoutSets at Complete Workout after making "review edits":
@@ -155,5 +155,5 @@ workoutService.replaceAllSets(sets: WorkoutSetFormView[]) -> Observable<WorkoutS
 WorkoutService > WorkoutEntryController.ReplaceAllSets(WorkoutSetFormView[] sets) > WorkoutEntryService.ReplaceAllSets():
   - WorkoutRepository:
     - ClearWorkoutSets(string workoutEntryId)
-    - SaveWorkoutSets(WorkoutSet[] sets)
+    - SaveWorkoutSets(WorkoutSetEntry[] sets)
 ```

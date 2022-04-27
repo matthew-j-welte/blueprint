@@ -6,8 +6,9 @@ class BaseQueue<T> {
 }
 
 export class Queue<T> extends BaseQueue<T> {
-  public push(val: T): void {
+  public push(val: T): Queue<T> {
     this.store.push(val);
+    return this;
   }
 
   public pop(): T | undefined {
@@ -26,7 +27,7 @@ export class UniqueQueue<T> extends BaseQueue<T> {
     }
   }
 
-  public push(val: T): void {
+  public push(val: T): UniqueQueue<T> {
     if (this.storeSet.has(val)) {
       this.store = this.store.filter((x) => x !== val);
     }
@@ -38,6 +39,7 @@ export class UniqueQueue<T> extends BaseQueue<T> {
         this.storeSet.delete(removed);
       }
     }
+    return this;
   }
 
   public pop(): T | undefined {
