@@ -113,7 +113,7 @@ function WorkoutForm() {
   };
 
   const isNewForm = workoutId == null;
-  const editWorkoutLink = <Link to={AppRoutes.editWorkout()}>creating workouts</Link>;
+  const editWorkoutLink = <Link to={AppRoutes.newWorkout()}>creating workouts</Link>;
 
   const workoutLabelsSet = new Set(workoutLabels);
 
@@ -135,15 +135,15 @@ function WorkoutForm() {
 
   const addExerciseToWorkout = () => {
     if (exerciseToAdd) {
-      if (heavyAim) {
-        exerciseToAdd.heavyAim = heavyAim;
-      }
-      if (conditionedAim) {
-        exerciseToAdd.conditionedAim = conditionedAim;
-      }
-      if (durableAim) {
-        exerciseToAdd.durableAim = durableAim;
-      }
+      // if (heavyAim) {
+      //   exerciseToAdd.heavyAim = heavyAim;
+      // }
+      // if (conditionedAim) {
+      //   exerciseToAdd.conditionedAim = conditionedAim;
+      // }
+      // if (durableAim) {
+      //   exerciseToAdd.durableAim = durableAim;
+      // }
 
       set_exerciseAssignments([...exerciseAssignments, exerciseToAdd]);
       set_exerciseToAdd(undefined);

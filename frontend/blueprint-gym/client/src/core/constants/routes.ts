@@ -1,23 +1,26 @@
 export const AppRoutes = {
-  home: "home",
-  newExercise: "exercise/new",
-  newWorkout: "workout/new",
-  newRegimen: "regimen/new",
+  home: () => "home",
+  exerciseList: () => "exercise-list",
+  workoutList: () => "workout-list",
+  regimenList: () => "regimen-list",
 
-  editExercise: (exerciseId: string = ":exerciseId") =>
-    `exercise/edit/${exerciseId}`,
-  editWorkout: (workoutId: string = ":workoutId") =>
-    `workout/edit/${workoutId}`,
-  editRegimen: (regimenId: string = ":regimenId") =>
-    `regimen/edit/${regimenId}`,
+  newExercise: () => `exercise/new`,
+  newWorkout: () => `workout/new`,
+  newRegimen: () => `regimen/new`,
 
-  workoutEntryPage: (workoutId: string = ":workoutId") =>
-    `workout/view/${workoutId}`,
-  regimenEntryPage: (regimenId: string = ":regimenId") =>
-    `regimen/view/${regimenId}`,
+  modifyExercise: (action: ":action" | "edit" | "publish" = ":action", exerciseId: string = ":exerciseId") =>
+    `exercise/${action}/${exerciseId}`,
+  modifyWorkout: (action: ":action" | "edit" | "publish" = ":action", workoutId: string = ":workoutId") =>
+    `workout/${action}/${workoutId}`,
+  modifyRegimen: (action: ":action" | "edit" | "publish" = ":action", regimenId: string = ":regimenId") =>
+    `regimen/${action}/${regimenId}`,
+  publishedExercise: (exerciseId: string = ":exerciseId") => `published-exercise/${exerciseId}`,
+  publishedWorkout: (workoutId: string = ":workoutId") => `published-workout/${workoutId}`,
+  publishedRegimen: (regimenId: string = ":regimenId") => `published-regimen/${regimenId}`,
 
-  workoutActiveEntry: (workoutId: string = ":workoutId") =>
-    `workout/active-entry/${workoutId}`,
-  workoutBulkEntry: (workoutId: string = ":workoutId") =>
-    `workout/bulk-entry/${workoutId}`,
+  workoutEntryPage: (workoutId: string = ":workoutId") => `workout/view/${workoutId}`,
+  regimenEntryPage: (regimenId: string = ":regimenId") => `regimen/view/${regimenId}`,
+
+  workoutActiveEntry: (workoutId: string = ":workoutId") => `workout/active-entry/${workoutId}`,
+  workoutBulkEntry: (workoutId: string = ":workoutId") => `workout/bulk-entry/${workoutId}`,
 };

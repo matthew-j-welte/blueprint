@@ -17,8 +17,23 @@ const requests = {
 };
 
 export const ExerciseService = {
-  getExerciseFormView: (exerciseId: string): Promise<ExerciseFormView> => requests.get(`get/${exerciseId}`),
-  saveExercise: (exercise: ExerciseFormView): Promise<ExerciseFormView> => requests.put("save", exercise),
+  getExercise: (exerciseId: string = ""): Promise<ExerciseFormView> => {
+    if (exerciseId) {
+      return requests.get(`get/${exerciseId}`);
+    } else {
+      return requests.get(`new`);
+    }
+  },
+  saveExercise: (exercise: ExerciseFormView, action: string): Promise<ExerciseFormView> => {
+    if (action === "new") {
+      return requests.post("new", exercise);
+    } else if (action === "edit") {
+      return requests.put("save", exercise);
+    } else if (action === "pre-publish") {
+      return requests.put("pre-publish", exercise);
+    }
+    return Promise.reject("Wrong action!");
+  },
   deleteExercise: (exerciseId: string): Promise<boolean> => requests.delete(`delete/${exerciseId}`),
   getAllExerciseLinks: (searchType: ExerciseState): Promise<ExerciseLink[]> =>
     requests.get(`search/all-links/${searchType}`),

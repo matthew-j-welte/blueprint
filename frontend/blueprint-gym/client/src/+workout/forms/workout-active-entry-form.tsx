@@ -117,9 +117,9 @@ function WorkoutActiveEntryForm() {
     const newActiveExercise = workout?.exerciseAssignments[newIndex] ?? undefined;
     if (newActiveExercise) {
       setActiveExerciseInfo(workout?.exerciseAssignments ?? [], newIndex);
-      set_activeSetHeavyCutoff(newActiveExercise.heavyAim);
-      set_activeSetConditionedCutoff(newActiveExercise.conditionedAim);
-      set_activeSetDurableCutoff(newActiveExercise.durableAim);
+      // set_activeSetHeavyCutoff(newActiveExercise.heavyAim);
+      // set_activeSetConditionedCutoff(newActiveExercise.conditionedAim);
+      // set_activeSetDurableCutoff(newActiveExercise.durableAim);
     }
   };
 

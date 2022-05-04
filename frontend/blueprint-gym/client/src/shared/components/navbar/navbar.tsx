@@ -20,7 +20,7 @@ function Navbar() {
         <div className="Navbar container-fluid">
           <div className="d-flex">
             <nav className="NavSection LinkNavSection d-flex justify-content-start">
-              <NavLink className={({ isActive }) => isActiveNav(isActive)} to={AppRoutes.home}>
+              <NavLink className={({ isActive }) => isActiveNav(isActive)} to={AppRoutes.home()}>
                 <FontAwesomeIcon icon={faHome} /> <span className="pl-1">Home</span>
               </NavLink>
               <NavLink className={({ isActive }) => isActiveNav(isActive)} to={AppRoutes.regimenEntryPage()}>

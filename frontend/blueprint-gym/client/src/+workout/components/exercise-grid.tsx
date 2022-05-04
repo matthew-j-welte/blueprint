@@ -52,7 +52,7 @@ function ExerciseGrid(props: ExerciseGridInput) {
                   </button>
                   <h6 className="less-thin mb-0">{x.exerciseName}</h6>
                 </div>
-                <div className="col-2 d-flex justify-content-center align-items-center">
+                {/* <div className="col-2 d-flex justify-content-center align-items-center">
                   <h6 className="mb-0 thin">{x.heavyAim}</h6>
                 </div>
                 <div className="col-2 d-flex justify-content-center align-items-center">
@@ -60,7 +60,7 @@ function ExerciseGrid(props: ExerciseGridInput) {
                 </div>
                 <div className="col-2 d-flex justify-content-center align-items-center">
                   <h6 className="mb-0 thin">{x.durableAim}</h6>
-                </div>
+                </div> */}
               </div>
               <hr className="dim-hr my-1" />
             </div>

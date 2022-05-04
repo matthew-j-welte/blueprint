@@ -55,3 +55,11 @@ export interface WorkoutSetEntry {
   weight: number;
   reps: number;
 }
+
+export interface BlueScoreFormula {
+  repsMultiplier: number;
+  weightMultiplier: number;
+  repsExtraMultiplierCutoff: number;
+  weightExtraMultiplierCutoff: number;
+  repsLabel: string;
+}

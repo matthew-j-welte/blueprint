@@ -11,7 +11,7 @@ import {
   MuscleSpecificity,
 } from "../../core/models/enums.model";
 import "../../shared/scss/blueprint-globals/all.scss";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AppRoutes } from "../../core/constants/routes";
 import { BasicMuscleGroups, ExerciseLabels, FocusedMuscleGroups } from "../../core/constants/workout";
 import { faPerson, faSitemap } from "@fortawesome/free-solid-svg-icons";
@@ -19,10 +19,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SelectablePill from "../../shared/components/selectable-pill/selectable-pill";
 import Select from "react-select";
 
-function ExerciseForm() {
-  const { exerciseId } = useParams();
-  const [id, set_id] = useState<string | null>();
-  const [modifiedOn, set_modifiedOn] = useState<Date | null>();
+export interface ExerciseFormInput {
+  form: ExerciseFormView;
+  action: string;
+  onSave: (exercise: ExerciseFormView) => void;
+}
+
+function ExerciseForm(props: ExerciseFormInput) {
+  const [action, set_action] = useState<string>();
   const [exerciseName, set_exerciseName] = useState<string>();
   const [description, set_description] = useState<string>();
   const [musclesWorked, set_musclesWorked] = useState<string[]>();
@@ -36,9 +40,13 @@ function ExerciseForm() {
   const [activeMuscleGroupBtn, set_activeMuscleGroupBtn] = useState(MuscleSpecificity.Focused);
   const [exerciseLookups, set_exerciseLookups] = useState<ExerciseLookupDto[]>([]);
 
+  useEffect(() => {
+    set_loadedExercise(props.form);
+    updateForm(props.form);
+    set_action(props.action);
+  }, []);
+
   const updateForm = (exercise: ExerciseFormView) => {
-    set_id(exercise.id);
-    set_modifiedOn(exercise.modifiedOn);
     set_exerciseName(exercise.exerciseName);
     set_description(exercise.description);
     set_musclesWorked(exercise.musclesWorked);
@@ -50,9 +58,7 @@ function ExerciseForm() {
 
   const getForm = () =>
     ({
-      id: id,
-      modifiedOn: modifiedOn,
-      exerciseId: exerciseId,
+      ...props.form,
       exerciseName: exerciseName,
       description: description,
       musclesWorked: musclesWorked,
@@ -61,17 +67,6 @@ function ExerciseForm() {
       difficulty: difficulty,
       parentVariationExercise: parentVariationExercise,
     } as ExerciseFormView);
-
-  useEffect(() => {
-    if (exerciseId) {
-      ExerciseService.getExerciseFormView(exerciseId).then((res) => {
-        set_loadedExercise(res);
-        updateForm(res);
-      });
-    } else {
-      set_state(ExerciseState.Personal);
-    }
-  }, []);
 
   const searchExercise = (text: string) => {
     set_exerciseName(text);
@@ -86,20 +81,8 @@ function ExerciseForm() {
     }
   };
 
-  const saveForm = () => {
-    console.log(getForm());
-    ExerciseService.saveExercise(getForm())
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-        alert("Failed!!!!!!!!!!!");
-      });
-  };
-
-  const isNewForm = exerciseId == null;
-  const editWorkoutLink = <Link to={AppRoutes.editWorkout()}>creating workouts</Link>;
+  const isNewForm = action === "new";
+  const editWorkoutLink = <Link to={AppRoutes.newWorkout()}>creating workouts</Link>;
 
   const muscleGroupButtons = Object.keys(MuscleGroupToLabelMap).map((k: any) => (
     <button
@@ -151,9 +134,23 @@ function ExerciseForm() {
     );
   });
 
+  const titlePrompt = {
+    new: "New Exercise",
+    edit: "Modify Exercise",
+    "pre-publish": "Pre Publish",
+    publish: "Publish Exercise",
+  }[props.action];
+
+  const buttonPrompt = {
+    new: "Add Exercise",
+    edit: "Update Exercise",
+    "pre-publish": "Pre Publish",
+    publish: "Publish Exercise",
+  }[props.action];
+
   return (
     <div className="px-3">
-      <h1 className="page-title">{isNewForm ? "New" : "Edit"} Exercise</h1>
+      <h1 className="page-title">{titlePrompt}</h1>
       {isNewForm ? (
         <p className="p-3 page-title-subtext">
           Add an exercise here and use it later when {editWorkoutLink} - where you can assign goals, a workout aim and
@@ -260,8 +257,8 @@ function ExerciseForm() {
         </div>
 
         <div className="container d-flex justify-content-end mt-5">
-          <button className="save-btn" type="button" onClick={() => saveForm()}>
-            Save
+          <button className="save-btn" type="button" onClick={() => props.onSave(getForm())}>
+            {buttonPrompt}
           </button>
         </div>
       </form>
