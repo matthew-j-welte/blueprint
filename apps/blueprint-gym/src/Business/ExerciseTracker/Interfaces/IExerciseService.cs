@@ -11,7 +11,12 @@ namespace BlueprintGym.Business.ExerciseTracker.Interfaces
   {
     ExerciseFormView GetNewExercise();
     Task<ExerciseFormView> GetExercise(string exerciseId);
+    Task<ExercisePrePublishFormView> GetExerciseForPrePublish(string exerciseId);
+    Task<ExercisePublishFormView> GetExerciseForPublish(string exerciseId);
+    Task<IEnumerable<ExercisePublishRequestDto>> GetMyPublishRequests(string userId);
+    Task<IEnumerable<ExercisePublishRequestDto>> GetPublishRequestsForAdminReview(string userId);
     Task<ExerciseFormView> SaveExercise(ExerciseFormView exercise);
+    Task<ExercisePrePublishFormView> PrePublishExercise(ExercisePrePublishFormView exercise);
     Task<bool> DeleteExercise(string exerciseId);
     Task<IEnumerable<ExerciseLink>> GetAllExerciseLinks(ExerciseState searchType);
     Task<IEnumerable<ExerciseLookupDto>> GetAllExerciseLookups(ExerciseState searchType);

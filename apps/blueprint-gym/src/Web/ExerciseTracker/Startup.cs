@@ -9,6 +9,7 @@ using BlueprintGym.Domain.ExerciseTracker.Repositories;
 using BlueprintGym.Infrastructure.Web.Startup;
 using BlueprintGym.Integration.Blob;
 using BlueprintGym.Integration.Contracts.Blob;
+using ExerciseTracker.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -47,7 +48,7 @@ namespace BlueprintGym.Web.ExerciseTracker
       this.apiStartupSvc.SetDatabaseName(dbOptions.DatabaseName);
       this.apiStartupSvc.SetContainerName(dbOptions.DatabaseContainers.ExerciseContainer.Name);
 
-      this.apiStartupSvc.ConfigureRepository<IExerciseRepository, ExerciseRepository, Exercise, ExerciseRef>(services);
+      this.apiStartupSvc.ConfigureRepository<IExerciseRepository, ExerciseRepository, Exercise, ExerciseRef, ExercisePublishRequestRef>(services);
 
       var isLocalDbMode = this.apiStartupSvc.IsLocalDbMode();
       if (isLocalDbMode)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/BlueprintGym.Business.Shared.csproj": {}
+    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Business/Shared/BlueprintGym.Business.Shared.csproj": {}
   },
   "projects": {
-    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/BlueprintGym.Business.Shared.csproj": {
+    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Business/Shared/BlueprintGym.Business.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/BlueprintGym.Business.Shared.csproj",
+        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Business/Shared/BlueprintGym.Business.Shared.csproj",
         "projectName": "BlueprintGym.Business.Shared",
-        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/BlueprintGym.Business.Shared.csproj",
+        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Business/Shared/BlueprintGym.Business.Shared.csproj",
         "packagesPath": "/home/mwelte/.nuget/packages/",
-        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/obj/",
+        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Business/Shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mwelte/.nuget/NuGet/NuGet.Config"
@@ -26,17 +26,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj": {
-                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj"
+              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj"
               },
-              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj": {
-                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj"
+              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj"
               },
-              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
-                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj"
+              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj"
               },
-              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj": {
-                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj"
+              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj"
               }
             }
           }
@@ -83,14 +83,14 @@
         }
       }
     },
-    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Constants/BlueprintGym.Domain.Constants.csproj": {
+    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Constants/BlueprintGym.Domain.Constants.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Constants/BlueprintGym.Domain.Constants.csproj",
+        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Constants/BlueprintGym.Domain.Constants.csproj",
         "projectName": "BlueprintGym.Domain.Constants",
-        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Constants/BlueprintGym.Domain.Constants.csproj",
+        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Constants/BlueprintGym.Domain.Constants.csproj",
         "packagesPath": "/home/mwelte/.nuget/packages/",
-        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Constants/obj/",
+        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Constants/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mwelte/.nuget/NuGet/NuGet.Config"
@@ -135,14 +135,14 @@
         }
       }
     },
-    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj": {
+    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj",
+        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj",
         "projectName": "BlueprintGym.Domain.Core",
-        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj",
+        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj",
         "packagesPath": "/home/mwelte/.nuget/packages/",
-        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/obj/",
+        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mwelte/.nuget/NuGet/NuGet.Config"
@@ -193,14 +193,14 @@
         }
       }
     },
-    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj": {
+    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj",
+        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj",
         "projectName": "BlueprintGym.Infrastructure.Web",
-        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj",
+        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj",
         "packagesPath": "/home/mwelte/.nuget/packages/",
-        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Infrastructure/Web/obj/",
+        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Infrastructure/Web/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mwelte/.nuget/NuGet/NuGet.Config"
@@ -215,14 +215,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Constants/BlueprintGym.Domain.Constants.csproj": {
-                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Constants/BlueprintGym.Domain.Constants.csproj"
+              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Constants/BlueprintGym.Domain.Constants.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Constants/BlueprintGym.Domain.Constants.csproj"
               },
-              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj": {
-                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj"
+              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj"
               },
-              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
-                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj"
+              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj"
               }
             }
           }
@@ -273,14 +273,14 @@
         }
       }
     },
-    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
+    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj",
+        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj",
         "projectName": "BlueprintGym.Integration.Contracts",
-        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj",
+        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj",
         "packagesPath": "/home/mwelte/.nuget/packages/",
-        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/obj/",
+        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mwelte/.nuget/NuGet/NuGet.Config"
@@ -325,14 +325,14 @@
         }
       }
     },
-    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj": {
+    "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj",
+        "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj",
         "projectName": "BlueprintGym.Integration",
-        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj",
+        "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj",
         "packagesPath": "/home/mwelte/.nuget/packages/",
-        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration/obj/",
+        "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mwelte/.nuget/NuGet/NuGet.Config"
@@ -347,11 +347,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj": {
-                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj"
+              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj"
               },
-              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
-                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj"
+              "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
+                "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj"
               }
             }
           }

@@ -1,54 +1,5 @@
 [
   {
-    "PK": "Exercise-b3faa490-d8b6-4d98-8935-2ded7b052a89",
-    "ExerciseId": "b3faa490-d8b6-4d98-8935-2ded7b052a89",
-    "ExerciseName": "Decline Press",
-    "Description": "Like a chest press, but declined!",
-    "MusclesWorked": [
-      "Upper Chest",
-      "Lower Chest",
-      "Shoulders",
-      "Triceps",
-      "Forearms/Grip"
-    ],
-    "ExerciseLabels": [
-      "Kettlebells",
-      "Barbell",
-      "Resistance Bands"
-    ],
-    "State": 0,
-    "Difficulty": 2,
-    "Author": null,
-    "ParentVariationExercise": null,
-    "Id": "b3faa490-d8b6-4d98-8935-2ded7b052a89",
-    "Type": "Exercise",
-    "ModifiedOn": "0001-01-01T00:00:00+00:00"
-  },
-  {
-    "PK": "Exercise-423133a5-f5c4-4acf-bf8a-47fc88fc0326",
-    "ExerciseId": "423133a5-f5c4-4acf-bf8a-47fc88fc0326",
-    "ExerciseName": "Hammer Press",
-    "Description": "Pulling weight over your head... like a hammer",
-    "MusclesWorked": [
-      "Upper Chest",
-      "Shoulders",
-      "Triceps",
-      "Forearms/Grip"
-    ],
-    "ExerciseLabels": [
-      "Kettlebells",
-      "Barbell",
-      "Resistance Bands"
-    ],
-    "State": 0,
-    "Difficulty": 3,
-    "Author": null,
-    "ParentVariationExercise": null,
-    "Id": "423133a5-f5c4-4acf-bf8a-47fc88fc0326",
-    "Type": "Exercise",
-    "ModifiedOn": "0001-01-01T00:00:00+00:00"
-  },
-  {
     "PK": "Exercise-96e5c74f-2d6c-4c7d-a3b6-18a276330ed2",
     "ExerciseId": "96e5c74f-2d6c-4c7d-a3b6-18a276330ed2",
     "ExerciseName": "Shoulder Press",
@@ -67,9 +18,13 @@
       "Bodyweight Possible"
     ],
     "State": 0,
+    "MuscleSpecificity": 0,
     "Difficulty": 3,
     "Author": null,
     "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
     "Id": "96e5c74f-2d6c-4c7d-a3b6-18a276330ed2",
     "Type": "Exercise",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
@@ -89,9 +44,13 @@
       "Weight Vest Possible"
     ],
     "State": 0,
+    "MuscleSpecificity": 0,
     "Difficulty": 2,
     "Author": null,
     "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
     "Id": "2877100a-f8dc-4419-92ba-3763f66f4bb7",
     "Type": "Exercise",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
@@ -111,9 +70,13 @@
       "Resistance Bands"
     ],
     "State": 0,
+    "MuscleSpecificity": 0,
     "Difficulty": 2,
     "Author": null,
     "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
     "Id": "95ae5026-b7fb-45fc-87b1-c51cb466311c",
     "Type": "Exercise",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
@@ -143,9 +106,13 @@
       "BFA (Big Fat Ass)"
     ],
     "State": 0,
+    "MuscleSpecificity": 0,
     "Difficulty": 2,
     "Author": null,
     "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
     "Id": "0490ec08-e6b3-4515-8726-f679b9945fa8",
     "Type": "Exercise",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
@@ -171,34 +138,14 @@
       "Injury Prone"
     ],
     "State": 0,
+    "MuscleSpecificity": 0,
     "Difficulty": 1,
     "Author": null,
     "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
     "Id": "3144fac6-fb40-4749-9c1b-7dafcb420153",
-    "Type": "Exercise",
-    "ModifiedOn": "0001-01-01T00:00:00+00:00"
-  },
-  {
-    "PK": "Exercise-0088a302-8c9a-43ce-9405-de6b6430cd68",
-    "ExerciseId": "0088a302-8c9a-43ce-9405-de6b6430cd68",
-    "ExerciseName": "Chest Flies",
-    "Description": "You know, chest flies",
-    "MusclesWorked": [
-      "Upper Chest",
-      "Shoulders",
-      "Triceps",
-      "Forearms/Grip"
-    ],
-    "ExerciseLabels": [
-      "Kettlebells",
-      "Resistance Bands",
-      "Injury Prone"
-    ],
-    "State": 0,
-    "Difficulty": 3,
-    "Author": null,
-    "ParentVariationExercise": null,
-    "Id": "0088a302-8c9a-43ce-9405-de6b6430cd68",
     "Type": "Exercise",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
   },
@@ -224,35 +171,14 @@
       "BFA (Big Fat Ass)"
     ],
     "State": 0,
+    "MuscleSpecificity": 0,
     "Difficulty": 3,
     "Author": null,
     "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
     "Id": "3ae41320-688a-4982-ac25-453a7c1ca598",
-    "Type": "Exercise",
-    "ModifiedOn": "0001-01-01T00:00:00+00:00"
-  },
-  {
-    "PK": "Exercise-b7974a96-caa8-421a-b928-aeca3cb945ac",
-    "ExerciseId": "b7974a96-caa8-421a-b928-aeca3cb945ac",
-    "ExerciseName": "Side Lunge",
-    "Description": "You know, side lunge",
-    "MusclesWorked": [
-      "Glutes",
-      "Upper Front Legs"
-    ],
-    "ExerciseLabels": [
-      "Kettlebells",
-      "Resistance Bands",
-      "Injury Prone",
-      "Cardio",
-      "Barbell",
-      "BFA (Big Fat Ass)"
-    ],
-    "State": 0,
-    "Difficulty": 3,
-    "Author": null,
-    "ParentVariationExercise": null,
-    "Id": "b7974a96-caa8-421a-b928-aeca3cb945ac",
     "Type": "Exercise",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
   },
@@ -282,35 +208,1154 @@
       "BFA (Big Fat Ass)"
     ],
     "State": 0,
+    "MuscleSpecificity": 0,
     "Difficulty": 3,
     "Author": null,
     "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
     "Id": "4ea190d2-5223-4a23-a7b6-52704bed049f",
     "Type": "Exercise",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
   },
   {
-    "PK": "Exercise-5bbc2b12-6e37-4bff-9315-7e55663277c5",
-    "ExerciseId": "5bbc2b12-6e37-4bff-9315-7e55663277c5",
-    "ExerciseName": "Ab Rolls",
-    "Description": "Abbiesssss",
+    "PK": "Exercise-328de301-b96a-462c-8298-4a45df0737f6",
+    "ExerciseId": "328de301-b96a-462c-8298-4a45df0737f6",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
     "MusclesWorked": [
-      "Shoulders",
-      "Inner Abs",
-      "Outer Abs"
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
     ],
     "ExerciseLabels": [
-      "Cardio",
-      "Bodyweight Possible",
       "Injury Prone",
-      "Outdoors",
-      "6-pack"
+      "Cardio"
     ],
     "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "328de301-b96a-462c-8298-4a45df0737f6",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-eb672edc-2434-4b52-8c3b-58c794a06283",
+    "ExerciseId": "eb672edc-2434-4b52-8c3b-58c794a06283",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "eb672edc-2434-4b52-8c3b-58c794a06283",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-2906f60b-5337-4ef0-a6a2-aa1f636c737f",
+    "ExerciseId": "2906f60b-5337-4ef0-a6a2-aa1f636c737f",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "2906f60b-5337-4ef0-a6a2-aa1f636c737f",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-87c3b15a-96e2-4013-ab1a-dd90a4b120be",
+    "ExerciseId": "87c3b15a-96e2-4013-ab1a-dd90a4b120be",
+    "ExerciseName": "Icky Wicky Kickies",
+    "Description": "This is an exercise where you jump up and do icky wicky kickies, make sense?",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Glutes"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 0,
     "Difficulty": 3,
     "Author": null,
     "ParentVariationExercise": null,
-    "Id": "5bbc2b12-6e37-4bff-9315-7e55663277c5",
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "87c3b15a-96e2-4013-ab1a-dd90a4b120be",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-6855f872-90ee-467d-bf1f-dd6c9cf6fa37",
+    "ExerciseId": "6855f872-90ee-467d-bf1f-dd6c9cf6fa37",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "6855f872-90ee-467d-bf1f-dd6c9cf6fa37",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-d003efb8-d50e-460b-8f5c-f16544313bc6",
+    "ExerciseId": "d003efb8-d50e-460b-8f5c-f16544313bc6",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Chest",
+      "Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 0,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "d003efb8-d50e-460b-8f5c-f16544313bc6",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-c493104f-17d2-4dc3-9cdd-553b24f50380",
+    "ExerciseId": "c493104f-17d2-4dc3-9cdd-553b24f50380",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 1,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "c493104f-17d2-4dc3-9cdd-553b24f50380",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-116d8de7-8c98-4382-8eb9-fe7e4dd52d68",
+    "ExerciseId": "116d8de7-8c98-4382-8eb9-fe7e4dd52d68",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "116d8de7-8c98-4382-8eb9-fe7e4dd52d68",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-21a1b8b9-b89e-4213-9d92-76ea3df9f83a",
+    "ExerciseId": "21a1b8b9-b89e-4213-9d92-76ea3df9f83a",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "21a1b8b9-b89e-4213-9d92-76ea3df9f83a",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-b3def60a-cc14-4f26-9f6c-6e8824cac42f",
+    "ExerciseId": "b3def60a-cc14-4f26-9f6c-6e8824cac42f",
+    "ExerciseName": "Icky Wicky Kickies",
+    "Description": "This is an exercise where you jump up and do icky wicky kickies, make sense?",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Glutes"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 0,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "b3def60a-cc14-4f26-9f6c-6e8824cac42f",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-0eab6611-075e-40bc-81fe-71cbc6a95bf8",
+    "ExerciseId": "0eab6611-075e-40bc-81fe-71cbc6a95bf8",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "0eab6611-075e-40bc-81fe-71cbc6a95bf8",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-93c0aa3c-4a04-499b-982b-8184391baf5f",
+    "ExerciseId": "93c0aa3c-4a04-499b-982b-8184391baf5f",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Chest",
+      "Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 0,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "93c0aa3c-4a04-499b-982b-8184391baf5f",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-d273baf1-ff29-4cc5-baf9-98ed783d3b64",
+    "ExerciseId": "d273baf1-ff29-4cc5-baf9-98ed783d3b64",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 1,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "d273baf1-ff29-4cc5-baf9-98ed783d3b64",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-413df1c6-10d5-49e3-b111-9e31b40dc751",
+    "ExerciseId": "413df1c6-10d5-49e3-b111-9e31b40dc751",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "413df1c6-10d5-49e3-b111-9e31b40dc751",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-eedbc859-310a-4215-bfad-8acb36c4d43c",
+    "ExerciseId": "eedbc859-310a-4215-bfad-8acb36c4d43c",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "eedbc859-310a-4215-bfad-8acb36c4d43c",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-06774946-cf59-4a9a-806f-66c10bd27b78",
+    "ExerciseId": "06774946-cf59-4a9a-806f-66c10bd27b78",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "06774946-cf59-4a9a-806f-66c10bd27b78",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-090c886b-a1c8-432c-80ad-93b000c55fc7",
+    "ExerciseId": "090c886b-a1c8-432c-80ad-93b000c55fc7",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "090c886b-a1c8-432c-80ad-93b000c55fc7",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-3d69d8b1-71e8-4239-a347-a7f8bebf462a",
+    "ExerciseId": "3d69d8b1-71e8-4239-a347-a7f8bebf462a",
+    "ExerciseName": "Icky Wicky Kickies",
+    "Description": "This is an exercise where you jump up and do icky wicky kickies, make sense?",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Glutes"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 0,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "3d69d8b1-71e8-4239-a347-a7f8bebf462a",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-2a1d9d77-0b2c-4609-b960-f3ceb823cb86",
+    "ExerciseId": "2a1d9d77-0b2c-4609-b960-f3ceb823cb86",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "UPDATES",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Barbell"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "2a1d9d77-0b2c-4609-b960-f3ceb823cb86",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-73b8f6fb-4be7-4ddc-9071-fae5cd3a85fc",
+    "ExerciseId": "73b8f6fb-4be7-4ddc-9071-fae5cd3a85fc",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Chest",
+      "Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 0,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "73b8f6fb-4be7-4ddc-9071-fae5cd3a85fc",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-7556810d-5432-4871-b001-e1c3b019a20e",
+    "ExerciseId": "7556810d-5432-4871-b001-e1c3b019a20e",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 1,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "7556810d-5432-4871-b001-e1c3b019a20e",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-1300599c-4bfa-4855-8e95-3693cfc0bf0b",
+    "ExerciseId": "1300599c-4bfa-4855-8e95-3693cfc0bf0b",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "1300599c-4bfa-4855-8e95-3693cfc0bf0b",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-ec600790-ac33-4291-aece-5e411e735193",
+    "ExerciseId": "ec600790-ac33-4291-aece-5e411e735193",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "ec600790-ac33-4291-aece-5e411e735193",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-250ea826-c711-4da5-a55d-71b8e741a1d4",
+    "ExerciseId": "250ea826-c711-4da5-a55d-71b8e741a1d4",
+    "ExerciseName": "Icky Wicky Kickies",
+    "Description": "This is an exercise where you jump up and do icky wicky kickies, make sense?",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Glutes"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 0,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "250ea826-c711-4da5-a55d-71b8e741a1d4",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-3209e6d2-e6ba-4cd8-b0e0-7de207ca73dc",
+    "ExerciseId": "3209e6d2-e6ba-4cd8-b0e0-7de207ca73dc",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "UPDATES",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Barbell"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 3,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "3209e6d2-e6ba-4cd8-b0e0-7de207ca73dc",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-e739e470-ff9e-4351-be0b-0339ed59be32",
+    "ExerciseId": "e739e470-ff9e-4351-be0b-0339ed59be32",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Chest",
+      "Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 0,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "e739e470-ff9e-4351-be0b-0339ed59be32",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-a7ed375d-7b42-4eb9-8f5e-5d554e260cc5",
+    "ExerciseId": "a7ed375d-7b42-4eb9-8f5e-5d554e260cc5",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 1,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "a7ed375d-7b42-4eb9-8f5e-5d554e260cc5",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-d7512abf-b475-4e99-973d-884376cda168",
+    "ExerciseId": "d7512abf-b475-4e99-973d-884376cda168",
+    "ExerciseName": "Some Test Workout",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "d7512abf-b475-4e99-973d-884376cda168",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-00fba14f-f9cf-485e-8e20-d6a8e4b74c45",
+    "ExerciseId": "00fba14f-f9cf-485e-8e20-d6a8e4b74c45",
+    "ExerciseName": "Edit Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "00fba14f-f9cf-485e-8e20-d6a8e4b74c45",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-aff51786-2775-4fab-bf44-4c26dc5cbc25",
+    "ExerciseId": "aff51786-2775-4fab-bf44-4c26dc5cbc25",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "aff51786-2775-4fab-bf44-4c26dc5cbc25",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-00d3be18-2d82-45f4-a103-b9bba687ad72",
+    "ExerciseId": "00d3be18-2d82-45f4-a103-b9bba687ad72",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "00d3be18-2d82-45f4-a103-b9bba687ad72",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-df4562a9-518a-4786-bb31-a63c73eeb309",
+    "ExerciseId": "df4562a9-518a-4786-bb31-a63c73eeb309",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "df4562a9-518a-4786-bb31-a63c73eeb309",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-2fac0d8b-7c05-47f3-9338-e9bfff7fbc10",
+    "ExerciseId": "2fac0d8b-7c05-47f3-9338-e9bfff7fbc10",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "2fac0d8b-7c05-47f3-9338-e9bfff7fbc10",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-be5e9225-8652-49fc-9dd1-5c1445e8097a",
+    "ExerciseId": "be5e9225-8652-49fc-9dd1-5c1445e8097a",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "be5e9225-8652-49fc-9dd1-5c1445e8097a",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-f86b02d5-0481-4d27-a8e3-4c7bb6b13fa7",
+    "ExerciseId": "f86b02d5-0481-4d27-a8e3-4c7bb6b13fa7",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "f86b02d5-0481-4d27-a8e3-4c7bb6b13fa7",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-eafa71dc-afab-413e-a17d-110a51327cb9",
+    "ExerciseId": "eafa71dc-afab-413e-a17d-110a51327cb9",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "eafa71dc-afab-413e-a17d-110a51327cb9",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-be9384a8-805c-4fd5-b597-f2b2a960b4a1",
+    "ExerciseId": "be9384a8-805c-4fd5-b597-f2b2a960b4a1",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "be9384a8-805c-4fd5-b597-f2b2a960b4a1",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-39f40408-ea5b-469f-bc76-98e9380f245e",
+    "ExerciseId": "39f40408-ea5b-469f-bc76-98e9380f245e",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "39f40408-ea5b-469f-bc76-98e9380f245e",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-896d593e-389c-4049-baab-300c8854e00f",
+    "ExerciseId": "896d593e-389c-4049-baab-300c8854e00f",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "896d593e-389c-4049-baab-300c8854e00f",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-74d05661-a1c8-4b68-b46b-cc506541665b",
+    "ExerciseId": "74d05661-a1c8-4b68-b46b-cc506541665b",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "74d05661-a1c8-4b68-b46b-cc506541665b",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-38695ab8-78ae-4251-9b29-7ca2fafa6640",
+    "ExerciseId": "38695ab8-78ae-4251-9b29-7ca2fafa6640",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "38695ab8-78ae-4251-9b29-7ca2fafa6640",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-b0c60de7-367e-4220-99bb-1fc226bbb35a",
+    "ExerciseId": "b0c60de7-367e-4220-99bb-1fc226bbb35a",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "b0c60de7-367e-4220-99bb-1fc226bbb35a",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-2e2c10f4-8cbd-4a3e-a9ac-993082873435",
+    "ExerciseId": "2e2c10f4-8cbd-4a3e-a9ac-993082873435",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "2e2c10f4-8cbd-4a3e-a9ac-993082873435",
+    "Type": "Exercise",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "Exercise-adee4d68-56b9-4678-82d8-79ba889f77df",
+    "ExerciseId": "adee4d68-56b9-4678-82d8-79ba889f77df",
+    "ExerciseName": "Publish Exercise Test",
+    "Description": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "ExerciseLabels": [
+      "Injury Prone",
+      "Cardio"
+    ],
+    "State": 0,
+    "MuscleSpecificity": 2,
+    "Difficulty": 2,
+    "Author": null,
+    "ParentVariationExercise": null,
+    "PreviousMuscleSpecificity": 0,
+    "VideoUrl": null,
+    "Formula": null,
+    "Id": "adee4d68-56b9-4678-82d8-79ba889f77df",
     "Type": "Exercise",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
   }

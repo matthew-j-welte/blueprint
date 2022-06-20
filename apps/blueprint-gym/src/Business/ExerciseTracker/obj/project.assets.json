@@ -6939,11 +6939,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/ExerciseTracker/BlueprintGym.Business.ExerciseTracker.csproj",
+      "projectUniqueName": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Business/ExerciseTracker/BlueprintGym.Business.ExerciseTracker.csproj",
       "projectName": "BlueprintGym.Business.ExerciseTracker",
-      "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/ExerciseTracker/BlueprintGym.Business.ExerciseTracker.csproj",
+      "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Business/ExerciseTracker/BlueprintGym.Business.ExerciseTracker.csproj",
       "packagesPath": "/home/mwelte/.nuget/packages/",
-      "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/ExerciseTracker/obj/",
+      "outputPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Business/ExerciseTracker/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mwelte/.nuget/NuGet/NuGet.Config"
@@ -6958,23 +6958,23 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/BlueprintGym.Business.Shared.csproj": {
-              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Business/Shared/BlueprintGym.Business.Shared.csproj"
+            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Business/Shared/BlueprintGym.Business.Shared.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Business/Shared/BlueprintGym.Business.Shared.csproj"
             },
-            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj": {
-              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/Core/BlueprintGym.Domain.Core.csproj"
+            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/Core/BlueprintGym.Domain.Core.csproj"
             },
-            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/ExerciseTracker/BlueprintGym.Domain.ExerciseTracker.csproj": {
-              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Domain/ExerciseTracker/BlueprintGym.Domain.ExerciseTracker.csproj"
+            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/ExerciseTracker/BlueprintGym.Domain.ExerciseTracker.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Domain/ExerciseTracker/BlueprintGym.Domain.ExerciseTracker.csproj"
             },
-            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj": {
-              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj"
+            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Infrastructure/Web/BlueprintGym.Infrastructure.Web.csproj"
             },
-            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
-              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj"
+            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration.Contracts/BlueprintGym.Integration.Contracts.csproj"
             },
-            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj": {
-              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj"
+            "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj": {
+              "projectPath": "/home/mwelte/github/matthew-j-welte/blueprint/apps/blueprint-gym/src/Integration/BlueprintGym.Integration/BlueprintGym.Integration.csproj"
             }
           }
         }

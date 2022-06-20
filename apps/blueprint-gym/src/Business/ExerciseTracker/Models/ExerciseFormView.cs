@@ -13,6 +13,7 @@ namespace BlueprintGym.Business.ExerciseTracker.Models
     public IEnumerable<string> MusclesWorked { get; set; }
     public IEnumerable<string> ExerciseLabels { get; set; }
     public ExerciseState State { get; set; }
+    public MuscleSpecificity MuscleSpecificity { get; set; }
     public FitnessDifficulty Difficulty { get; set; }
     public ExerciseLink ParentVariationExercise { get; set; }
   }

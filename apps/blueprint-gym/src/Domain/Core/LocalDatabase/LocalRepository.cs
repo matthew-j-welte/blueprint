@@ -18,14 +18,15 @@ namespace BlueprintGym.Domain.Core.LocalDatabase
     {
       this.databaseName = databaseName;
 
-      var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "development";
+      var dbEnv = Environment.GetEnvironmentVariable("BLUEPRINT_GYM_DB_ENV");
+      dbEnv ??= Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "development";
       var blueprintPath = Environment.GetEnvironmentVariable("BLUEPRINT_GYM_PATH");
       if (string.IsNullOrEmpty(blueprintPath))
       {
         throw new SystemException("Must set BLUEPRINT_GYM_PATH path!");
       }
 
-      var localDbStoragePath = Path.Join(blueprintPath, "local-db", env.ToLower());
+      var localDbStoragePath = Path.Join(blueprintPath, "local-db", dbEnv.ToLower());
 
       Directory.CreateDirectory(localDbStoragePath);
       localDbStoragePath = Path.Join(localDbStoragePath, "cosmos");

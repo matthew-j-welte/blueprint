@@ -1,41 +1,6 @@
 [
   {
     "PK": "ExerciseRef-Personal",
-    "ExerciseId": "b3faa490-d8b6-4d98-8935-2ded7b052a89",
-    "ExerciseName": "Decline Press",
-    "DescriptionSnippet": "Like a chest press, but declined!",
-    "MusclesWorked": [
-      "Upper Chest",
-      "Lower Chest",
-      "Shoulders",
-      "Triceps",
-      "Forearms/Grip"
-    ],
-    "Difficulty": 2,
-    "State": 0,
-    "Id": "b3faa490-d8b6-4d98-8935-2ded7b052a89",
-    "Type": "ExerciseRef",
-    "ModifiedOn": "0001-01-01T00:00:00+00:00"
-  },
-  {
-    "PK": "ExerciseRef-Personal",
-    "ExerciseId": "423133a5-f5c4-4acf-bf8a-47fc88fc0326",
-    "ExerciseName": "Hammer Press",
-    "DescriptionSnippet": "Pulling weight over your head... like a hammer",
-    "MusclesWorked": [
-      "Upper Chest",
-      "Shoulders",
-      "Triceps",
-      "Forearms/Grip"
-    ],
-    "Difficulty": 3,
-    "State": 0,
-    "Id": "423133a5-f5c4-4acf-bf8a-47fc88fc0326",
-    "Type": "ExerciseRef",
-    "ModifiedOn": "0001-01-01T00:00:00+00:00"
-  },
-  {
-    "PK": "ExerciseRef-Personal",
     "ExerciseId": "96e5c74f-2d6c-4c7d-a3b6-18a276330ed2",
     "ExerciseName": "Shoulder Press",
     "DescriptionSnippet": "Pressing weight over your head",
@@ -119,23 +84,6 @@
   },
   {
     "PK": "ExerciseRef-Personal",
-    "ExerciseId": "0088a302-8c9a-43ce-9405-de6b6430cd68",
-    "ExerciseName": "Chest Flies",
-    "DescriptionSnippet": "You know, chest flies",
-    "MusclesWorked": [
-      "Upper Chest",
-      "Shoulders",
-      "Triceps",
-      "Forearms/Grip"
-    ],
-    "Difficulty": 3,
-    "State": 0,
-    "Id": "0088a302-8c9a-43ce-9405-de6b6430cd68",
-    "Type": "ExerciseRef",
-    "ModifiedOn": "0001-01-01T00:00:00+00:00"
-  },
-  {
-    "PK": "ExerciseRef-Personal",
     "ExerciseId": "3ae41320-688a-4982-ac25-453a7c1ca598",
     "ExerciseName": "Deadlifts",
     "DescriptionSnippet": "You know, deadlifts",
@@ -150,21 +98,6 @@
     "Difficulty": 3,
     "State": 0,
     "Id": "3ae41320-688a-4982-ac25-453a7c1ca598",
-    "Type": "ExerciseRef",
-    "ModifiedOn": "0001-01-01T00:00:00+00:00"
-  },
-  {
-    "PK": "ExerciseRef-Personal",
-    "ExerciseId": "b7974a96-caa8-421a-b928-aeca3cb945ac",
-    "ExerciseName": "Side Lunge",
-    "DescriptionSnippet": "You know, side lunge",
-    "MusclesWorked": [
-      "Glutes",
-      "Upper Front Legs"
-    ],
-    "Difficulty": 3,
-    "State": 0,
-    "Id": "b7974a96-caa8-421a-b928-aeca3cb945ac",
     "Type": "ExerciseRef",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
   },
@@ -202,6 +135,708 @@
     "Difficulty": 3,
     "State": 0,
     "Id": "5bbc2b12-6e37-4bff-9315-7e55663277c5",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "328de301-b96a-462c-8298-4a45df0737f6",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "328de301-b96a-462c-8298-4a45df0737f6",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "eb672edc-2434-4b52-8c3b-58c794a06283",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "eb672edc-2434-4b52-8c3b-58c794a06283",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "2906f60b-5337-4ef0-a6a2-aa1f636c737f",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "2906f60b-5337-4ef0-a6a2-aa1f636c737f",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "87c3b15a-96e2-4013-ab1a-dd90a4b120be",
+    "ExerciseName": "Icky Wicky Kickies",
+    "DescriptionSnippet": "This is an exercise where you jump up and do icky wicky kickies, make sense?",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Glutes"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "87c3b15a-96e2-4013-ab1a-dd90a4b120be",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "6855f872-90ee-467d-bf1f-dd6c9cf6fa37",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "6855f872-90ee-467d-bf1f-dd6c9cf6fa37",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "d003efb8-d50e-460b-8f5c-f16544313bc6",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Chest",
+      "Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "d003efb8-d50e-460b-8f5c-f16544313bc6",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "c493104f-17d2-4dc3-9cdd-553b24f50380",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "c493104f-17d2-4dc3-9cdd-553b24f50380",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "116d8de7-8c98-4382-8eb9-fe7e4dd52d68",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "116d8de7-8c98-4382-8eb9-fe7e4dd52d68",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "21a1b8b9-b89e-4213-9d92-76ea3df9f83a",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "21a1b8b9-b89e-4213-9d92-76ea3df9f83a",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "b3def60a-cc14-4f26-9f6c-6e8824cac42f",
+    "ExerciseName": "Icky Wicky Kickies",
+    "DescriptionSnippet": "This is an exercise where you jump up and do icky wicky kickies, make sense?",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Glutes"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "b3def60a-cc14-4f26-9f6c-6e8824cac42f",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "0eab6611-075e-40bc-81fe-71cbc6a95bf8",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "0eab6611-075e-40bc-81fe-71cbc6a95bf8",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "93c0aa3c-4a04-499b-982b-8184391baf5f",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Chest",
+      "Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "93c0aa3c-4a04-499b-982b-8184391baf5f",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "d273baf1-ff29-4cc5-baf9-98ed783d3b64",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "d273baf1-ff29-4cc5-baf9-98ed783d3b64",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "413df1c6-10d5-49e3-b111-9e31b40dc751",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "413df1c6-10d5-49e3-b111-9e31b40dc751",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "eedbc859-310a-4215-bfad-8acb36c4d43c",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "eedbc859-310a-4215-bfad-8acb36c4d43c",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "06774946-cf59-4a9a-806f-66c10bd27b78",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "06774946-cf59-4a9a-806f-66c10bd27b78",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "090c886b-a1c8-432c-80ad-93b000c55fc7",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "090c886b-a1c8-432c-80ad-93b000c55fc7",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "3d69d8b1-71e8-4239-a347-a7f8bebf462a",
+    "ExerciseName": "Icky Wicky Kickies",
+    "DescriptionSnippet": "This is an exercise where you jump up and do icky wicky kickies, make sense?",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Glutes"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "3d69d8b1-71e8-4239-a347-a7f8bebf462a",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "2a1d9d77-0b2c-4609-b960-f3ceb823cb86",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "UPDATES",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Lower Back"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "2a1d9d77-0b2c-4609-b960-f3ceb823cb86",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "73b8f6fb-4be7-4ddc-9071-fae5cd3a85fc",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Chest",
+      "Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "73b8f6fb-4be7-4ddc-9071-fae5cd3a85fc",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "7556810d-5432-4871-b001-e1c3b019a20e",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "7556810d-5432-4871-b001-e1c3b019a20e",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "1300599c-4bfa-4855-8e95-3693cfc0bf0b",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "1300599c-4bfa-4855-8e95-3693cfc0bf0b",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "ec600790-ac33-4291-aece-5e411e735193",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "ec600790-ac33-4291-aece-5e411e735193",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "250ea826-c711-4da5-a55d-71b8e741a1d4",
+    "ExerciseName": "Icky Wicky Kickies",
+    "DescriptionSnippet": "This is an exercise where you jump up and do icky wicky kickies, make sense?",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Glutes"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "250ea826-c711-4da5-a55d-71b8e741a1d4",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "3209e6d2-e6ba-4cd8-b0e0-7de207ca73dc",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "UPDATES",
+    "MusclesWorked": [
+      "Upper Front Legs",
+      "Lower Back"
+    ],
+    "Difficulty": 3,
+    "State": 0,
+    "Id": "3209e6d2-e6ba-4cd8-b0e0-7de207ca73dc",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "e739e470-ff9e-4351-be0b-0339ed59be32",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Chest",
+      "Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "e739e470-ff9e-4351-be0b-0339ed59be32",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "a7ed375d-7b42-4eb9-8f5e-5d554e260cc5",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "a7ed375d-7b42-4eb9-8f5e-5d554e260cc5",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "d7512abf-b475-4e99-973d-884376cda168",
+    "ExerciseName": "Some Test Workout",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Upper Back",
+      "Lower Back"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "d7512abf-b475-4e99-973d-884376cda168",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "00fba14f-f9cf-485e-8e20-d6a8e4b74c45",
+    "ExerciseName": "Edit Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "00fba14f-f9cf-485e-8e20-d6a8e4b74c45",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "aff51786-2775-4fab-bf44-4c26dc5cbc25",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "aff51786-2775-4fab-bf44-4c26dc5cbc25",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "00d3be18-2d82-45f4-a103-b9bba687ad72",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "00d3be18-2d82-45f4-a103-b9bba687ad72",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "df4562a9-518a-4786-bb31-a63c73eeb309",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "df4562a9-518a-4786-bb31-a63c73eeb309",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "2fac0d8b-7c05-47f3-9338-e9bfff7fbc10",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "2fac0d8b-7c05-47f3-9338-e9bfff7fbc10",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "be5e9225-8652-49fc-9dd1-5c1445e8097a",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "be5e9225-8652-49fc-9dd1-5c1445e8097a",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "f86b02d5-0481-4d27-a8e3-4c7bb6b13fa7",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "f86b02d5-0481-4d27-a8e3-4c7bb6b13fa7",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "eafa71dc-afab-413e-a17d-110a51327cb9",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "eafa71dc-afab-413e-a17d-110a51327cb9",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "be9384a8-805c-4fd5-b597-f2b2a960b4a1",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "be9384a8-805c-4fd5-b597-f2b2a960b4a1",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "39f40408-ea5b-469f-bc76-98e9380f245e",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "39f40408-ea5b-469f-bc76-98e9380f245e",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "896d593e-389c-4049-baab-300c8854e00f",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "896d593e-389c-4049-baab-300c8854e00f",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "74d05661-a1c8-4b68-b46b-cc506541665b",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "74d05661-a1c8-4b68-b46b-cc506541665b",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "38695ab8-78ae-4251-9b29-7ca2fafa6640",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "38695ab8-78ae-4251-9b29-7ca2fafa6640",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "b0c60de7-367e-4220-99bb-1fc226bbb35a",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "b0c60de7-367e-4220-99bb-1fc226bbb35a",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "2e2c10f4-8cbd-4a3e-a9ac-993082873435",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "2e2c10f4-8cbd-4a3e-a9ac-993082873435",
+    "Type": "ExerciseRef",
+    "ModifiedOn": "0001-01-01T00:00:00+00:00"
+  },
+  {
+    "PK": "ExerciseRef-Personal",
+    "ExerciseId": "adee4d68-56b9-4678-82d8-79ba889f77df",
+    "ExerciseName": "Publish Exercise Test",
+    "DescriptionSnippet": "This is some test workout",
+    "MusclesWorked": [
+      "Upper Chest",
+      "Lower Chest",
+      "Triceps"
+    ],
+    "Difficulty": 2,
+    "State": 0,
+    "Id": "adee4d68-56b9-4678-82d8-79ba889f77df",
     "Type": "ExerciseRef",
     "ModifiedOn": "0001-01-01T00:00:00+00:00"
   }

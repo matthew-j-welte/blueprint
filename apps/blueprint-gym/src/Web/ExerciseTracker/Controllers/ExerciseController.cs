@@ -22,26 +22,34 @@ namespace BlueprintGym.Web.ExerciseTracker.Controllers
 
     // TODO: Eventually this may accept a dictionary of "initParams"
     [HttpGet("new")]
-    public ExerciseFormView GetExercise() => this.exerciseService.GetNewExercise();
+    public ExerciseFormView GetNewExercise() => this.exerciseService.GetNewExercise();
 
     [HttpGet("get/{exerciseId}")]
     public async Task<ExerciseFormView> GetExercise(string exerciseId)
       => await this.exerciseService.GetExercise(exerciseId).ConfigureAwait(false);
 
-    [HttpPut("save")]
-    public async Task<ExerciseFormView> SaveExercise(ExerciseFormView exercise)
-      => await this.exerciseService.SaveExercise(exercise).ConfigureAwait(false);
+    [HttpGet("pre-publish/get/{exerciseId}")]
+    public async Task<ExercisePrePublishFormView> GetExerciseForPrePublish(string exerciseId)
+      => await this.exerciseService.GetExerciseForPrePublish(exerciseId).ConfigureAwait(false);
 
-    [HttpDelete("delete/{exerciseId}")]
-    public async Task<bool> DeleteExercise(string exerciseId)
-      => await this.exerciseService.DeleteExercise(exerciseId).ConfigureAwait(false);
+    [HttpGet("publish/get/{exerciseId}")]
+    public async Task<ExerciseFormView> GetExerciseForPublish(string exerciseId)
+      => await this.exerciseService.GetExerciseForPublish(exerciseId).ConfigureAwait(false);
+
+    [HttpGet("publish-requests/{userId}")]
+    public async Task<IEnumerable<ExercisePublishRequestDto>> GetMyPublishRequests(string userId)
+      => await this.exerciseService.GetMyPublishRequests(userId).ConfigureAwait(false);
+
+    [HttpGet("admin-publish-requests/{userId}")]
+    public async Task<IEnumerable<ExercisePublishRequestDto>> GetPublishRequestsForAdminReview(string userId)
+      => await this.exerciseService.GetPublishRequestsForAdminReview(userId).ConfigureAwait(false);
 
     [HttpGet("search/all-links/{searchType}")]
     public async Task<IEnumerable<ExerciseLink>> GetAllExerciseLinks(ExerciseState searchType)
       => await this.exerciseService.GetAllExerciseLinks(searchType).ConfigureAwait(false);
 
     [HttpGet("search/links/{searchType}/{name}")]
-    public async Task<IEnumerable<ExerciseLink>> SearchExerciseLinksByName(string name, ExerciseState searchType)
+    public async Task<IEnumerable<ExerciseLink>> SearchExerciseLinksByName(ExerciseState searchType, string name)
       => await this.exerciseService.SearchExerciseLinksByName(name, searchType).ConfigureAwait(false);
 
     [HttpGet("search/all-lookups/{searchType}")]
@@ -51,5 +59,21 @@ namespace BlueprintGym.Web.ExerciseTracker.Controllers
     [HttpGet("search/lookups/{searchType}/{name}")]
     public async Task<IEnumerable<ExerciseLookupDto>> SearchExerciseLookupsByName(string name, ExerciseState searchType)
       => await this.exerciseService.SearchExerciseLookupsByName(name, searchType).ConfigureAwait(false);
+
+    [HttpPost("new")]
+    public async Task<ExerciseFormView> SaveNewExercise(ExerciseFormView exercise) =>
+      await this.exerciseService.SaveExercise(exercise).ConfigureAwait(false);
+
+    [HttpPut("save")]
+    public async Task<ExerciseFormView> SaveExercise(ExerciseFormView exercise)
+      => await this.exerciseService.SaveExercise(exercise).ConfigureAwait(false);
+
+    [HttpPut("pre-publish")]
+    public async Task<ExercisePrePublishFormView> PrePublishExercise(ExercisePrePublishFormView exercise)
+      => await this.exerciseService.PrePublishExercise(exercise).ConfigureAwait(false);
+
+    [HttpDelete("delete/{exerciseId}")]
+    public async Task<bool> DeleteExercise(string exerciseId)
+      => await this.exerciseService.DeleteExercise(exerciseId).ConfigureAwait(false);
   }
 }
