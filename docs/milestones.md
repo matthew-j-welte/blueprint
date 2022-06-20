@@ -63,5 +63,10 @@ Tasks:
   - Create/Implement view-workout-submission page with tabular info about the workout
 - (10)
   - Create group by workout functionality in the page from (8)
+- (~)
+  - Create form components for easy form creation
+  - Styling finalized and helpers created
+  - E2E code helpers finalized (routes/exercise-form/api-client)
+    - For exercise form maybe create an interface for each input that defines the input/output functions. Then create a form class with each of those fields as a property.
 
 **Major Components and Customer Use List**

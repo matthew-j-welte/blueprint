@@ -145,6 +145,7 @@ Reusable:
 - hover effects
 - font
 - color
+- panel
 - special icons
   - subtitles
   - logo
